@@ -23,12 +23,13 @@ get-childitem -literalpath "$series_dir" -recurse -directory | foreach-object {
 
                 # Testeo el fichero a ver si esta encriptado con contraseña
                 #! mirar si lo de abajo lo puedo hacer con get-7zipinformation
-                $file_password = (& $7z l -slt -- $file_compress) | select-string -pattern "Encrypted = +" 
+                # $file_password = (& $7z l -slt -- $file_compress) | select-string -pattern "Encrypted = +" 
+                $file_password = (get-7zip -archivename $file_compress).encrypted  
 
                 # Si lo devuelto no es null es que esta encriptado con contraseña.
                 # Cuando se ejecuta lo anterior y devuelve en una linea "Encrypted = +", entonces procedemos a buscar el fichero de contraseñas. Sacamos la url que contiene y
                 # decodificamos la web para extraer la contraseña y entonces descomprimimos el fichero
-                if ( $null -ne $file_password ) { 
+                if ( $file_password -eq $true ) { 
                         
                         # Busco el fichero que contiene la web donde esta la contraseña que suele tener en el nombre la palabra CONTRASEÑA en PCTRELOAD
                         $url = (get-childitem -literalpath $ruta | where-object { $_.name -like "*CONTRASEÑA*" }).fullname
