@@ -73,6 +73,11 @@ $directorios | foreach-object {
         # Despues quito los corchetes y su contenido
         $new_filename2 = $new_filename -replace "\[[\w*\s*-\.]*\]",""
 
+
+        REM Renombro los ficheros
+        & "c:\Program Files (x86)\ReNamer\ReNamer.exe" /rename "PELICULAS" "D:\PUBLIC\INCOMING\radarr\*.mkv"
+        & "c:\Program Files (x86)\ReNamer\ReNamer.exe" /rename "PELICULAS" "D:\PUBLIC\INCOMING\radarr\*.avi"
+
         <#
         # Lo paso por filebot
         & $filebot -rename "$new_filename2" -non-strict --encoding UTF-8 --conflict auto --db TheMovieDB --lang es --format "{n.replace(':',' -') }"
