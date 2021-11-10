@@ -74,7 +74,7 @@ $directorios | foreach-object {
         $new_filename2 = $new_filename -replace "\[[\w*\s*-\.]*\]",""
 
 
-        REM Renombro los ficheros
+        # Renombro los ficheros
         & "c:\Program Files (x86)\ReNamer\ReNamer.exe" /rename "PELICULAS" "D:\PUBLIC\INCOMING\radarr\*.mkv"
         & "c:\Program Files (x86)\ReNamer\ReNamer.exe" /rename "PELICULAS" "D:\PUBLIC\INCOMING\radarr\*.avi"
 
