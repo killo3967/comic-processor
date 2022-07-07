@@ -1,0 +1,894 @@
+**********************
+PowerShell transcript start
+Start time: 20220511232518
+Username: SERVER\server
+RunAs User: SERVER\server
+Configuration Name: 
+Machine: SERVER (Microsoft Windows NT 10.0.19044.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -NoProfile -ExecutionPolicy Bypass -Command Import-Module 'c:\Users\server\.vscode\extensions\ms-vscode.powershell-2022.5.1\modules\PowerShellEditorServices\PowerShellEditorServices.psd1'; Start-EditorServices -HostName 'Visual Studio Code Host' -HostProfileId 'Microsoft.VSCode' -HostVersion '2022.5.1' -AdditionalModules @('PowerShellEditorServices.VSCode') -BundledModulesPath 'c:\Users\server\.vscode\extensions\ms-vscode.powershell-2022.5.1\modules' -EnableConsoleRepl -StartupBanner '=====> PowerShell Integrated Console v2022.5.1 <=====
+' -LogLevel 'Normal' -LogPath 'c:\Users\server\.vscode\extensions\ms-vscode.powershell-2022.5.1\logs\1652270293-98f172f1-6088-4312-bffb-82734603e11e1652270288611\EditorServices.log' -SessionDetailsPath 'c:\Users\server\.vscode\extensions\ms-vscode.powershell-2022.5.1\sessions\PSES-VSCode-2204-603550' -FeatureFlags @() 
+Process ID: 6328
+PSVersion: 7.2.3
+PSEdition: Core
+GitCommitId: 7.2.3
+OS: Microsoft Windows 10.0.19044
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.10032.0, 6.0.0, 6.1.0, 6.2.0, 7.0.0, 7.1.0, 7.2.3
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is C:\scripts\convierte\log\_2022_05_11_11_25_18.log
+#####################################################################################################
+#### PROCESANDO NUEVA SERIE: Godshaper
+#####################################################################################################
+PASO 0.5 -  MUEVO TODOS LOS COMIS AL DIRECTORIO RAIZ DE LA SERIE
+
+Get-ChildItem: C:\scripts\convierte\comic-convert.ps1:69:5
+Line |
+  69 |      Get-childitem -path $series_dir -Include *.cbr, *.cbz -file -recu …
+     |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Cannot find path 'D:\PUBLIC\JDOWNLOADER\PRUEBAS\Godshaper (BOOM! Studios)(2017)(comics 5 de 6)\Godshaper (BOOM! Studios)(2017)(comics 5 de 6)' because it does not exist.
+
+Get-ChildItem: C:\scripts\convierte\comic-convert.ps1:69:5
+Line |
+  69 |      Get-childitem -path $series_dir -Include *.cbr, *.cbz -file -recu …
+     |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Cannot find path 'D:\PUBLIC\JDOWNLOADER\PRUEBAS\Godshaper (BOOM! Studios)(2017)(comics 5 de 6)\Godshaper (BOOM! Studios)(2017)(comics 5 de 6)' because it does
+     | not exist.
+
+PASO 0.6 - BORRO TODOS LOS DIRECTORIOS RECURSIVAMENTE
+PAS0 0.7 - LIMPIO EL NOMBRE DEL COMIC
+
+Get-ChildItem: C:\scripts\convierte\comic-convert.ps1:85:21
+Line |
+  85 |  … ta_comics = get-childitem -path $_.fullname -Include *.cbr, *.cbz -fi …
+     |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Cannot find path 'D:\PUBLIC\JDOWNLOADER\PRUEBAS\Godshaper (BOOM! Studios)(2017)(comics 5 de 6)\Godshaper (BOOM! Studios)(2017)(comics 5 de 6)' because it does not exist.
+
+Get-ChildItem: C:\scripts\convierte\comic-convert.ps1:85:21
+Line |
+  85 |  … ta_comics = get-childitem -path $_.fullname -Include *.cbr, *.cbz -fi …
+     |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Cannot find path 'D:\PUBLIC\JDOWNLOADER\PRUEBAS\Godshaper (BOOM! Studios)(2017)(comics 5 de 6)\Godshaper (BOOM! Studios)(2017)(comics 5 de 6)' because it does
+     | not exist.
+
+NADA QUE PROCESAR
+**********************
+Command start time: 20220511232521
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="magick"
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Application     magick.exe                                         0.0.0.0    C:\Program Files\ImageMagick-7.0.11-Q16-HDRI\magick.exe
+
+**********************
+Command start time: 20220511232521
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="rename-item"
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Rename-Item                                        7.0.0.0    Microsoft.PowerShell.Management
+
+**********************
+Command start time: 20220511232521
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="@"
+**********************
+Command start time: 20220511232521
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="@"
+**********************
+Command start time: 20220511234616
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="start-sleep"
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Start-Sleep                                        7.0.0.0    Microsoft.PowerShell.Utility
+
+**********************
+Command start time: 20220511234616
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Help): "Get-Help"
+>> ParameterBinding(Get-Help): name="Name"; value="Start-Sleep"
+>> ParameterBinding(Get-Help): name="Online"; value="False"
+>> ParameterBinding(Get-Help): name="ErrorAction"; value="Ignore"
+
+NAME
+    Start-Sleep
+
+SYNTAX
+    Start-Sleep [-Seconds] <double> [<CommonParameters>]
+
+    Start-Sleep -Milliseconds <int> [<CommonParameters>]
+
+
+ALIASES
+    sleep
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+        -- To view the Help topic for this cmdlet online, type: "Get-Help Start-Sleep -Online" or
+           go to https://go.microsoft.com/fwlink/?LinkID=2097041.
+
+
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> . "c:\scripts\convierte\comic-convert.ps1"
+PATH DEL SCRIPT =
+C:\scripts\convierte
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234659
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234700
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234700
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234723
+**********************
+PS C:\scripts\convierte> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+**********************
+Command start time: 20220511234725
+**********************
+PS C:\scripts\convierte> . "c:\scripts\convierte\comic-convert.ps1"
+PATH DEL SCRIPT =
+C:\scripts\convierte
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234726
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234757
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220511234805
+**********************
+PS C:\scripts\convierte> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+**********************
+Command start time: 20220511234844
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="start-transcript"
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Start-Transcript                                   7.0.0.0    Microsoft.PowerShell.Host
+
+**********************
+Command start time: 20220511234844
+**********************
+PS C:\scripts\convierte> CommandInvocation(Get-Help): "Get-Help"
+>> ParameterBinding(Get-Help): name="Name"; value="Start-Transcript"
+>> ParameterBinding(Get-Help): name="Online"; value="False"
+>> ParameterBinding(Get-Help): name="ErrorAction"; value="Ignore"
+
+NAME
+    Start-Transcript
+
+SYNTAX
+    Start-Transcript [[-Path] <string>] [-Append] [-Force] [-NoClobber] [-IncludeInvocationHeader] [-UseMinimalHeader] [-WhatIf] [-Confirm] [<CommonParameters>]
+
+    Start-Transcript [[-LiteralPath] <string>] [-Append] [-Force] [-NoClobber] [-IncludeInvocationHeader] [-UseMinimalHeader] [-WhatIf] [-Confirm] [<CommonParameters>]
+
+    Start-Transcript [[-OutputDirectory] <string>] [-Append] [-Force] [-NoClobber] [-IncludeInvocationHeader] [-UseMinimalHeader] [-WhatIf] [-Confirm] [<CommonParameters>]
+
+
+ALIASES
+    None
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+        -- To view the Help topic for this cmdlet online, type: "Get-Help Start-Transcript -Online" or
+           go to https://go.microsoft.com/fwlink/?LinkID=2096485.
+
+

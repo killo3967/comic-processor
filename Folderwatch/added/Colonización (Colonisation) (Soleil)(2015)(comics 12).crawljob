@@ -1,0 +1,72 @@
+[
+{
+"extractPasswords": ["", ""],
+"downloadPassword": "",
+"enabled": "TRUE",
+"text": "https://mega.nz/#!fQsFASYI!sTg_FJGZjUYpMl47AaXeQNocLZV2PyF3rz1gm4JkvMs",
+"packageName": "Colonización (Colonisation) (Soleil)(2015)(comics 12)",
+"autoConfirm": "TRUE",
+"comment": "SuperUsefulComment",
+"autoStart": "TRUE",
+"extractAfterDownload": "TRUE",
+"forcedStart": "TRUE",
+"downloadFolder": "C:\\Folderwatch\\download\\Colonización (Colonisation) (Soleil)(2015)(comics 12)",
+"overwritePackagizerEnabled": true
+}
+,{
+"extractPasswords": ["", ""],
+"downloadPassword": "",
+"enabled": "TRUE",
+"text": "https://mega.nz/#!aQ0DAKwB!4jULZBFBUdDnTV8XuWLRqSrS5Fn91ffyVdNlHHlTe4A",
+"packageName": "Colonización (Colonisation) (Soleil)(2015)(comics 12)",
+"autoConfirm": "TRUE",
+"comment": "SuperUsefulComment",
+"autoStart": "TRUE",
+"extractAfterDownload": "TRUE",
+"forcedStart": "TRUE",
+"downloadFolder": "C:\\Folderwatch\\download\\Colonización (Colonisation) (Soleil)(2015)(comics 12)",
+"overwritePackagizerEnabled": true
+}
+,{
+"extractPasswords": ["", ""],
+"downloadPassword": "",
+"enabled": "TRUE",
+"text": "http://www.mediafire.com/file/ye7izw9r4cpwra5/Colonizaci%25C3%25B3n_-03-_El_%25C3%25A1rbol_matriz_-_%2528Filippi_-_Cucca%2529_%255BViaJaNDo-curt%255D%255BTM-CRG%255D.cbr/file",
+"packageName": "Colonización (Colonisation) (Soleil)(2015)(comics 12)",
+"autoConfirm": "TRUE",
+"comment": "SuperUsefulComment",
+"autoStart": "TRUE",
+"extractAfterDownload": "TRUE",
+"forcedStart": "TRUE",
+"downloadFolder": "C:\\Folderwatch\\download\\Colonización (Colonisation) (Soleil)(2015)(comics 12)",
+"overwritePackagizerEnabled": true
+}
+,{
+"extractPasswords": ["", ""],
+"downloadPassword": "",
+"enabled": "TRUE",
+"text": "http://www.mediafire.com/?01s1qcedf8p015b/",
+"packageName": "Colonización (Colonisation) (Soleil)(2015)(comics 12)",
+"autoConfirm": "TRUE",
+"comment": "SuperUsefulComment",
+"autoStart": "TRUE",
+"extractAfterDownload": "TRUE",
+"forcedStart": "TRUE",
+"downloadFolder": "C:\\Folderwatch\\download\\Colonización (Colonisation) (Soleil)(2015)(comics 12)",
+"overwritePackagizerEnabled": true
+}
+,{
+"extractPasswords": ["", ""],
+"downloadPassword": "",
+"enabled": "TRUE",
+"text": "https://www.mediafire.com/file/8ijo83m0tv5e5hh/",
+"packageName": "Colonización (Colonisation) (Soleil)(2015)(comics 12)",
+"autoConfirm": "TRUE",
+"comment": "SuperUsefulComment",
+"autoStart": "TRUE",
+"extractAfterDownload": "TRUE",
+"forcedStart": "TRUE",
+"downloadFolder": "C:\\Folderwatch\\download\\Colonización (Colonisation) (Soleil)(2015)(comics 12)",
+"overwritePackagizerEnabled": true
+}
+]

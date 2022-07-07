@@ -1,0 +1,16 @@
+[
+{
+"extractPasswords": ["", ""],
+"downloadPassword": "",
+"enabled": "TRUE",
+"text": "https://www.mediafire.com/file/8ivkwwzaaer7etu/",
+"packageName": "Insecto (Norma)(2019)(comics 1)",
+"autoConfirm": "TRUE",
+"comment": "SuperUsefulComment",
+"autoStart": "TRUE",
+"extractAfterDownload": "TRUE",
+"forcedStart": "TRUE",
+"downloadFolder": "C:\\Folderwatch\\download\\Insecto (Norma)(2019)(comics 1)",
+"overwritePackagizerEnabled": true
+}
+]

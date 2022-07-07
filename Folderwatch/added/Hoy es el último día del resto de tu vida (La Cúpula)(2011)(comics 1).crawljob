@@ -1,0 +1,16 @@
+[
+{
+"extractPasswords": ["", ""],
+"downloadPassword": "",
+"enabled": "TRUE",
+"text": "https://www.mediafire.com/file/lz5pwxhaewobtzs/",
+"packageName": "Hoy es el último día del resto de tu vida (La Cúpula)(2011)(comics 1)",
+"autoConfirm": "TRUE",
+"comment": "SuperUsefulComment",
+"autoStart": "TRUE",
+"extractAfterDownload": "TRUE",
+"forcedStart": "TRUE",
+"downloadFolder": "C:\\Folderwatch\\download\\Hoy es el último día del resto de tu vida (La Cúpula)(2011)(comics 1)",
+"overwritePackagizerEnabled": true
+}
+]

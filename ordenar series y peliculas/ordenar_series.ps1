@@ -93,3 +93,7 @@ get-childitem $series_dir -recurse -include *.mkv,*.avi | foreach-object {
 
 
 # Remove-Item -literalpath $_.directory -Verbose -Recurse -ErrorAction SilentlyContinue
+
+# mando a sonarr reescanear las series
+$params = @{"name"="RescanSeries";"seriesId"="$sonarr_seriesid";} | ConvertTo-Json -Depth 100
+Invoke-WebRequest -Uri http://127.0.0.1:8989/api/command?apikey=SONARRAPIKEY -Method POST -Body $params

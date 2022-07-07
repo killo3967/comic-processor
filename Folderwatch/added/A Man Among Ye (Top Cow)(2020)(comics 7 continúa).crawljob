@@ -1,0 +1,100 @@
+[
+{
+"extractPasswords": ["", ""],
+"downloadPassword": "",
+"enabled": "TRUE",
+"text": "https://www.mediafire.com/file/n2kijhkmlt14ves/",
+"packageName": "A Man Among Ye (Top Cow)(2020)(comics 7 continúa)",
+"autoConfirm": "TRUE",
+"comment": "SuperUsefulComment",
+"autoStart": "TRUE",
+"extractAfterDownload": "TRUE",
+"forcedStart": "TRUE",
+"downloadFolder": "C:\\Folderwatch\\download\\A Man Among Ye (Top Cow)(2020)(comics 7 continúa)",
+"overwritePackagizerEnabled": true
+}
+,{
+"extractPasswords": ["", ""],
+"downloadPassword": "",
+"enabled": "TRUE",
+"text": "http://www.mediafire.com/file/sd0nu4mesj79f4j/",
+"packageName": "A Man Among Ye (Top Cow)(2020)(comics 7 continúa)",
+"autoConfirm": "TRUE",
+"comment": "SuperUsefulComment",
+"autoStart": "TRUE",
+"extractAfterDownload": "TRUE",
+"forcedStart": "TRUE",
+"downloadFolder": "C:\\Folderwatch\\download\\A Man Among Ye (Top Cow)(2020)(comics 7 continúa)",
+"overwritePackagizerEnabled": true
+}
+,{
+"extractPasswords": ["", ""],
+"downloadPassword": "",
+"enabled": "TRUE",
+"text": "http://www.mediafire.com/file/lcpbgss076lk3dw/",
+"packageName": "A Man Among Ye (Top Cow)(2020)(comics 7 continúa)",
+"autoConfirm": "TRUE",
+"comment": "SuperUsefulComment",
+"autoStart": "TRUE",
+"extractAfterDownload": "TRUE",
+"forcedStart": "TRUE",
+"downloadFolder": "C:\\Folderwatch\\download\\A Man Among Ye (Top Cow)(2020)(comics 7 continúa)",
+"overwritePackagizerEnabled": true
+}
+,{
+"extractPasswords": ["", ""],
+"downloadPassword": "",
+"enabled": "TRUE",
+"text": "https://www.mediafire.com/file/16r17c19r4dyce1/",
+"packageName": "A Man Among Ye (Top Cow)(2020)(comics 7 continúa)",
+"autoConfirm": "TRUE",
+"comment": "SuperUsefulComment",
+"autoStart": "TRUE",
+"extractAfterDownload": "TRUE",
+"forcedStart": "TRUE",
+"downloadFolder": "C:\\Folderwatch\\download\\A Man Among Ye (Top Cow)(2020)(comics 7 continúa)",
+"overwritePackagizerEnabled": true
+}
+,{
+"extractPasswords": ["", ""],
+"downloadPassword": "",
+"enabled": "TRUE",
+"text": "https://www.mediafire.com/file/thtmcv4u1f311lw/",
+"packageName": "A Man Among Ye (Top Cow)(2020)(comics 7 continúa)",
+"autoConfirm": "TRUE",
+"comment": "SuperUsefulComment",
+"autoStart": "TRUE",
+"extractAfterDownload": "TRUE",
+"forcedStart": "TRUE",
+"downloadFolder": "C:\\Folderwatch\\download\\A Man Among Ye (Top Cow)(2020)(comics 7 continúa)",
+"overwritePackagizerEnabled": true
+}
+,{
+"extractPasswords": ["", ""],
+"downloadPassword": "",
+"enabled": "TRUE",
+"text": "https://www.mediafire.com/file/6wm8g9agfdrwzsz/",
+"packageName": "A Man Among Ye (Top Cow)(2020)(comics 7 continúa)",
+"autoConfirm": "TRUE",
+"comment": "SuperUsefulComment",
+"autoStart": "TRUE",
+"extractAfterDownload": "TRUE",
+"forcedStart": "TRUE",
+"downloadFolder": "C:\\Folderwatch\\download\\A Man Among Ye (Top Cow)(2020)(comics 7 continúa)",
+"overwritePackagizerEnabled": true
+}
+,{
+"extractPasswords": ["", ""],
+"downloadPassword": "",
+"enabled": "TRUE",
+"text": "https://www.mediafire.com/file/akoipc1qgmh75hf/",
+"packageName": "A Man Among Ye (Top Cow)(2020)(comics 7 continúa)",
+"autoConfirm": "TRUE",
+"comment": "SuperUsefulComment",
+"autoStart": "TRUE",
+"extractAfterDownload": "TRUE",
+"forcedStart": "TRUE",
+"downloadFolder": "C:\\Folderwatch\\download\\A Man Among Ye (Top Cow)(2020)(comics 7 continúa)",
+"overwritePackagizerEnabled": true
+}
+]

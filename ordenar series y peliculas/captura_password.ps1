@@ -1,7 +1,7 @@
 # Sacamos la lista de directorios que hay en "D:\PUBLIC\INCOMING\tv-sonarr"
 clear-host
 
-$base_direcotry = 'D:\PUBLIC\INCOMING\tv-sonarr'
+$base_direcotry = 'D:\PUBLIC\INCOMING\radarr'
 $7z = 'C:\Program Files\7-Zip\7z.exe'
 
 get-childitem -literalpath "$base_direcotry" -recurse -directory | foreach-object {

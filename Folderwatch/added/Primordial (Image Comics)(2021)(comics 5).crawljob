@@ -1,0 +1,30 @@
+[
+{
+"extractPasswords": ["", ""],
+"downloadPassword": "",
+"enabled": "TRUE",
+"text": "https://mega.nz/file/nTRyALBT#mZVZjQ272Zu5RjT-havYU8p5PUmq8RL5T2FlleVme00",
+"packageName": "Primordial (Image Comics)(2021)(comics 5)",
+"autoConfirm": "TRUE",
+"comment": "SuperUsefulComment",
+"autoStart": "TRUE",
+"extractAfterDownload": "TRUE",
+"forcedStart": "TRUE",
+"downloadFolder": "C:\\Folderwatch\\download\\Primordial (Image Comics)(2021)(comics 5)",
+"overwritePackagizerEnabled": true
+}
+,{
+"extractPasswords": ["", ""],
+"downloadPassword": "",
+"enabled": "TRUE",
+"text": "https://mega.nz/file/ibZGjT6C#iNkZN_sGdObVhsVZurIoeBGVqWmf0jNvLgHW3TBOZhw",
+"packageName": "Primordial (Image Comics)(2021)(comics 5)",
+"autoConfirm": "TRUE",
+"comment": "SuperUsefulComment",
+"autoStart": "TRUE",
+"extractAfterDownload": "TRUE",
+"forcedStart": "TRUE",
+"downloadFolder": "C:\\Folderwatch\\download\\Primordial (Image Comics)(2021)(comics 5)",
+"overwritePackagizerEnabled": true
+}
+]

@@ -1,0 +1,16 @@
+[
+{
+"extractPasswords": ["", ""],
+"downloadPassword": "",
+"enabled": "TRUE",
+"text": "http://www.mediafire.com/file/2jw7p0cvq889lc3/",
+"packageName": "42 Agentes Intergalácticos (Soleil)(2006)(comics 5)",
+"autoConfirm": "TRUE",
+"comment": "SuperUsefulComment",
+"autoStart": "TRUE",
+"extractAfterDownload": "TRUE",
+"forcedStart": "TRUE",
+"downloadFolder": "C:\\Folderwatch\\download\\42 Agentes Intergalácticos (Soleil)(2006)(comics 5)",
+"overwritePackagizerEnabled": true
+}
+]

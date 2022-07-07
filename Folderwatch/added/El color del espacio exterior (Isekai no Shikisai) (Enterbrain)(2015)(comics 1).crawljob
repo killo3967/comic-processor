@@ -1,0 +1,16 @@
+[
+{
+"extractPasswords": ["", ""],
+"downloadPassword": "",
+"enabled": "TRUE",
+"text": "https://www.mediafire.com/file/v576x34dr87ssaj/",
+"packageName": "El color del espacio exterior (Isekai no Shikisai) (Enterbrain)(2015)(comics 1)",
+"autoConfirm": "TRUE",
+"comment": "SuperUsefulComment",
+"autoStart": "TRUE",
+"extractAfterDownload": "TRUE",
+"forcedStart": "TRUE",
+"downloadFolder": "C:\\Folderwatch\\download\\El color del espacio exterior (Isekai no Shikisai) (Enterbrain)(2015)(comics 1)",
+"overwritePackagizerEnabled": true
+}
+]

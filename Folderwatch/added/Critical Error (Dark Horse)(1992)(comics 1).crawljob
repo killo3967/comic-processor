@@ -1,0 +1,16 @@
+[
+{
+"extractPasswords": ["", ""],
+"downloadPassword": "",
+"enabled": "TRUE",
+"text": "https://www.mediafire.com/file/m3bldllw4sulfo4/",
+"packageName": "Critical Error (Dark Horse)(1992)(comics 1)",
+"autoConfirm": "TRUE",
+"comment": "SuperUsefulComment",
+"autoStart": "TRUE",
+"extractAfterDownload": "TRUE",
+"forcedStart": "TRUE",
+"downloadFolder": "C:\\Folderwatch\\download\\Critical Error (Dark Horse)(1992)(comics 1)",
+"overwritePackagizerEnabled": true
+}
+]

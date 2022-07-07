@@ -1,0 +1,16 @@
+[
+{
+"extractPasswords": ["", ""],
+"downloadPassword": "",
+"enabled": "TRUE",
+"text": "https://www.mediafire.com/file/yz9kljweed1ipkf/",
+"packageName": "Snow Angels (comiXology Originals)(2021)(comics 4 Primera Temporada + 4 Segunda Temporada)",
+"autoConfirm": "TRUE",
+"comment": "SuperUsefulComment",
+"autoStart": "TRUE",
+"extractAfterDownload": "TRUE",
+"forcedStart": "TRUE",
+"downloadFolder": "C:\\Folderwatch\\download\\Snow Angels (comiXology Originals)(2021)(comics 4 Primera Temporada + 4 Segunda Temporada)",
+"overwritePackagizerEnabled": true
+}
+]

@@ -1,0 +1,16 @@
+[
+{
+"extractPasswords": ["", ""],
+"downloadPassword": "",
+"enabled": "TRUE",
+"text": "https://www.mediafire.com/file/oecezmsd0rsh9po/",
+"packageName": "En soledad (Planeta)(2016)(comics 1)",
+"autoConfirm": "TRUE",
+"comment": "SuperUsefulComment",
+"autoStart": "TRUE",
+"extractAfterDownload": "TRUE",
+"forcedStart": "TRUE",
+"downloadFolder": "C:\\Folderwatch\\download\\En soledad (Planeta)(2016)(comics 1)",
+"overwritePackagizerEnabled": true
+}
+]

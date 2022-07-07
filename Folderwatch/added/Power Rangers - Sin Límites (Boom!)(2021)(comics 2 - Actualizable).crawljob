@@ -1,0 +1,30 @@
+[
+{
+"extractPasswords": ["", ""],
+"downloadPassword": "",
+"enabled": "TRUE",
+"text": "https://www.4shared.com/office/EDGcwNLhea",
+"packageName": "Power Rangers - Sin Límites (Boom!)(2021)(comics 2 - Actualizable)",
+"autoConfirm": "TRUE",
+"comment": "SuperUsefulComment",
+"autoStart": "TRUE",
+"extractAfterDownload": "TRUE",
+"forcedStart": "TRUE",
+"downloadFolder": "C:\\Folderwatch\\download\\Power Rangers - Sin Límites (Boom!)(2021)(comics 2 - Actualizable)",
+"overwritePackagizerEnabled": true
+}
+,{
+"extractPasswords": ["", ""],
+"downloadPassword": "",
+"enabled": "TRUE",
+"text": "https://www.4shared.com/s/fo6JPWwf7ea",
+"packageName": "Power Rangers - Sin Límites (Boom!)(2021)(comics 2 - Actualizable)",
+"autoConfirm": "TRUE",
+"comment": "SuperUsefulComment",
+"autoStart": "TRUE",
+"extractAfterDownload": "TRUE",
+"forcedStart": "TRUE",
+"downloadFolder": "C:\\Folderwatch\\download\\Power Rangers - Sin Límites (Boom!)(2021)(comics 2 - Actualizable)",
+"overwritePackagizerEnabled": true
+}
+]

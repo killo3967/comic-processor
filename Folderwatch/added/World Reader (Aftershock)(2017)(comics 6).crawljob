@@ -1,0 +1,16 @@
+[
+{
+"extractPasswords": ["", ""],
+"downloadPassword": "",
+"enabled": "TRUE",
+"text": "https://www.mediafire.com/file/gf7vq91rskfb5wr/",
+"packageName": "World Reader (Aftershock)(2017)(comics 6)",
+"autoConfirm": "TRUE",
+"comment": "SuperUsefulComment",
+"autoStart": "TRUE",
+"extractAfterDownload": "TRUE",
+"forcedStart": "TRUE",
+"downloadFolder": "C:\\Folderwatch\\download\\World Reader (Aftershock)(2017)(comics 6)",
+"overwritePackagizerEnabled": true
+}
+]

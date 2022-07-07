@@ -1,0 +1,16 @@
+[
+{
+"extractPasswords": ["", ""],
+"downloadPassword": "",
+"enabled": "TRUE",
+"text": "https://www.mediafire.com/file/k029q5stxp14a2f/",
+"packageName": "Backtrack (Oni Press)(2020)(comics 10)",
+"autoConfirm": "TRUE",
+"comment": "SuperUsefulComment",
+"autoStart": "TRUE",
+"extractAfterDownload": "TRUE",
+"forcedStart": "TRUE",
+"downloadFolder": "C:\\Folderwatch\\download\\Backtrack (Oni Press)(2020)(comics 10)",
+"overwritePackagizerEnabled": true
+}
+]
