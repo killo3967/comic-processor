@@ -1,14 +1,18 @@
-# La siguiente funcion trata de normalizar los nombres de los comics
-# Las regla son las siguientes:
-#   Estructura: <contador> <serie> <Vol. volumen> <#issue> . <extension>
-#   No todos los campos existiran. Algunas veces los campos contador y volumen no existen, pero series,issue y extension son obligatorios
-#   El problema es cuando el campo serie empieza por un nuemro y entonces en el nombre hay dos numeros consecutivos.
-#   Habra que ir extrayendo cada posible campo trozo a trozo
-#
-#
-# EN LA DOCUMENTACION DE COMICTAGGER (https://code.google.com/archive/p/comictagger/wikis/UserGuide.wiki#Search_vs._Auto-Identify_vs._Auto-Tag)
-# ESTA LAS SIGUIENTES INSTRUCCIONES:
 <#
+La siguiente funcion trata de normalizar los nombres de los comics
+Las regla son las siguientes:
+Estructura: <contador> <serie> <Vol. volumen> <#issue> . <extension>
+No todos los campos existiran. Algunas veces los campos contador y volumen no existen, pero series,issue y extension son obligatorios
+El problema es cuando el campo serie empieza por un nuemro y entonces en el nombre hay dos numeros consecutivos.
+Habra que ir extrayendo cada posible campo trozo a trozo
+
+
+EN LA DOCUMENTACION DE COMICTAGGER (
+    https://code.google.com/archive/p/comictagger/wikis/UserGuide.wiki#Search_vs._Auto-Identify_vs._Auto-Tag
+    https://github.com/comictagger/comictagger/wiki/UserGuide#general-geatures
+
+    ESTA LAS SIGUIENTES INSTRUCCIONES:
+
 Análisis de nombre de archivo
 Cuando se abre un archivo y no tiene etiquetas, ComicTagger intentará analizar el nombre del archivo para obtener información. 
 Generalmente, espera un formato similar a este:
@@ -65,59 +69,54 @@ formatos de nombres de fichero
 SERIES_NAME vVOLNUM #ISSUENUM (of COUNT) (PUBYEAR).ext
 SERIES_NAME (SERIESYEAR) #ISSUENUM (of COUNT) (PUBYEAR) - Nombre del archivo.ext <- Este es el mio
 
-
-
-##### guardo esto que parece que funciona con el directorio
 #>
-
-
-
-
-function identifica_comic {
-# the idea is to identify all parts of the filename and put them in the variables $serie, $volumen, $numero, $numero_de_edicion, $año, $extension
-Param (
-    [Parameter(Mandatory=$true)]
-    $ruta_fichero
-)
-
-    # Lo primero es identificar la serie a partir del nombre del directorio
-
-
-}
 
 function extraer_serie {
     Param (
     [Parameter(Mandatory=$true)]
     $ruta_fichero
-)
-    $dir_list[$i].name.split("(")[0].trim()
-
+    )
+    $series_directory = split-path -leaf $ruta_fichero
+    $series_directory = $series_directory -replace '(\[|\()[^\]\)]*(\]|\))' , ''
+    
+    return $series_directory
 }
+
+function extraer_serie_nombre_comic {
+    Param (
+    [Parameter(Mandatory=$true)]
+    $ruta_fichero
+    )
+    $series_directory = split-path -leaf $ruta_fichero
+    $series_name = $series_directory -replace '(\[|\()[^\]\)]*(\]|\))' , ''
+    
+    return $series_name 
+}
+
 function extraer_año {
-    # Uso la expresion de la variable global $cadena_año para extraer el año tanto en el directorio como en el comic 
     # Se extrae del directorio donde esta contenido el comic o desde el propio comic
     Param (
         [Parameter(Mandatory=$true)]
         $ruta_ficheros
     )
+    
     # Primero busco el año en el nombre del comic.  
-    $v_año = [regex]::match( $ruta_ficheros.name , $cadena_año )
+    $v_año = [regex]::match( $ruta_ficheros , $cadena_año )
     if ( $v_año.Success -eq $true) {
         # El grupo de captura es $4
         $v_año = $v_año.Groups[4].value
     } else {
         # Si no lo encuentro, busco en el directorio.
-        $v_año = [regex]::match( $ruta_ficheros.directory , $cadena_año )
+        $v_año = [regex]::match( $ruta_ficheros.directory.name , $cadena_año )
         if ( $v_año.Success -eq $true) {
             # El grupo de captura es $4
             $v_año = $v_año.Groups[4].value
         } else {
-            # Si no lo encuentro lo pongo a "0000" 
-            $v_año = "0000"
+            # Si no lo encuentro hago un OCR de las paginas iniciales y finales del comic para extraer el año. 
+            $v_año.clear
+            $v_año = escaner_ocr
         }
     }
-
-    # El 'grupo 1' $1 extrae el año y los parentesis
     Return $v_año
 }
 
@@ -127,57 +126,44 @@ function extraer_issue {
         $ruta_ficheros
         )
 
-    $issue = ($new_comic.tostring().split('#'))[1] -replace '(\d{1,3})(.*)' , '$1'
-    if ( $issue -eq 0 ) { $issue = 1 }
+    # Extraigo el nombre del comic
+    $comic_name = $ruta_ficheros.name
 
-    # cuento cuantos grupos de numeros hay en el comic que tengan menos de 3 digitos
-    $grupos_numeros = [regex]::match( $comic_name , '\d{1,3}').count
+    # Cuento cuantos grupos de numeros hay en el comic que tengan menos de 3 digitos
+    $grupos_numeros = [regex]::match( $comic_name , '\d{1,3}')
     
     # Si hay uno solo, entiendo que es el issue.
-    if ( $grupos_numeros -eq 1 ) {
-        $comic_name = $comic_name -replace '(\d{1,3})' , ' #$1 '
+    if ( $grupos_numeros.count -eq 1 ) {
+        # No hago nada ya que el numero buscado es el issue
     } else {
-        # Miro si hay un patron de numero con '#'
-        $issue = [regex]::match( $comic_name , '(\d{1,3})')
-        if ( $issue.count -eq 1 ) {
-            # Si encuentra un patron con #
-            $comic_name = $comic_name -replace '(\d{1,3})' , '#$1'
-        } else {
-            # o hay ningun numero con '#'
-            $comic_name = $comic_name -replace '(\d{1,3})' , '#1'
-        }
-    }
+        #! Cuidado aqui hay que ver porque hay dos o mas patrones menores de tres digitos
+        #! uno puede ser el numero al principio, el otro el issue y otro podria ser el numero de volumen.
+        #! Habria que extraer cada uno de ellos y ponerlos en una variable.
+        #! De momento lo formateo igualmente a la variable cadena_issue
+
+        # si hay varios debe ser el que sea < de 500. Si hay un año en el titulo se debe ignorar ese elemento.
+        # montamos un bucle para ver todas las soluciones y elegir la que mas correspoda
+        # Se podria buscar si tiene una almohadilla y seria ese. Si no tiene la almohadilla es un problema.
+
+        $comic_name = $comic_name -replace $cadena_issue , ' #$2 '
+    }       
+  
+    # Se extrae del numero del comic
+    $issue = [regex]::match( $comic_name , $cadena_issue )
     
+    $issue = [int]($issue.value -split '#')[1]
+    <#! DE MOMENTO LO FORMATERARE EN UN FUTURO CUANDO FALLE EL SCRAPPING o cuando no tenga #
     # El numero del comic debe tener 3 Digitos. Si no lo tiene, lo añado.
-    $issue = [regex]::match( $comic_name , '\#([0]*)\d{1,3}')
-    if ( $issue.sucess -eq $true) {
-            $new_issue = '#' + (($issue.value -split '#')[1]).padleft(3,'0')
-            $comic_name = $comic_name -replace $issue.value , $new_issue
-    } else {
-        $comic_name = $comic_name + "#001"
+    if ( $issue.Success -eq $true) {
+            $new_issue = (($issue.value -split '#')[1]).padleft(3,'0')
     }
+    #>
 
-    # Se extrae del numero del comic 
-    $issue = [regex]::match( $ruta_ficheros.name , '\#([0]*)\d{1,3}')
-    
-    # El numero del comic debe tener 3 Digitos. Si no lo tiene, lo añado.
-    if ( $issue.sucess -eq $true) {
-            $new_issue = '#' + (($issue.value -split '#')[1]).padleft(3,'0')
-            $comic_name = $comic_name -replace $issue.value , $new_issue
-    } else {
-        $comic_name = $comic_name + "#001"
-    }
-    return 
+    return $issue
 }
 
 
-function extraer_editorial {
 
-}
-
-function extraer_indice {
-
-}
 
 
 

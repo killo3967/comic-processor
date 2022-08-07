@@ -1,0 +1,721 @@
+<!DOCTYPE html> <html class="v2 dzblnitw idc0_341" dir=ltr style=height:100% lang=en><!--
+ Page saved with SingleFile 
+ url: http://blog.softwx.net/2015/01/optimizing-damerau-levenshtein_15.html 
+ saved date: Thu Jul 21 2022 11:12:40 GMT+0200 (hora de verano de Europa central)
+--><meta charset=utf-8>
+<style>:root{--sf-img-11: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAMAAABhq6zVAAAABGdBTUEAANbY1E9YMgAAAP9QTFRF2XIp3nIw4Xgx6IY16Yc1214q3WMr32ow4Gks4W40428u43I144BT5XMu5XY25noz53Yw6Hkw6Hs36X43634y64Ax64A564M57Ic+7Zpj7oUz7oY67oc67qZ974Y08Is78I1A8J1l8Yo08Yw88Y858ZVN8bGK8o888442848286Rm87aL9JI99JM99JxP9LyY9ZU79ZY+9pQ39ptE9qto95c495k/97J1+Jg4+LmB+MSa+MWa+atd+bFq+cea+ps5+rd2+rh2+r2D+uXY+506+6NG+65e+69f+7p3+7+D/MCD/erZ/e/l/fDm/fHm/ufO/vLm/vPm/vjy//nz////B9JuTQAAAAV0Uk5TMO/v7++mu2gOAAAAj0lEQVQIHQXBUQuCMBAA4N3ddjO11B5C+jVC//+t94iCCCQa6tJ5bn0fKGy0oYx1ugpiwRAJja06ggovanGTscb9qAYvtt4jumGhBtswxMK6r1818VnJPJbHp0fM7G2CcnlyIYK8y2GUw2tug6DmU769mR5N3NBYiX2vzEdpAd25wXsJMSaheM+2NSWlIKQ/2xpDTzPOPTwAAAAASUVORK5CYII=");--sf-img-10: url("data:image/gif;base64,R0lGODlhDQAKALMPAP///6+vr/j4+OHh4fr6+uzs7Nvb2+3t7dzc3Ojo6N3d3e7u7ubm5vf39/b29v///yH5BAEAAA8ALAAAAAANAAoAQAQ68D1AK5AYi5OOyMQxBAFAGshwEARpmQGzEJJQjOhQfBLxUo4GTZBwUU6KxMc2OqV2GaZCx8v0BLRMBAA7")}body{margin:0}.content-outer,.header-outer,.tabs-outer,.main-outer,.main-inner,.footer-outer,.post,.comments,.widget,.date-header{position:relative;min-height:0}.footer-outer{margin-bottom:-1px}.tabs-inner{padding:0 15px}.main-inner{padding:30px 0}.main-inner .column-left-inner,.main-inner .column-right-inner{padding:0 15px}.footer-inner{padding:30px 15px}.section{margin:0 15px}.widget{margin:30px 0}.section:first-child .widget:first-child{margin-top:0}.section:last-child .widget:last-child{margin-bottom:0}body .navbar{height:30px;padding:0;margin:0}body .navbar .Navbar{position:absolute;z-index:10;left:0;width:100%;margin:0;padding:0;background:none;border:none}.header-inner .section{margin:0}.header-inner .widget{margin-left:30px;margin-right:30px}.header-inner .Header{margin:0}.header-inner .Header #header-inner{overflow:hidden}.header-inner .Header .descriptionwrapper{margin-bottom:25px}.Header h1{margin-bottom:10px}.Header .description{margin:.5em 0 10px;padding:0 2px}a img{position:relative}h1,h2,h3{margin:0;position:relative}h1 a:hover{text-decoration:none}.widget{line-height:1.4}.widget ul{line-height:1.2}.widget li{padding:.25em 0}.post-body{width:100%}.post-footer-line>*{margin-right:1em}.post-footer-line>*:last-child{margin-right:0}.post-timestamp{margin-left:-1em}.post-footer-line>*:first-child{margin-left:0}.Profile .profile-datablock{margin:0 0 .5em}dt{font-weight:bold}table.section-columns td.first.columns-cell{border-left:none}.content{position:relative;word-wrap:break-word}.content-outer,.region-inner{min-height:0;margin:0 auto}.columns-inner{min-height:0}.column-center-outer,.column-left-outer,.column-right-outer{position:relative;float:left}.column-center-outer{width:100%}.fauxcolumns{position:relative}.fauxcolumn-outer{position:absolute;top:0;bottom:0;overflow:hidden}.fauxcolumn-outer .fauxborder-left,.fauxcolumn-outer .fauxborder-right,.fauxcolumn-inner{height:100%}.fauxcolumn-left-outer{left:0}.fauxcolumn-right-outer{right:0}.cap-top,.cap-bottom{position:relative;height:0;background-repeat:repeat-x}.cap-top .cap-left,.cap-top .cap-right,.cap-bottom .cap-left,.cap-bottom .cap-right{height:100%;background-repeat:no-repeat}.cap-top,.cap-top .cap-left{background-position:top left}.cap-bottom,.cap-bottom .cap-left{background-position:bottom left}.cap-top .cap-left,.cap-bottom .cap-left{float:left}.cap-top .cap-right{background-position:top right;float:right}.cap-bottom .cap-right{background-position:bottom right;float:right}.fauxborder-left{background-position:top left;background-repeat:repeat-y;position:relative}.fauxborder-right{background-position:top right;background-repeat:repeat-y;position:absolute;right:0;height:100%}table.section-columns{border:none;table-layout:fixed;width:100%;position:relative}table.columns-2 td.columns-cell{width:50%}table.section-columns td.columns-cell{vertical-align:top}.body-fauxcolumns,.content-fauxcolumns{position:absolute;top:0;left:0;z-index:-1;height:100%;width:100%;overflow:hidden}.body-fauxcolumns .fauxcolumn-outer{width:100%}.content-fauxcolumns .fauxcolumn-outer{position:relative;overflow:visible;height:100%;margin:0 auto}aside,header,footer{display:block}div.clear{clear:both}#navbar-iframe{display:block;height:30px}.profile-data{margin:0}.profile-name-link{background:no-repeat left top;box-sizing:border-box;display:inline-block;max-width:100%;min-height:20px;padding-left:20px}.profile-textblock{margin:.5em 0}body{overflow-wrap:break-word;word-break:break-word;word-wrap:break-word}.widget.Subscribe{position:static}.subscribe{color:#999}.subscribe-wrapper{margin:.5em;padding:0;position:relative}div.subscribe{cursor:pointer;margin:0;padding:0;text-align:left;width:144px}div.subscribe div.top{font-size:1em;padding:4px 0 1px;width:144px}html>body div.subscribe div.top{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAAGQBAMAAACzH/Q/AAAAMFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkJCTg4ODh4eH7+/v8/Pz///8hEP7MAAAAD3RSTlMABBQiIyYnKCkqK5aZ6O1Hd1dgAAAAv0lEQVR42u3TwRGCMBRF0fArCOxYilZgCfZAYWzpAKuzA+3A1Vs4eG4BZyYvSQ3XNdC917w/Ax1bTY8W6HappUVaasxAY7VQIBAIBAKBQCAQCAQCgUCgBNQzzpCDfu9oJ741XwQE+gq9Ms7b2P89tndkbBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQ6N/QBxmRSL1QjElcAAAAASUVORK5CYII=)top left no-repeat}span.inner{padding:0}div.subscribe div.top span.inner{margin:0 5px}.feed-icon{vertical-align:baseline;display:inline}div.subscribe div.bottom{font-size:3px;height:3px;line-height:0}.subscribe-wrapper .expanded{position:absolute;top:0;z-index:20}html>body div.subscribe div.bottom{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAAADBAMAAACOmptmAAAALVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAkJCTh4eHj4+Pk5OT7+/v8/Pz9/f3///+jj1vZAAAADHRSTlMABAUUFSImK5mbnuu6xDmCAAAAIklEQVQIHWOweHuGcnD23hQG8dXvqAB2FTEwuaZRAYQoAAA1TZXCCL/A+AAAAABJRU5ErkJggg==)bottom left no-repeat;margin-bottom:0;padding-bottom:0;width:144px}.subscribe-dropdown-arrow{float:right;margin-right:6px;margin-top:4px}.Translate .goog-te-gadget a:link.goog-logo-link{font-size:12px;font-weight:bold;color:#444;text-decoration:none}.Translate .goog-te-combo{background-color:#f5f5f5;color:#444;border:1px solid #dcdcdc;padding:6px;font-family:Arial,Helvetica,sans-serif}#ArchiveList .toggle{cursor:pointer;font-family:Arial,sans-serif}#ArchiveList .toggle-open{line-height:.6em}#ArchiveList{text-align:left}#ArchiveList a.post-count-link,#ArchiveList a.post-count-link:link,#ArchiveList a.post-count-link:visited{text-decoration:none}#ArchiveList a.toggle,#ArchiveList a.toggle:link,#ArchiveList a.toggle:visited,#ArchiveList a.toggle:hover{color:inherit;text-decoration:none}.BlogArchive #ArchiveList ul li{background:none;list-style:none;list-style-image:none;list-style-position:outside;border-width:0;padding-left:15px;text-indent:-15px;margin:.25em 0;background-image:none}.BlogArchive #ArchiveList ul ul li{padding-left:1.2em}.BlogArchive #ArchiveList ul{margin:0;padding:0;list-style:none;list-style-image:none;border-width:0}.BlogArchive #ArchiveList ul.posts li{padding-left:1.3em}.post-footer abbr{border:none}#blog-pager-newer-link{float:left}#blog-pager-older-link{float:right}#blog-pager{margin:1em 0;text-align:center;overflow:hidden}.comments{clear:both;margin-top:10px;margin-bottom:0}.post-share-buttons{margin-top:.5em;vertical-align:middle}.share-button{width:20px;height:20px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAA8CAYAAACtrX6oAAATn0lEQVRo3u2bCXSUVZbHMz19bLvtVjw9PdPHmZ4ZbbVPN922SDsgiuiALXpkFHHOtOPSLqiI7C7sEpAAYZEEJKyySiAIYQlJCHswIWwhSSUkqSSVkH0DErIntfzn/V/xii+VfPVVlQI2U3XO/9S33nrv/d69931Vt4KCxOvAgQMI6OZTkILb3t7+nUgZDtj7/tgLAA4A9r+BjY2NiI+PR3R0NHbs2NFF2uPbt2/H3r17UVFR4VWHGxoa0Nzc/K3ax89cuXKl1IoVK7Bq1SrXNt/VvlZff/21V+1j3/Pz85GcnIy4uDjs3r1b6sSJEygvL/cL8IULF3Du3Dl88803Uty+ePHijQNMYGvXrsXGjRtdWr9+vUsbNmzodG7dunWIjIw07HBNTQ3OnDmDs2fPStD+ts8dXnfSQlbgjdpXVVWFpKQk7N+/H4cOHZITeevWrYiKisKmTZukzcTERK8Bt7S04NSpU3IsFy9e3EmrV6+W53iNIWAOclhYGLZt2ya9w2azdbqhra0NVqtVat++fViyZAmWLVvm0UO08GiX0GNiYqS++uqrLpB5zKjDhYWF0hOosrIyvwFzoLvzUgWW3soJZLfbpdRxT+0jXEI9fPiwBMvrOU4LFixAeHg4Fi5ciC+//FIe4zVGgAmOE4VcCJQThfdxAsXGxspJx+O8xh1yF8BLly7F7NmzMWPGDHkj3d/hcHRSR0eHBPXpp58iJCRESq+BDL0KbkJCApqamjrZoidyEOnNvgAuKirCyZMnpQib4ZC2+U5xInrrwd2FY3VMC5dS13hqHwee3skxmjVrFr744gvs2rVLTuw1a9bIcZs5c6b8DMLOyMjwaO/06dMSYEREBNLS0tDa2irbdfnyZemAnOCMCryG13oETCNz586VYZKN4KzjYCogtbW1WL58uWwkQXBWeQJMD6aHsrNsGG1woDhJlE0C8hcwO6RCtRL3ORCXLl3yyoO1XqvA8p1SYNVxJT17eXl5cp+5lnDpwYRBR6FnU2zjpEmT5PjOnz9fOoGePd7HsEzPz8zMlEAZtXiMk4V5mMfOnz8v2fG4tt8uwDxI0YMJjJ7FuK68ND09XQ4qgfMY72EIJ2B6vLpfNVDt0zvpvQzHarCOHDkicxEbzH0OAMOOysucjXr2lCwWi+woAVNsK/cJndtc2PAa9/vc7TG9eBIjAeV+XM8evZeRihOHnksvo4cRACcy28R3evPbb78tryEYPXv0bk4CjiPDL0N/aGionHBkwW32med4Da81mUyd7HUCzLxAoFzlcfCzs7Mxb948ORspwuQM5DmGxM8//9wrwHv27HEBZghlJKBHa48dO3ZMXksPNgKscjDhpqamdvJgihOSg+svYAXWXUaAuVpmOKbH7dy5U6566Rhsb0FBAcxms1xZHz9+HBMnTnRFST17zLWExgnLiUKHYt6tq6vD0aNHJRtGAALmmojA6UC6gFUOpjE1+JxFzBX8IA6oFgqPf/bZZz4B1hPDKkOMNx7MAVM5mAPIDjKicNKpRyf3e7wBTI/SAlRgGSrV9bxGzx7hMhoRGkHwkY9gKYbv3Nxc6TQEzHXOlClT5Bjq2Tt48KAcd0YGOh0/mymI/SVIAuZncp9RkoB5TxfA7AClQjSNMXQWFxfLDvJinufqmfC5T8DM12ykul81UO0z93YXopmjCJ2zjkB4nJ7I1SUB69lTUiGagEtLS7uc15O7PQWU71q5e7L7eT17HGzmXXowcyRzrvJcwlWAueIdMWKEhMsx17PHSU/AjGoMvbTJycGJs2jRIgmY48CJzfWLCtlaexIwB4liCKBH0jDDCxdDTOLuYohlqOG1EyZMcN2vGqj2OZvplQStbPHeyspKKQ6AOs77FGA9e0r04JSUFNm5rKwsORndr+lO7vYIgn12f1fbHDiK29pzevY4uMqDuVZhqmBb6b0ES3FsOUk++OADFzw9e8zdHBNGVRVFuXbhGHJMmQYIkusOOiZTZk5OTid7nQCrHEx49FYOfnfiOcKZPn26IWAunAiZMLqbLBTDLMGqL0WMALNTKkRT9H7OcIqDSujMwd4C1kLV7ivA2vOUnj16FvvBqMUQTAfgwog5lJ5Hz1VwOQl4nithPXuMpFxTKMdjVOFY8TjFcWAKJTdOAqYFHtcFHBwcjKlTp8pBogcrT9NKLfc5KydPnoxx48YZAmaHCY+rR8425hElXk+oPK8el4wAUwzTyosJmdtKHFCGRiPAXMFyRU/RI9S2kgKsPcd7PLWPz8D8domPU3SAMWPGyHeKYXnkyJEuuNq+6tnjWHMS0Hu3bNni+u6AK2l6P20RLsea8N3tBekNoD9ybyAbwhBDwBS3uxPhqkngLWAlei8njfJmbnMxyIExah89QguX71qYCrAWuhFgiusM5laGTHosYaoFFfOkgss1jhFgBVl9gVJSUiInD20QLL2bj2YM593195oCZqjnlybaryIp968nGdbUMQLzBTBVX18vI45Sd+G5O3v8XG3o1ebi7rYpb9YIFNMFF5OEob5mJPTNmzfLR0Jv2qcVQy9TALcZ9hmOGb04xtqwfF0BB+zdeHsBwDc74EDJzk1essMXv/wO6OaTC+539YO/Mhyw9/2xFwAcAOx/Azsqc4DQJ4Cxdwr18KzRQjMfgjV9r1cdLmoFytrxrdr35uTtePTlFT6J93jTvtbqRlTtK0ThvNPIHH8AqaPicfKjOBSsPIOLWZV+AW7ML0DFV1EomDITBZNnomLzNjQWWG4cYMe8fsCrQcC7V/SW0F+v6A2h4Zpz7145PuY2ww6n1AEfZtkwNduG/Bb43T5f4SoZte9yRg0sc04iZ8JRmD9Jwul3Y5H8xk4cf2sXjr66DXH/vR6mFcneA25owPn5YUi6tzfign4i9CPEB92K2KAf4tivHsD50DC0NzYaAy54/XXkPf44aj7+GPaGS3DYO2Bra4S9rUm8Nzm3rW2w21pR+8VC5P/nAOQPHqzbQOmZWngTfwUsehRY8Ijw7D7AqJ8Ab2oAvyM08hbDDm8uB97PsGGkUEKN45oBfmPS16i91AT18gYw4eZ8egz5k5JxRoDdN2w9ol9chsj/WozoIcuxbdAS7P+fTdg9eCVMYccMAbddvozsd8bgwN/9AglBd+LUI4ORO3YK8qeFwPTyezj6D/djf9DPkT18tJwIHgHnvfAC8h7pg+zf/RYl77yD9upKuL8c7a2oDg7GuZ6/R26/fjAL6QIe08MF1x4xDI7L1RpLdjhKM4Bp912FTMAf3GoIeEuFmBsmG8Zk2rC1zIZi4cXFbUCReC8UumDFdwJYC9dbwIVzTsEyNQUn3tyFtU+FYOuH4Ti8PgrHtu5A9KzliBg6Hev6zkXsC2sRJWBbYrI82ju/IFwCPHzHPShdthq2pkZ01FSjvdLJpj7lBI7/4TEJn9d6BGweOhQFA59E1bSpyHngj8h/7hm0Z5lcHWyvKEbh228i+/7foGbyZBQPG4bcvn09e/BbTs91tFx2ThD+LsxzDodz3xTjBDzcN8CjBWCG6Y/P2TAp+6o+EfvTc2xIb8S3BuwO1ghwVXwhcj9KxNn390m4BzduQZOtAg3NJbhUb8HFhnzkpCUh7NmJWPvYHEQ9EY5jU/bo2msqLBJh+U848MNfomL9ZmcN29zFSLqntwzN+ZNmyWOXDifiSI97xPGHxD3nuwJWFQC5woPzBwyAtbwc9fGxOPdQb+T3exRNR4+gLSsLlmefQVbPnqhbvw5oakbpSy8hp08f1/2qgWrfMfYOZ65d9JgTJv120wjYJz4Ax7FVzmP1NXB8chfw9lXAevaUtIDHZzk9WavhaTYZxt3vc7fnL2A9e5a5p5A94QgSXlwvPbfZVoba6jxUlmWjojQT5SUmlJVnInHbdsz65xHY/dxq7Hlpja69iq3RMt+mPf+qGCix3pg8C/uCfopv7n4QB/7+lyIP/xglXzjHMf3510ROvgWV4h6tvS6AmYPbLRZ5U8OpE8gbNAi5vXvD3LcPzI89hvpDB+Q5m0jqhS++iNw+fY0BM+fC5hytekGn0gy0NlyNfQ0idEe+D7zuG+AJAu5k4bXBuTbMuCJ6b0ieHbkt/gPWexkBzhx/EKkj4rBj6DIcWhclPLdYwD0n4ZYVZ6C4MA0lJRlISz6E8EETZaiOGrhEf8JM/UwA/RmKFi5FU3YODv/s30Q+Hg9rnTgXPA97g4KQ/uJfZdtyRk8Sk+FWFE4PMQbcVlDg6lTr0cMoGjIElqf/jNa4vYyx8jiTv3nYUOQ83Ns3wHqvQ6HAa94DVjk4utKOug4HatscqLmiRhu6rcnyFjBzrzb/qn0jwKmj4pD85k5EDlkscm40LlzKE2BNEm6JgHvechYFBWdw9vghRLw0HSsfnIGop5bq2iuYOMMJeF4YmnNykfiL36Bs9SbZJsuMOYgRgE3/O0LuZ701VgLO+2RGV8CqhkcCFiG6vbAQjku16DBnwdHWCqtI6h1VYlRtHbDm58JRXYE24cGm559HUq9ervtVA9W+Y0zXEO3Y9J5YQT8poAtFvCBC/UXnKB6Y6wKsZ08p8gpgenFCjd3rmix3e/6GaD17Jz+Ow+n3YhH9XAR2igXVBZFzlecSrgRsSUVyTAzm3DcK2wYuRfTQlbr2ysUzb7x4LDr9+BBUi7B+vOejKP48Ai35+Tj443/BHgG4ZOlKEb2tYnX9jHyEKo74spM9CVj9+pD7vMjB/fuj5ch+2KpEErN353UO2AXs1oxUpD/zLOIfeNh1v2qg2rePud25yJr+azE52p23V+aKJe9Zp8rEAk40Tr7WvuoCrGdPaWfVVQ8Ot9hR2Qqvfl1xt+cvYD17BatSpQdvHRSOZWK1bM44LnNucXG69NyCwjPINh1H5KTFmH/fWGwdEI6Do6J07dUKkKf6DRYr5B44cufdOPTTf8WFhEOwicch08vv4tzwcbC3NKNiUxQO/OAfkfhPv0VFckone50Am4UHWx7vj2ZTpgyoVhvlcJM4Js61lJchZcAgY8BXHpMcMcH64TlnnyB2h3MyeAE4W0TPCQLuOKHxmczBdiwssGOBUGi+HUsE9KI2XHfAFzOrcOQ1Mdgvb8aXD4dg1V9m4kRcLM4mHZRhmZ4bOXkxQu8fJ3Pvxr7zkbkmRdeeLJPavhuJd/1e5NsfIOm+P8lc3FZWjraSEgm3JjYB3/x7LxHKb0fOhCnyHl3AZ58YiNTefVGZkozai9WoqSjtqspSVFeVoTQ7A4n9/4z4ng/pAx51+9XnW66Sw54C4mYC+0OAhNnifQ4c9NxRtznhyi86fmQIWJYDVThcXkyNNl3V8HQbtpQbA37qrbUYPXuvrtRLe4z3eGqfaWUy9g/diLhh67H6P2Zh4R/GI2LIdCwbNhVz7h2F0HvHXoEbiv0jtuLy+Yse7THUcqV8+Pa7kTH0dVi5mHv1XaT8cQDSnvmLeDz6tfTwjGGvocps7tLfIL0B9EfuDXRMvce5Mn7nynMut1/rRuoRSXrwLV4BpvbVAjOF9/JxSWn8lWfjE/U3BrCEHJ6EXc+txI6By7BHPApt6BcqFlTBiBq0FFsGhEnPTRBwq9I8t08LuThijci/y9BcYEHKg0/I/MvHosS7eiJvymeo7qbI8JoDbkrdI2KpeMYdeasMvR7Fa96/DW27g70G7Eot4pEos1GsJBud78Vt8Kp9/v7Y4E37CveeQ8r0OMS8sg7bn1uO7YMj5ILq4KhtMK05joaSOsP2acXQW1ddjcai8ygKWYS88VNQuvYrVKWe7RSWryvggL0bby8A+GYHHCjZuclLdgKA/x/UZAVCYCAHBwYwALhrAy/lnYZ93gDYx/SQ32p51Cih4F5oOrnDqw6rmqxv075r+Zgka7LiLbDMPQ2TrMmKw8mPYpHPmqzMSp8B81GoOj0DpRsiXTVZpRu3oDrDdOMek+xzH/GrJsuow+41Wf62z9+aLKP2eVuT5S3g2vJyFM77XLcmi+cuVJQbAza/8grM/fuj+sMPYa2/AJu1HR2tDbC2Nor3Rud2eyusHS2oWbIAeU8+jrynn9YHPPp2v2qyjDrsXpN1rQDr1WR5ap+vNVlGgGvLyryuyeK13QJWPy+Z/azJ8vhzoR81WUY/F3pTk/Vd/FyoV5PlqX3+1GTp2aurq0PR/DCPNVl1mposXst7uvxc6PrB38+aLI8/+PtRk+VLyY6nmqzrXbJTFWfxqyZLz16dOc/nmqw6c77nio5ATVagJitQk/W3VpPlKpv1sybLY9msHzVZvtRF69VkfZu6aKOaLD17/HuKPzVZevb8qskS9+jXRftRk5Xcq5cxYB9rsowAu9dkXat/NvhaF33y43i/arL07FVEfu1zTVbpinWeAA/1qybLsPDdx5osI8Dd1WR9HwBb/KzJ0rPXXF5hXJPV2oJKTU1WfZrJw19XxCran5osw/8m+ViTZQTY25qs6w34YpZ/NVme+lu9M8ZjTVatpibL/NE0dHR4+OuKvzVZuoBH9/CrJsubv1N6U5NlBNjfkh1P7fOnJsuTPavV6nVNVnNF5fX9+yim+VeT5e3/ZY1qsm4EYFuz1aeaLG/+PkrIpSvWypqslm5qsgqmzUZLdfX1/3+wNSvB55ose1yIz/94764m60b+AdzWbvWqJsvXP4B3NDWhpaTUVZNVsWELGnLMIix3XL2ure36AQ7Yu/H2AoBvdsCBkp2bu2Tn/wBHWnVz/KUB9wAAAABJRU5ErkJggg==)no-repeat left!important;overflow:hidden;margin-left:-1px}a:hover.share-button{text-decoration:none;z-index:1}.share-button-link-text{display:block;text-indent:-9999px}.sb-email{background-position:0 0!important}a:hover.sb-email{background-position:0-20px!important}a:active.sb-email{background-position:0-40px!important}.sb-blog{background-position:-20px 0!important}a:hover.sb-blog{background-position:-20px -20px!important}a:active.sb-blog{background-position:-20px -40px!important}.sb-twitter{background-position:-40px 0!important}a:hover.sb-twitter{background-position:-40px -20px!important}a:active.sb-twitter{background-position:-40px -40px!important}.sb-facebook{background-position:-60px 0!important}a:hover.sb-facebook{background-position:-60px -20px!important}a:active.sb-facebook{background-position:-60px -40px!important}.sb-pinterest{background-position:-100px 0!important}a:hover.sb-pinterest{background-position:-100px -20px!important}a:active.sb-pinterest{background-position:-100px -40px!important}.goog-inline-block{position:relative;display:-moz-inline-box;display:inline-block}</style>
+<meta content="width=1100" name=viewport>
+<meta content=blogger name=generator>
+<link href=http://blog.softwx.net/2015/01/optimizing-damerau-levenshtein_15.html rel=canonical>
+<link rel=alternate type=application/atom+xml title="Here's the Codez - Atom" href=http://blog.softwx.net/feeds/posts/default>
+<link rel=alternate type=application/rss+xml title="Here's the Codez - RSS" href="http://blog.softwx.net/feeds/posts/default?alt=rss">
+<link rel=service.post type=application/atom+xml title="Here's the Codez - Atom" href=https://www.blogger.com/feeds/7963198204855313475/posts/default>
+<link rel=alternate type=application/atom+xml title="Here's the Codez - Atom" href=http://blog.softwx.net/feeds/5047407733264257765/comments/default>
+<link href="http://lh3.ggpht.com/-HZoJPgPylrE/VLdr7uPBa-I/AAAAAAAAAHA/8FN4YxkBDRI/DamLev_thumb.png?imgmax=800" rel=image_src>
+<meta content=http://blog.softwx.net/2015/01/optimizing-damerau-levenshtein_15.html property=og:url>
+<meta content="Optimizing the Damerau-Levenshtein Algorithm in C#" property=og:title>
+<meta content="The previous two posts covered the Levenshtein algorithm in C# , and the TSQL implementation . In this post I’ll cover the Damerau-Levenshte..." property=og:description>
+<meta content="http://lh3.ggpht.com/-HZoJPgPylrE/VLdr7uPBa-I/AAAAAAAAAHA/8FN4YxkBDRI/w1200-h630-p-k-no-nu/DamLev_thumb.png?imgmax=800" property=og:image>
+<title>Aquí está el Codez: optimización del algoritmo Damerau-Levenshtein en C#</title>
+<style id=template-skin-1><!--body{font:normal normal 12px Arial,Tahoma,Helvetica,FreeSans,sans-serif;color:#222222;background:#66bbdd none repeat scroll top left;padding:0 40px 40px 40px}html body .region-inner{min-width:0;max-width:100%;width:auto}h2{font-size:22px}a:link{text-decoration:none;color:#2288bb}a:visited{text-decoration:none;color:#888888}a:hover{text-decoration:underline;color:#33aaff}.body-fauxcolumn-outer .fauxcolumn-inner{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKAQMAAAC3/F3+AAAAA1BMVEX///+nxBvIAAAAAXRSTlOZyTXzhgAAAApJREFUCB1jwAsAAB4AAfeYTFwAAAAASUVORK5CYII=)repeat scroll top left}.body-fauxcolumn-outer .cap-top{position:absolute;z-index:1;height:400px;width:100%}.body-fauxcolumn-outer .cap-top .cap-left{width:100%;background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAARMCAYAAACZG7OEAAABWklEQVR42u3cwQ0CQQwEQS/cl2jIPzCQ0BAEBnHrqgBW7hvxZSW5VaOjqlbng5dq1v6gZMmSJbtQsmTJkiWfK9kokiVLlizZKJIlS5Ys2YWSJUuWLHnXZKNIlixZsmSjSJYsWbJkF0qWLFmyZMnbJBtFsmTJko0iWbJkyZIlu1CyZMmSJe+abBTJkiVLlmwUyZIlS5bsQsmSJUsekmwUyZIlS5Ys2SiSJUuWLNmFkiVLlixZ8nmTjSJZsmTJRpEsWbJkyZJdKFmyZMn/mbyS3LsvzLxRJEuWLFmyZMmSJUs2imTJkiVLlixZsmTJU5ONIlmyZMmSJUuWLFnytGSjSJYsWbJkyZIlSx4+CgAAAAAAAAAAAAAAAAAAAAAAAADwYytJ6/8fHlX16n7wMe/Bp2TJfim+oWTfULJvKNk3/NaFK8m1AAAAAAAAAAAAAAAAAAAAAAAAAADgE2/S1Gnyf8/liwAAAABJRU5ErkJggg==)repeat-x scroll top left}.content-outer{-moz-box-shadow:0 0 40px rgba(0,0,0,.15);-webkit-box-shadow:0 0 5px rgba(0,0,0,.15);-goog-ms-box-shadow:0 0 10px #333333;box-shadow:0 0 40px rgba(0,0,0,.15);margin-bottom:1px}.content-inner{padding:10px 10px}.content-inner{background-color:#ffffff}.header-outer{background:transparent none repeat-x scroll 0-400px}.Header h1{font:normal normal 60px Arial,Tahoma,Helvetica,FreeSans,sans-serif;color:#3399bb;text-shadow:-1px -1px 1px rgba(0,0,0,.2)}.Header h1 a{color:#3399bb}.Header .description{font-size:140%;color:#777777}.header-inner .Header .titlewrapper{padding:22px 30px}.header-inner .Header .descriptionwrapper{padding:0 30px}.tabs-inner .section:first-child{border-top:1px solid #eeeeee}.main-outer{border-top:0 solid #eeeeee}.fauxcolumn-left-outer .fauxcolumn-inner{border-right:1px solid #eeeeee}.fauxcolumn-right-outer .fauxcolumn-inner{border-left:1px solid #eeeeee}div.widget>h2,div.widget h2.title{margin:0 0 1em 0;font:normal bold 11px Arial,Tahoma,Helvetica,FreeSans,sans-serif;color:#000000}.widget .zippy{color:#999999;text-shadow:2px 2px 1px rgba(0,0,0,.1)}h2.date-header{font:normal bold 11px Arial,Tahoma,Helvetica,FreeSans,sans-serif}.date-header span{background-color:transparent;color:#222222;padding:inherit;letter-spacing:inherit;margin:inherit}.main-inner{padding-top:30px;padding-bottom:30px}.main-inner .column-center-inner{padding:0 15px}.main-inner .column-center-inner .section{margin:0 15px}.post{margin:0 0 25px 0}h3.post-title{font:normal normal 22px Arial,Tahoma,Helvetica,FreeSans,sans-serif;margin:.75em 0 0}.post-body{font-size:110%;line-height:1.4;position:relative}.post-body img{background:#ffffff;border:1px solid #eeeeee;-moz-box-shadow:1px 1px 5px rgba(0,0,0,.1);-webkit-box-shadow:1px 1px 5px rgba(0,0,0,.1);box-shadow:1px 1px 5px rgba(0,0,0,.1)}.post-body img{padding:5px}.post-header{margin:0 0 1.5em;line-height:1.6;font-size:90%}.post-footer{margin:20px -2px 0;padding:5px 10px;color:#666666;background-color:#f9f9f9;border-bottom:1px solid #eeeeee;line-height:1.6;font-size:90%}.section-columns td.columns-cell{border-left:1px solid #eeeeee}.blog-pager{background:transparent none no-repeat scroll top center}.blog-pager-older-link,.home-link,.blog-pager-newer-link{background-color:#ffffff;padding:5px}.footer-outer{border-top:0 dashed #bbbbbb}--><!--body{min-width:960px}.content-outer,.content-fauxcolumn-outer{min-width:960px;max-width:960px}.main-inner .columns{padding-left:0;padding-right:310px}.main-inner .fauxcolumn-center-outer{left:0;right:310px}.main-inner .fauxcolumn-left-outer{width:0}.main-inner .fauxcolumn-right-outer{width:310px}.main-inner .column-left-outer{width:0;right:100%;margin-left:-0}.main-inner .column-right-outer{width:310px;margin-right:-310px}--></style>
+<noscript><link href="https://www.blogger.com/dyn-css/authorization.css?targetBlogID=7963198204855313475&amp;zx=e5fb8f1d-d972-4a87-a4ec-cdfc47d90a3e" rel="stylesheet"></noscript>
+<meta name=google-adsense-platform-account content=ca-host-pub-1556223355139109>
+<meta name=google-adsense-platform-domain content=blogspot.com>
+<style>.goog-te-banner-frame{left:0px;top:0px;height:39px;width:100%;z-index:10000001;position:fixed;border:none;border-bottom:1px solid #6b90da;margin:0;-moz-box-shadow:0 0 8px 1px #999999;-webkit-box-shadow:0 0 8px 1px #999999;box-shadow:0 0 8px 1px #999999}.goog-te-menu-frame{z-index:10000002;position:fixed;border:none;-moz-box-shadow:0 3px 8px 2px #999999;-webkit-box-shadow:0 3px 8px 2px #999999;box-shadow:0 3px 8px 2px #999999}.goog-te-gadget{font-family:arial;font-size:11px;color:#666;white-space:nowrap}.goog-te-gadget img{vertical-align:middle;border:none}.goog-te-combo{margin-left:4px;margin-right:4px;vertical-align:baseline}.goog-te-gadget .goog-te-combo{margin:4px 0}.goog-logo-link,.goog-logo-link:link,.goog-logo-link:visited,.goog-logo-link:hover,.goog-logo-link:active{font-size:12px;font-weight:bold;color:#444;text-decoration:none}.goog-te-combo{font-size:10pt}.goog-te-spinner-pos{z-index:1000;position:fixed;transition-delay:0.6s;left:-1000px;top:-1000px}.goog-te-spinner-animation{display:flex;align-items:center;justify-content:center;width:104px;height:104px;border-radius:50px;background:#fff url(data:image/png;base64,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)50% 50%no-repeat;transition:all 0.6s ease-in-out;transform:scale(0.4);opacity:0}.goog-te-spinner{margin:2px 0 0 2px;animation:goog-te-spinner-rotator 1.4s linear infinite}@keyframes goog-te-spinner-rotator{0%{transform:rotate(0deg)}100%{transform:rotate(270deg)}}.goog-te-spinner-path{stroke-dasharray:187;stroke-dashoffset:0;stroke:#4285f4;transform-origin:center;animation:goog-te-spinner-dash 1.4s ease-in-out infinite}@keyframes goog-te-spinner-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}100%{stroke-dashoffset:187;transform:rotate(450deg)}}</style><meta content="http://lh3.ggpht.com/-HZoJPgPylrE/VLdr7uPBa-I/AAAAAAAAAHA/8FN4YxkBDRI/DamLev_thumb.png?imgmax=800" itemprop=image_url class=sf-hidden><meta content=7963198204855313475 itemprop=blogId class=sf-hidden><meta content=5047407733264257765 itemprop=postId class=sf-hidden><meta content=https://www.blogger.com/profile/00424027621936625044 itemprop=url class=sf-hidden><meta content=http://blog.softwx.net/2015/01/optimizing-damerau-levenshtein_15.html itemprop=url class=sf-hidden><link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAADc0rf/1tHF/9TOwv/SxJv/2Mqk/9vOq//Zzaz/2Myo/9nNqf/ZzKr/2cyp/9jMqv/YzKn/2Myq/9nNqP/VzLP/5Nam/+XXnf/p5+D/8e7e/+barv/j0ZD/6teP/+zal//r2ZX/69mV/+vZlf/q2JX/69mU/+nYlf/u25P/28+h/+HWrv/p15H/4dKZ/+fhzv/4+v//8e/r/+DWsv/k05X/6dmb/+jXmv/p2Jr/6Neb/+nYmv/n15v/6tmZ/9rPpf/j1av/6tmX/+rZmv/l0o3/4dSk//Pw6v/9/v//5eDJ/+PTk//r2pr/6diY/+rZmf/q2Zj/6NiZ/+zal//b0KP/49as/+rYlf/o15v/69qd/+nXlv/ezpD/6uXT//3////i2rv/6NaT/+nZm//p2Jj/6tmZ/+jYmv/r2pj/29Ck/+LVq//p2Jb/6dia/+nYl//p2Jz/7Nua/97Olf/4+Pb/7+3l/+XTjv/p2Zz/6NeZ/+rZmf/n15r/7NqY/9vQpP/j1qz/6tmW/+jXmv/q2Zn/6NeX/+vbnf/fzY3/9/f0/+rl0v/m1JD/6tmc/+nYmP/q2Zn/6Nma/+zamP/b0KT/49as/+nZlv/p2Jv/6diY/+rZnP/o1ZH/4tm0//3+///l2q7/59aV/+nZm//o15j/6NaX/+TUl//p1pX/2s6j/+PWrP/q2Zb/6dib/+jYmf/q2Zn/4tKZ//Pz7f/+/v7/49q6/+bTjf/r257/6tmb/+3cm//v4J7/8eGb/9vRpP/j1qz/6tmW/+nYm//p2Jn/6tmZ/+PTmP/w7+v///////b18//h1rH/5NKS/+XTkf/QvYj/vah8/6+WbP+smoH/49as/+rZlv/p2Jv/6tiY/+rZm//p15X/4NSk//T09P//////+Pj6/+/r3P/AsZP/gWBL/31YQv9+WEL/ln5t/+LWq//p2JX/6Nea/+nYmP/o15j/6dia/+jWlP/cz57/7Ork///////+/v//+/z//+Pe2v+/saT/mn5q/5yGdf/i1Kv/6deU/+jWmf/p15f/6diZ/+rYmP/q2pv/8d+a/+PUmf/a1Mv///////38+v////////////r6+//W09L/49at/+jYl//m15v/5teZ/+TUmP/h0Zb/28qR/9XEjv+5onf/h2ZN/7usof/8/v////////n4+P/+/v7/6urq/6aOev+KZ0f/jm9Q/4xrTf+MbE3/i2hL/4hnSv+AXUP/e1ZA/4djSv98VTn/mH9s/+Pe2//+/v///v7+/+Xl5f+/r6j/q5WK/7CbkP+umY7/r5uQ/7CckP+xnJH/tKCT/7ailP+xnZH/tqOY/6qThf+3p5//6ejo/+vp6f/k4uL/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==" rel=icon type=image/x-icon><style>.sf-hidden{display:none!important}</style><meta http-equiv=content-security-policy content="default-src 'none'; font-src 'self' data:; img-src 'self' data:; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:;"><style>img[src="data:,"],source[src="data:,"]{display:none!important}</style></head>
+<body class=variant-pale style=position:relative;min-height:100%;top:40px><div class=skiptranslate><iframe id=:1.container class="goog-te-banner-frame skiptranslate" style=visibility:visible sandbox="allow-popups allow-top-navigation allow-top-navigation-by-user-activation" srcdoc="<html><meta charset=utf-8><style>:root{--sf-img-0: url(&quot;data:image/gif;base64,R0lGODlhAQA7APcAANfX19/f3+Hh4eLi4uTk5Obm5ujo6Orq6uvr6+3t7e7u7uTv++bw++fw/Ojx/Ory/O30/O71/fHx8fP4/fT5/fb6/vj7/vr8/vz9//7+/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAAQA7AAAINQAzCBxIUCCGCwgtVFhIYcKECA8jQHgw8UEDBg4aLGCwIIOEjyAlKEiA4ICBAgQGCAgQAEBAADs=&quot;);--sf-img-1: url(&quot;data:image/gif;base64,R0lGODlhVAATAOePAAAAyxZBmhdFrBhHrhpMyB1Uxh1Vzh5X0R9ZzR9awSFf1SNk2CYW0SZq2yZs4Cka2yt45TB9ITJ11TODHjODIDWKGzdgrDmUGjuaRTybGT1svj6hGUClGEF1tEGnFkGpGUKrFUNnrkWjYUWoUkZtskdww0dxy0l/EkmP5EqlLUtLS0uxFFCmLlGY6lON3la4E1e0GFhYD1uxRlu5EVyyU1+vLGW8FGef5mmTx22p7W6PEW+d32+e4XKa2Hp6en6p5H9lE4eHh4i06YurxYyqyYyufoy8iI29ho7AhpCz55DEhJW55ZaT15jClqGm9afE2KgeFavK7LDN47rV7b7J4cTa9cXi0MjX8Mrd9c0lGs3l/9QmGtbW1tfq/9jl9djl+NmcANns0dnt4NonG9otM9yGft4pG9/x4OCrIuG3I+Hv/+Lfz+Px4eRWTOSaAeSyNuUpHOWIgOalAOby/+c5P+egD+exAefJcOhYXuqjAOq3Tuq9YOtqbuvHG+vz++xYTOy8AO2sAe6xAO7x9+/Ecu/SaPDYaPD2//D47/KzAPS7APfpy/ng3fzp7P347f///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////yH5BAEKAP8ALAAAAABUABMAAAj+AP+pGEiw4MB//4goXMhQ4b8gECNKnIiwosWLGBE+2sjxkaNGIB115KjCB5eTKFP6UEEkypyXMGNGIRJkpM2NQSwO2bkzI8aRjOL8oUP0TxxGI1WkXIqSZcynMGnetJnz386OanpWxNGhKw6NHOMQHUs2jsiNSpkudQr1qVScI2vitLpRTZe7XdRoGYKQ65K/Hb5yxEO2MJ0/HdNyYQCgMQAGTYnAfOAYwIOociNy1Pwo55BHXZZ07XC3Ct9/HZZUFP1vo9ixfNYsWsOHDp6kKJlUZhIZppPKTjBvhtiZOM7PdlN34Xp3Ct/Uqzu0XjT2z5qRaxrhRsn4cUq2Lyn+W475FqfEjkE+4+0yhXkXKUNGy+/6yFAdotc7HrqpmItuALz15ltjwQmHnnGbqddcV3jBl9pfEIrmSB+KKILYVNtxB9l3ksX0wGXkyWUeZ8eBdheDDcY332iOVKiIIR0tgcKMNKKQwyP9+ReggL4VaGBxNZGYnl3r4TXFE/FFCGEHLVa4SEdR1EhjDofkqBZ4bb30lpDGeUYkiu89t2JXTb4Yo5Qz3mglU1hmWZ6IcM01hBZVrDeFFEiipiRgE1ZYREdzaCGoFi3MKASOJql10kotZfnSTHBiWNVOd0qBp1Zj0mdIGiOMYMVNVdAYxSMCGWQqQg2lSsRDGKKnE09jp/lU0SNhdDqCCJ929EWhKLTQBamyBuvTRMRKJKywGxlh6whGWOGsESLQeCiwx1Zr7bWyckTDstxi0MENHGEr7rjWdqQst7Ya0RG57LZ70UhWQGurCM2O5O697N6EyL773hQQADs=&quot;)}.goog-logo-link,.goog-logo-link:link,.goog-logo-link:visited,.goog-logo-link:hover,.goog-logo-link:active{font-size:12px;font-weight:bold;color:#444;text-decoration:none}.goog-te-banner .goog-logo-link,.goog-close-link{display:block;margin:0px 10px}.goog-te-banner .goog-logo-link{padding-top:2px;padding-left:4px}.goog-te-banner *{font-family:arial;font-size:10pt}.goog-te-banner{margin:0;background-color:#e4effb;overflow:hidden}.goog-te-banner img{border:none}.goog-te-banner-content{color:#000}.goog-te-banner-content img{vertical-align:middle}.goog-te-banner-margin{width:8px}.goog-te-button{border-color:#e7e7e7;border-style:none solid solid none;border-width:0 1px 1px 0}.goog-te-button div{border-color:#cccccc #999999 #999999 #cccccc;border-right:1px solid #999999;border-style:solid;border-width:1px;height:20px}.goog-te-button button{background:transparent;border:none;cursor:pointer;height:20px;overflow:hidden;margin:0;vertical-align:top;white-space:nowrap}.goog-te-button button:active{background:none repeat scroll 0 0#cccccc}.goog-te-menu-value{text-decoration:none;color:#0000cc;white-space:nowrap;margin-left:4px;margin-right:4px}.goog-te-menu-value span{text-decoration:underline}.goog-te-menu-value img{margin-left:2px;margin-right:2px}@keyframes goog-te-spinner-rotator{0%{transform:rotate(0deg)}100%{transform:rotate(270deg)}}@keyframes goog-te-spinner-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}100%{stroke-dashoffset:187;transform:rotate(450deg)}}</style><meta http-equiv=content-security-policy content=&quot;default-src 'none'; font-src 'self' data:; img-src 'self' data:; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:;&quot;><style>img[src=&quot;data:,&quot;],source[src=&quot;data:,&quot;]{display:none!important}</style><body class=goog-te-banner scroll=no border=0 dir=ltr style=background-image:var(--sf-img-0)><table width=100% height=100% cellspacing=0 cellpadding=0 border=0><tbody><tr valign=middle><td width=1 nowrap><a href=https://translate.google.com/ class=goog-logo-link target=_blank><img src=&quot;data:image/png;base64,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&quot; alt=&quot;Google Traductor de Google&quot;></a><td width=1><img src=&quot;data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==&quot; title=&quot;El contenido de esta página segura se enviará a Google para traducirlo con una conexión segura.&quot; alt=&quot;El contenido de esta página segura se enviará a Google para traducirlo con una conexión segura.&quot; style=&quot;background-image:var(--sf-img-1);background-position:-56px 0px;margin:0 4px&quot; width=9 height=15><td class=goog-te-banner-margin><td><table height=100% cellspacing=0 cellpadding=0 border=0><tbody><tr id=:1.promptSection valign=middle><td nowrap><span class=goog-te-banner-content><font style=vertical-align:inherit>Ver esta página en: </font><span id=:1.promptTargetLang><a aria-haspopup=true class=goog-te-menu-value><span>español</span><img src=&quot;data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==&quot; alt style=&quot;background-image:var(--sf-img-1);background-position:-14px 0px;border:medium none&quot; width=14 height=14></a></span></span><td class=goog-te-banner-margin><td nowrap><div class=goog-te-button><div style=&quot;background-image:var(--sf-img-0);background-repeat:repeat-x;background-position:0px -39px&quot;><button id=:1.confirm><b><font style=vertical-align:inherit>Traducir </font></b></button></div></div><td class=goog-te-banner-margin><td nowrap><div class=goog-te-button style=display:block><div style=&quot;background-image:var(--sf-img-0);background-repeat:repeat-x;background-position:0px -39px&quot;><button id=:1.noAutoPopup>Desactivar para: inglés</button></div></div><tr id=:1.progressSection style=display:none valign=middle><tr id=:1.finishSection style=display:none><tr id=:1.errorSection style=display:none valign=middle></table><td class=goog-te-banner-margin><td id=options width=1><div class=goog-te-button><div style=&quot;background:rgba(0,0,0,0) var(--sf-img-0) repeat-x scroll 0px -39px&quot;><button><font style=vertical-align:inherit>Opciones&amp;nbsp;▼ </font></button></div></div><td width=1><a id=:1.close class=goog-close-link title=Cerrar><img src=&quot;data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==&quot; alt=Cerrar style=&quot;background-image:var(--sf-img-1);background-position:-28px 0px&quot; width=15 height=15></a></table>" frameborder=0></iframe></div>
+<div class="navbar section" id=navbar name=Navbar><div class="widget Navbar" data-version=1 id=Navbar1>
+<div id=navbar-iframe-container><iframe ng-non-bindable hspace=0 marginheight=0 marginwidth=0 scrolling=no tabindex=0 vspace=0 id=navbar-iframe name=navbar-iframe sandbox="allow-popups allow-top-navigation allow-top-navigation-by-user-activation" srcdoc="<!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot; &quot;http://www.w3.org/TR/html4/strict.dtd&quot;> <html dir=ltr class=&quot;tgrvkjawh idc0_341&quot;><meta charset=utf-8><style>:root{--sf-img-0: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAUCAMAAADFhv/OAAABiVBMVEUAAAD/q3L/q3L/q3L/q3L/q3JmZmZoaGhubm5wcHBycnJ0dHR4eHh6enqCgoKEhISGhoaIiIiKioqOjo6QkJCSkpKYmJiampqenp6lpaWmpqapqamqqqqrq6usrKytra2urq6vr6+zs7O0tLS1tbW2tra3t7e5ubm6urq7u7u+vr6/v7/BwcHDw8PHx8fJycnLy8vQ0NDR0dHT09PU1NTV1dXW1tbY2Njb29vc3Nzd3d3f39/g4ODh4eHi4uLj4+Pl5eXm5ubn5+fp6ent7e3u7u7v7+/x8fHz8/P19fX29vb39/f5+fn6+vr7+/v8/Pz9/f3/q3L/rnf/sHr/sXv/tIH/tYP/toT/toX/uIf/vI//wpn/w5r/xJv/xJ3/xZ3/xZ7/xp//x6D/yaT/0rT/07X/1bn/2L3/2b//2cD/28L/3cb/38r/5NH/5NL/5tX/6Nj/7+T/8OX/8ej/9Oz/9O3/9e7/9vD/9vH/9/L/+PT/+vb/+/j/+/n//Pv//fv//fz//v3///9gKGHcAAAABnRSTlMADHh53+GPUDoCAAABq0lEQVQYGXXBCVcSYRQG4Jftw4Bqsig/GpBq0qZstE0JRW0ZSgbFW9m+b7ZamZCWmt1f3p3J5hwPzvMAs2NWsVQeduHjESOTzfV7ELFEinZIJWKYO1cwrYFj2q4DYDu9x+jdq/JNAHHqEsdY4URtDq6jT3vASHp/leGZ6jADSeqShHW0BtE4pa8ARk8Vgg+pqwDtAkWrBd+ongAyBsPnqApAvoVP3zfWV94/pH9QGkDgsp4Esr0IXFDjAImFXxzYekABlMsuRMvRk0Au50GwqcYBEh+ZN9rtTeYlCmBYOzNAq1o8fgPoVyYDfCmzbx4gscx8n+gF808KwLW1PVpxSoXBOuDlVd45b2bTB5sAiTXmL4uLX5n5zWsSQP2MFkWt7RmgeUSJjFJ5BolVDv0hAcCbnqhNXRvS2roJ8HSlWrvep5TBJH5waJME/msO6ZMNbOM+dYBJdJif3xWPfvM6CYQaF12E+KwHEt+Y3z57+uTxqy1eJYFoJN5xaIkEopG4vcLb1u6RQDTy3fmw3Ol02p9f3iIfotEuEC1JXZKIFqcucUSLJVK0QyoR+wtEprA0cDOepAAAAABJRU5ErkJggg==&quot;);--sf-img-1: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAECAYAAABsgwTvAAAAPElEQVR42nXMsQ0AIAwDQe/kWbL/BqwQSIFALznSF3FxqlqdOidmu1ODJRAQQDT7xUSIGCNETA8ilsH/3xfYtbHJD+xUAAAAAElFTkSuQmCC&quot;)}body{padding:0;margin:0}#b-navbar{white-space:nowrap;color:#444;height:29px;border-bottom:1px solid #888;background:transparent;font-size:13px;font-family:Arial,Sans-serif;position:relative}#b-navbar #b-navbar-bg{position:absolute;left:0;top:0;width:100%;height:30px;background-color:#fff;opacity:0.4}#b-navbar .navbar-right{text-align:right;padding-right:5px}#b-navbar-controls{margin-left:.2em;height:29px}#b-navbar #b-navbar-logo{display:block;margin-right:8px;margin-left:8px;width:20px;height:20px;background:var(--sf-img-0) no-repeat -26px 0;cursor:pointer}#b-navbar #b-query-box{background-color:#fff;margin:0 .5em 0 0;border:1px solid #aaa;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;padding:0 .3em}#b-navbar #b-query-icon{display:block;width:13px;height:13px;cursor:pointer;background:var(--sf-img-0) no-repeat 0 0}#b-navbar #b-query-icon:hover{background:var(--sf-img-0) no-repeat -13px 0}#b-navbar #b-query{font-size:13px;color:#000;background-color:transparent;border:none;margin:0}#b-navbar .b-link,#b-navbar #b-user{display:inline-block;font-size:13px;vertical-align:middle;padding:2px .4em}#b-navbar .b-link{color:#333;text-decoration:none;white-space:nowrap;cursor:pointer}#b-navbar .b-link:hover{color:#55e;text-decoration:underline}#b-navbar #b-more span.arrow{background:var(--sf-img-1) no-repeat -12px center;display:inline-block;width:7px;height:10px}#b-navbar #b-more:hover span.arrow{background:var(--sf-img-1) no-repeat 0 center}.sf-hidden{display:none!important}</style><meta http-equiv=content-security-policy content=&quot;default-src 'none'; font-src 'self' data:; img-src 'self' data:; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:;&quot;><style>img[src=&quot;data:,&quot;],source[src=&quot;data:,&quot;]{display:none!important}</style></head>
+<body class=&quot;lang_es rb&quot;>
+<div id=b-navbar><div id=b-navbar-bg style=z-index:-1></div>
+<div id=b-navbar-fg>
+<table id=b-navbar-controls width=100% cellspacing=0 cellpadding=0 border=0><tbody><tr style=height:20px><td width=24px valign=middle><a href=https://www.blogger.com/ id=b-navbar-logo tabindex=1 title=&quot;Ir a Blogger.com&quot;></a>
+<div id=b-sms class=&quot;b-mobile sf-hidden&quot;></div></td>
+<td width=150px valign=middle><form id=searchthis action=https://blog.softwx.net/search style=display:inline><div id=b-query-box><table cellspacing=0 cellpadding=0><tbody><tr><td valign=middle><input type=text id=b-query name=q tabindex=3 style=width:120px title=Buscar value></td>
+<td style=width:15px valign=middle><a id=b-query-icon title=&quot;Buscar este blog&quot;></a></table></div>
+</form></td>
+<td class=gplus valign=middle nowrap><a id=b-more class=b-link tabindex=4><font style=vertical-align:inherit>Más
+ </font><span class=arrow></span></a></td>
+<td class=navbar-right nowrap align=right><span id=b-user><font style=vertical-align:inherit>killo3967@gmail.com </font></span>
+<a class=b-link href=https://www.blogger.com/home tabindex=11><font style=vertical-align:inherit>Escritorio </font></a>
+<a class=b-link href=&quot;http://blog.softwx.net/logout?d=https://www.blogger.com/logout-redirect.g?blogID%3D7963198204855313475%26postID%3D5047407733264257765&quot; tabindex=12><font style=vertical-align:inherit>Cerrar sesión </font></a></table></div></div>
+" width=100% frameborder=0></iframe></div>
+</div></div>
+<div class=body-fauxcolumns>
+<div class="fauxcolumn-outer body-fauxcolumn-outer">
+<div class=cap-top>
+<div class=cap-left></div>
+<div class=cap-right></div>
+</div>
+<div class=fauxborder-left>
+<div class=fauxborder-right></div>
+<div class=fauxcolumn-inner>
+</div>
+</div>
+<div class=cap-bottom>
+<div class=cap-left></div>
+<div class=cap-right></div>
+</div>
+</div>
+</div>
+<div class=content>
+<div class=content-fauxcolumns>
+<div class="fauxcolumn-outer content-fauxcolumn-outer">
+<div class=cap-top>
+<div class=cap-left></div>
+<div class=cap-right></div>
+</div>
+<div class=fauxborder-left>
+<div class=fauxborder-right></div>
+<div class=fauxcolumn-inner>
+</div>
+</div>
+<div class=cap-bottom>
+<div class=cap-left></div>
+<div class=cap-right></div>
+</div>
+</div>
+</div>
+<div class=content-outer>
+<div class="content-cap-top cap-top">
+<div class=cap-left></div>
+<div class=cap-right></div>
+</div>
+<div class="fauxborder-left content-fauxborder-left">
+<div class="fauxborder-right content-fauxborder-right"></div>
+<div class=content-inner>
+<header>
+<div class=header-outer>
+<div class="header-cap-top cap-top">
+<div class=cap-left></div>
+<div class=cap-right></div>
+</div>
+<div class="fauxborder-left header-fauxborder-left">
+<div class="fauxborder-right header-fauxborder-right"></div>
+<div class="region-inner header-inner">
+<div class="header section" id=header name=Header><div class="widget Header" data-version=1 id=Header1>
+<div id=header-inner>
+<div class=titlewrapper>
+<h1 class=title>
+<a href=http://blog.softwx.net/><font style=vertical-align:inherit>
+Aquí está el Codez
+ </font></a>
+</h1>
+</div>
+<div class=descriptionwrapper>
+<p class=description><span><font style=vertical-align:inherit>Compartiendo algo de código </font></span></p>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+<div class="header-cap-bottom cap-bottom">
+<div class=cap-left></div>
+<div class=cap-right></div>
+</div>
+</div>
+</header>
+<div class=tabs-outer>
+<div class="tabs-cap-top cap-top">
+<div class=cap-left></div>
+<div class=cap-right></div>
+</div>
+<div class="fauxborder-left tabs-fauxborder-left">
+<div class="fauxborder-right tabs-fauxborder-right"></div>
+<div class="region-inner tabs-inner">
+<div class="tabs no-items section" id=crosscol name=Cross-Column></div>
+<div class="tabs no-items section" id=crosscol-overflow name="Cross-Column 2"></div>
+</div>
+</div>
+<div class="tabs-cap-bottom cap-bottom">
+<div class=cap-left></div>
+<div class=cap-right></div>
+</div>
+</div>
+<div class=main-outer>
+<div class="main-cap-top cap-top">
+<div class=cap-left></div>
+<div class=cap-right></div>
+</div>
+<div class="fauxborder-left main-fauxborder-left">
+<div class="fauxborder-right main-fauxborder-right"></div>
+<div class="region-inner main-inner">
+<div class="columns fauxcolumns">
+<div class="fauxcolumn-outer fauxcolumn-center-outer">
+<div class=cap-top>
+<div class=cap-left></div>
+<div class=cap-right></div>
+</div>
+<div class=fauxborder-left>
+<div class=fauxborder-right></div>
+<div class=fauxcolumn-inner>
+</div>
+</div>
+<div class=cap-bottom>
+<div class=cap-left></div>
+<div class=cap-right></div>
+</div>
+</div>
+<div class="fauxcolumn-outer fauxcolumn-left-outer">
+<div class=cap-top>
+<div class=cap-left></div>
+<div class=cap-right></div>
+</div>
+<div class=fauxborder-left>
+<div class=fauxborder-right></div>
+<div class=fauxcolumn-inner>
+</div>
+</div>
+<div class=cap-bottom>
+<div class=cap-left></div>
+<div class=cap-right></div>
+</div>
+</div>
+<div class="fauxcolumn-outer fauxcolumn-right-outer">
+<div class=cap-top>
+<div class=cap-left></div>
+<div class=cap-right></div>
+</div>
+<div class=fauxborder-left>
+<div class=fauxborder-right></div>
+<div class=fauxcolumn-inner>
+</div>
+</div>
+<div class=cap-bottom>
+<div class=cap-left></div>
+<div class=cap-right></div>
+</div>
+</div>
+<div class=columns-inner>
+<div class=column-center-outer>
+<div class=column-center-inner>
+<div class="main section" id=main name=Main><div class="widget Blog" data-version=1 id=Blog1>
+<div class="blog-posts hfeed">
+ <div class=date-outer>
+ 
+<h2 class=date-header><span><font style=vertical-align:inherit>jueves, 15 de enero de 2015 </font></span></h2>
+ <div class=date-posts>
+ 
+<div class=post-outer>
+<div class="post hentry uncustomized-post-template" itemprop=blogPost itemscope itemtype=http://schema.org/BlogPosting>
+<a name=5047407733264257765></a>
+<h3 class="post-title entry-title" itemprop=name><font style=vertical-align:inherit>
+Optimización del algoritmo Damerau-Levenshtein en C#
+ </font></h3>
+<div class=post-header>
+<div class=post-header-line-1></div>
+</div>
+<div class="post-body entry-content" id=post-body-5047407733264257765 itemprop="description articleBody"><font style=vertical-align:inherit>Las dos publicaciones anteriores cubrieron el </font><a href=http://blog.softwx.net/2014/12/optimizing-levenshtein-algorithm-in-c.html><font style=vertical-align:inherit>algoritmo de Levenshtein en C# </font></a><font style=vertical-align:inherit>y la </font><a href=http://blog.softwx.net/2014/12/optimizing-levenshtein-algorithm-in-tsql.html><font style=vertical-align:inherit>implementación de TSQL </font></a><font style=vertical-align:inherit>. En esta publicación, cubriré el algoritmo Damerau-Levenshtein en C#, y la </font><a href=http://blog.softwx.net/2015/01/optimizing-damerau-levenshtein_19.html><font style=vertical-align:inherit>próxima publicación brindará la versión TSQL </font></a><font style=vertical-align:inherit>. La idea de esta medida de distancia es muy similar a la de Levenshtein. Si recuerda, Levenshtein mide el número de ediciones de sustitución, inserción y eliminación necesarias para convertir una cadena en otra. Damerau agregó la edición adicional de dos transposiciones de caracteres. Como ejemplo, la distancia de Levenshtein entre "paul" y "pual" es 2. Con Damerau-Levenshtein, la distancia es solo 1. Para aplicaciones que combinan cadenas como palabras o nombres de personas, mi experiencia es que Damerau-Levenshtein da mejores resultados. </font><br><font style=vertical-align:inherit>Antes de entrar en el algoritmo, debo mencionar esta advertencia. Como se describe en el </font><a href=http://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance><font style=vertical-align:inherit>artículo de wikipedia </font></a><font style=vertical-align:inherit>, hay dos implementaciones básicas. Una es una implementación literal que produce una métrica de distancia real, que es bastante complicada. La otra implementación más simple es la alineación óptima de cadenas, también llamada distancia de edición restringida, que es mucho más fácil de implementar. La desventaja es que la versión óptima de alineación de cadenas no es una métrica real. Esta publicación implementa la distancia de edición restringida más simple. Para la mayoría de los propósitos, funciona bien. La principal diferencia es que solo permite editar una subcadena una vez. Usando la implementación literal de Damerau, la distancia entre "CA" y "ABC" es 2 (CA-&gt;AC-&gt;ABC). Con la versión de distancia de edición restringida, la distancia es 3 (CA-&gt;A-&gt;AB-&gt;ABC). Esto se debe a que, en este caso, no puede realizar la transposición y luego editar la subcadena por segunda vez insertando la B entre los dos caracteres. </font><br><font style=vertical-align:inherit>La implementación que se presenta aquí es muy similar a la implementación anterior de Levenshtein. Contiene todas las mismas optimizaciones que tenía y agrega la lógica adicional para manejar las transposiciones. Si recuerda, la implementación de Levenshtein tenía una optimización de espacio que usaba la mejora que reducía la necesidad de una matriz bidimensional m * n, a solo dos matrices unidimensionales, y luego mejoró aún más hasta necesitar una sola matriz. Con Damerau, puedes pasar de la matriz m * n a tres arreglos sin demasiada dificultad. Necesita tres matrices porque necesita mirar un nivel más atrás para detectar y calcular la parte de transposición del algoritmo. Es un poco más complicado reducirlo a solo dos matrices, pero se puede lograr de manera similar a cómo pasamos de dos a una matriz con Levenshtein. Se realiza mediante el uso judicial de variables temporales, lo que tiene el beneficio adicional de reducir el acceso a la matriz y reducir el tiempo de ejecución. Puede ser difícil de seguir, así que espero que este diagrama ayude a mostrar lo que sucede. </font><br>
+<a href=http://lh3.ggpht.com/-gmqqZ4noD8c/VLdr61go6cI/AAAAAAAAAG4/VXZ_TP8XBSE/s1600-h/DamLev%25255B2%25255D.png><img alt=DamLev src=data:image/png;base64,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 style=background-image:none;border-bottom-width:0px;border-left-width:0px;border-right-width:0px;border-top-width:0px;display:inline;padding-left:0px;padding-right:0px;padding-top:0px title=DamLev width=244 height=181 border=0></a><br><font style=vertical-align:inherit>Podemos reducir el uso de la memoria modificando las matrices en su lugar a medida que iteramos hacia abajo en la columna. Leemos de antemano los valores almacenados cuando procesamos la columna anterior y almacenamos los valores de la columna actual a medida que avanzamos. En el diagrama, estamos en medio del cálculo de la distancia, y estamos en la columna 2 (el bucle i exterior) y la fila 4 (el bucle j interior), con la celda a punto de calcularse coloreada en negro. Las celdas amarillas representan el contenido de la matriz v0. Hemos calculado los nuevos valores en las celdas de arriba, pero todavía tenemos que leer y usar las celdas de la columna anterior debajo del punto actual. La columna tan marca la matriz v2 que contiene los valores que necesitamos para calcular el costo de transposición. Para evitar algunas operaciones matemáticas adicionales, el contenido de la matriz v2 en realidad se compensa con 1, por lo que v2[4] contiene 3, aunque en el diagrama anterior, ese valor se muestra en la fila 3. </font><br><font style=vertical-align:inherit>He estado usando Damerau-Levenshtein para la coincidencia de nombres de personas. No lo uso como técnica principal, porque no es muy adecuado para búsquedas rápidas en una base de datos. Lo uso principalmente como verificador de segunda opinión para otras técnicas de búsqueda. Utilizo búsquedas fonéticas y búsquedas de bigramas. Pero no uso solo las puntuaciones de esas técnicas, las ajusto calculando también la distancia Damerau-Levenshtein. Esto no es tan malo, porque las búsquedas fonéticas y de bigramas pueden aprovechar el acceso a la base de datos indexada. Luego, el conjunto devuelto más pequeño es todo lo que necesita para calcular la distancia de edición más costosa. A veces, las cadenas pueden medirse de cerca por la similitud de bigramas, o tener el mismo código fonético, pero ser bastante diferentes. Al aplicar Damerau-Levenshtein, estos partidos marginales verán un poco derribados sus puntajes. </font><br><font style=vertical-align:inherit>Hay dos implementaciones de Damerau-Levenshtein a continuación. El primer método toma dos cadenas como parámetros y devuelve la distancia de edición entre ellas. El segundo método es muy similar, pero tiene una diferencia importante. Toma un parámetro adicional que le permite especificar una distancia máxima. Especificar una distancia máxima permite dos optimizaciones importantes. La obvia es que permite la salida de un cortocircuito. Tan pronto como se determina que las dos cadenas tienen una distancia mayor que la distancia máxima permitida, puede regresar de inmediato, sin perder más tiempo determinando la distancia de edición completa. No necesitamos mirar todos los valores intermedios para probar el cortocircuito. Solo necesitamos examinar la línea de la diagonal final (un solo valor por columna). Si la distancia es mayor que maxDistance, se devuelve un valor de -1 para indicar que la distancia es mayor que maxDistance, pero no se conoce la distancia exacta. La segunda optimización es menos obvia, pero igualmente y en algunos casos más importante. Dada una distancia máxima, no necesitamos evaluar todas las celdas de cada columna. Solo necesitamos evaluar las celdas dentro de una ventana alrededor de las dos diagonales (la que comienza en la esquina superior izquierda y la que termina en la esquina inferior derecha). El tamaño de la ventana es maxDistance celdas a ambos lados de las diagonales, reducido por la diferencia de longitudes de las dos cadenas. Al comparar dos cadenas grandes cuando se les da una distancia máxima pequeña, esto reduce en gran medida la cantidad de celdas que deben visitarse y calcularse. Esencialmente, cambia la complejidad del tiempo de ser el producto de las dos longitudes de la cadena a ser solo la longitud de la cadena más corta, es decir, la complejidad del tiempo se vuelve lineal. Por lo tanto, incluso si no se activa el cortocircuito de salida temprana, todavía hay un gran beneficio de velocidad. Estas optimizaciones de maxDistance vienen con una pequeña cantidad de gastos generales. Si desea obtener la distancia de edición completa y no le importa dar una distancia máxima, es mejor usar el método a continuación que no tiene el parámetro maxDistance. Será más rápido para su uso. Pero si desea dar una distancia máxima, el método que toma ese parámetro le dará excelentes resultados. Para cadenas grandes, puede ser muchas veces más rápido. </font><br>
+<pre class="brush: csharp;"><font style=vertical-align:inherit>/// &lt;resumen&gt;
+ // Calcula y devuelve la distancia de edición de Damerau-Levenshtein entre dos cadenas, 
+ /// es decir, el número de ediciones de inserción, eliminación, sustitución y transposición
+ /// necesario para transformar una cadena en otra.  Este valor será &gt;= 0, donde 0
+ /// indica cadenas idénticas.  Las comparaciones distinguen entre mayúsculas y minúsculas, por lo que, por ejemplo, 
+ /// "Fred" y "fred" tendrán una distancia de 1. Este algoritmo es básicamente el
+ /// Algoritmo de Levenshtein con una modificación que considera la transposición de dos
+ /// caracteres adyacentes como una sola edición.
+ /// http://blog.softwx.net/2015/01/optimizando-damerau-levenshtein_15.html
+ /// &lt;/resumen&gt;
+ /// &lt;comentarios&gt;Ver http://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance
+ /// Tenga en cuenta que esto se basa en el algoritmo "Rápido, eficiente en memoria" de Sten Hjelmqvist, descrito
+ /// en http://www.codeproject.com/Articles/13525/Fast-memory-ficient-Levenshtein-algorithm.
+ /// Esta versión se diferencia por incluir algunas optimizaciones, y extenderla al Damerau-
+ /// Algoritmo de Levenstein.
+ /// Tenga en cuenta que esta es la distancia de alineación de cadenas óptima más simple y rápida (también conocida como edición restringida)
+ /// que difiere ligeramente del algoritmo clásico de Damerau-Levenshtein al imponer la restricción
+ /// que ninguna subcadena se edite más de una vez.  Entonces, por ejemplo, "CA" a "ABC" tiene una distancia de edición
+ /// de 2 por una aplicación completa de Damerau-Levenshtein, pero una distancia de 3 por este método que
+ /// utiliza el algoritmo de alineación de cadenas óptimo.  Consulte el artículo de wikipedia para obtener más detalles sobre esto.
+ /// distinción.
+ /// &lt;/comentarios&gt;
+ /// &lt;param name="s"&gt;Cadena que se compara por distancia.&lt;/param&gt;
+ /// &lt;param name="t"&gt;Cadena que se compara con otra cadena.&lt;/param&gt;
+ /// &lt;devoluciones&gt;int distancia de edición, &gt;= 0 que representa el número de ediciones requeridas
+ /// para transformar una cadena en otra.&lt;/returns&gt;
+ public static int DamLev(esta cadena s, cadena t) {
+     if (String.IsNullOrEmpty(s)) return (t ?? "").Length;
+     if (String.IsNullOrEmpty(t)) devuelve s.Length;
+
+     // si hay cadenas de diferentes longitudes, asegúrese de que la cadena más corta esté en s.  Esto puede resultar en un poco
+     // mayor velocidad al pasar más tiempo girando solo el bucle interno durante el procesamiento principal.
+     if (s.Longitud &gt; t.Longitud) {
+         var temperatura = s;  s = t;  t = temperatura;  // intercambiar s y t
+     }
+     int sLen = s.Length;  // esta es también la longitud mínima de las dos cadenas
+     int tLen = t.Longitud;
+
+     // el sufijo común a ambas cadenas se puede ignorar
+     while ((sLen &gt; 0) &amp;&amp; (s[sLen - 1] == t[tLen - 1])) { sLen--;  tLen--;  }
+
+     int inicio = 0;
+     if ((s[0] == t[0]) || (sLen == 0)) { // si hay un prefijo compartido, o todos los s coinciden con el sufijo de t
+         // el prefijo común a ambas cadenas se puede ignorar
+         while ((inicio &lt; sLen) &amp;&amp; (s[inicio] == t[inicio])) inicio++;
+         sLen -= inicio;  // longitud de la parte excluyendo prefijos y sufijos comunes
+         tLen -= inicio;
+
+         // si toda la cadena más corta coincide con el prefijo y/o el sufijo de la cadena más larga, entonces
+         // editar la distancia es solo la eliminación de caracteres adicionales presentes en una cadena más larga
+         si (sLen == 0) devuelve tLen;
+
+         t = t.Substring(inicio, tLen);  // más rápido que t[start+j] en el ciclo interno a continuación
+     }
+
+     var v0 = nuevo int[tLen];
+     var v2 = nuevo int[tLen];  // almacena un nivel más atrás (compensado por +1 posición)
+     for (int j = 0; j &lt; tLen; j++) v0[j] = j + 1;
+
+     char sChar = s[0];
+     int actual = 0;
+     para (int i = 0; i &lt; sLen; i++) {
+         char prevsChar = sChar;
+         sChar = s[inicio + i];
+         char tChar = t[0];
+         int izquierda = i;
+         corriente = yo + 1;
+         int nextTransCost = 0;
+         para (int j = 0; j &lt; tLen; j++) {
+             int arriba = actual;
+             int thisTransCost = nextTransCost;
+             nextTransCost = v2[j];
+             v2[j] = actual = izquierda;  // costo de la diagonal (sustitución)
+             izquierda = v0[j];  // izquierda ahora es igual al costo actual (que será diagonal en la siguiente iteración)
+             char prevtChar = tChar;
+             tChar = t[j];
+             if (sChar != tChar) {
+                 if (izquierda &lt; actual) actual = izquierda;  // inserción
+                 if (arriba &lt; actual) actual = arriba;  // eliminación
+                 actual++;
+                 si ((i != 0) &amp;&amp; (j != 0)
+                     &amp;&amp; (sChar == prevtChar)
+                     &amp;&amp; (prevsChar == tChar)) {
+                     esteTransCost++;
+                     if (thisTransCost &lt; actual) actual = thisTransCost;  // transposición
+                 }
+             }
+             v0[j] = actual;
+         }
+     }
+     corriente de retorno;
+ } </font></pre>
+<pre class="brush: csharp;"><font style=vertical-align:inherit>/// Calcula y devuelve la distancia de edición de Damerau-Levenshtein entre dos cadenas, 
+ /// es decir, el número de ediciones de inserción, eliminación, sustitución y transposición
+ /// necesario para transformar una cadena en otra.  Este valor será &gt;= 0, donde 0
+ /// indica cadenas idénticas.  Las comparaciones distinguen entre mayúsculas y minúsculas, por lo que, por ejemplo, 
+ /// "Fred" y "fred" tendrán una distancia de 1. Este algoritmo es básicamente el
+ /// Algoritmo de Levenshtein con una modificación que considera la transposición de dos
+ /// caracteres adyacentes como una sola edición.
+ /// http://blog.softwx.net/2015/01/optimizando-damerau-levenshtein_15.html
+ /// &lt;/resumen&gt;
+ /// &lt;comentarios&gt;Ver http://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance
+ /// Tenga en cuenta que esto se basa en el algoritmo "Rápido, eficiente en memoria" de Sten Hjelmqvist, descrito
+ /// en http://www.codeproject.com/Articles/13525/Fast-memory-ficient-Levenshtein-algorithm.
+ /// Esta versión se diferencia por incluir algunas optimizaciones, y extenderla al Damerau-
+ /// Algoritmo de Levenstein.
+ /// Tenga en cuenta que esta es la distancia de alineación de cadenas óptima más simple y rápida (también conocida como edición restringida)
+ /// que difiere ligeramente del algoritmo clásico de Damerau-Levenshtein al imponer la restricción
+ /// que ninguna subcadena se edite más de una vez.  Entonces, por ejemplo, "CA" a "ABC" tiene una distancia de edición
+ /// de 2 por una aplicación completa de Damerau-Levenshtein, pero una distancia de 3 por este método que
+ /// utiliza el algoritmo de alineación de cadenas óptimo.  Consulte el artículo de wikipedia para obtener más detalles sobre esto.
+ /// distinción.
+ /// &lt;/comentarios&gt;
+ /// &lt;param name="s"&gt;Cadena que se compara por distancia.&lt;/param&gt;
+ /// &lt;param name="t"&gt;Cadena que se compara con otra cadena.&lt;/param&gt;
+ /// &lt;param name="maxDistance"&gt;La distancia máxima de edición de interés.&lt;/param&gt;
+ /// &lt;devoluciones&gt;int distancia de edición, &gt;= 0 que representa el número de ediciones requeridas
+ /// para transformar una cadena en otra, o -1 si la distancia es mayor que la maxDistance especificada.&lt;/returns&gt;
+ public static int DamLev(esta cadena s, cadena t, int maxDistance = int.MaxValue) {
+     si (String.IsNullOrEmpty(s)) regresa ((t ?? "").Length &lt;= maxDistance) ?  (t ?? "").Longitud: -1;
+     si (String.IsNullOrEmpty(t)) devuelve (s.Length &lt;= maxDistance) ?  S. Longitud: -1;
+
+     // si hay cadenas de diferentes longitudes, asegúrese de que la cadena más corta esté en s.  Esto puede resultar en un poco
+     // mayor velocidad al pasar más tiempo girando solo el bucle interno durante el procesamiento principal.
+     if (s.Longitud &gt; t.Longitud) {
+         var temperatura = s;  s = t;  t = temperatura;  // intercambiar s y t
+     }
+     int sLen = s.Length;  // esta es también la longitud mínima de las dos cadenas
+     int tLen = t.Longitud;
+
+     // el sufijo común a ambas cadenas se puede ignorar
+     while ((sLen &gt; 0) &amp;&amp; (s[sLen - 1] == t[tLen - 1])) { sLen--;  tLen--;  }
+
+     int inicio = 0;
+     if ((s[0] == t[0]) || (sLen == 0)) { // si hay un prefijo compartido, o todos los s coinciden con el sufijo de t
+         // el prefijo común a ambas cadenas se puede ignorar
+         while ((inicio &lt; sLen) &amp;&amp; (s[inicio] == t[inicio])) inicio++;
+         sLen -= inicio;  // longitud de la parte excluyendo prefijos y sufijos comunes
+         tLen -= inicio;
+
+         // si toda la cadena más corta coincide con el prefijo y/o el sufijo de la cadena más larga, entonces
+         // editar la distancia es solo la eliminación de caracteres adicionales presentes en una cadena más larga
+         si (sLen == 0) devuelve (tLen &lt;= maxDistance) ?  tLen : -1;
+
+         t = t.Substring(inicio, tLen);  // más rápido que t[start+j] en el ciclo interno a continuación
+     }
+     int lenDiff = tLen - sLen;
+     if ((maxDistance &lt; 0) || (maxDistance &gt; tLen)) {
+         maxDistancia = tLen;
+     } else if (lenDiff &gt; maxDistance) devuelve -1;
+
+     var v0 = nuevo int[tLen];
+     var v2 = nuevo int[tLen];  // almacena un nivel más atrás (compensado por +1 posición)
+     intj;
+     for (j = 0; j &lt; maxDistance; j++) v0[j] = j + 1;
+     for (; j &lt; tLen; j++) v0[j] = maxDistance + 1;
+
+     int jStartOffset = maxDistance - (tLen - sLen);
+     bool haveMax = maxDistance &lt; tLen;
+     int jInicio = 0;
+     int jEnd = maxDistance;
+     char sChar = s[0];
+     int actual = 0;
+     para (int i = 0; i &lt; sLen; i++) {
+         char prevsChar = sChar;
+         sChar = s[inicio + i];
+         char tChar = t[0];
+         int izquierda = i;
+         corriente = izquierda + 1;
+         int nextTransCost = 0;
+         // no es necesario mirar más allá de la ventana de la diagonal inferior derecha - celdas maxDistance (la diagonal inferior derecha es i - lenDiff)
+         // y la diagonal superior izquierda + celdas maxDistance (la parte superior izquierda es i)
+         jInicio += (i &gt; jInicioDesplazamiento) ?  1 : 0;
+         jEnd += (jEnd &lt; tLen) ?  1 : 0;
+         for (j = jInicio; j &lt; jFin; j++) {
+             int arriba = actual;
+             int thisTransCost = nextTransCost;
+             nextTransCost = v2[j];
+             v2[j] = actual = izquierda;  // costo de la diagonal (sustitución)
+             izquierda = v0[j];  // izquierda ahora es igual al costo actual (que será diagonal en la siguiente iteración)
+             char prevtChar = tChar;
+             tChar = t[j];
+             if (sChar != tChar) {
+                 if (izquierda &lt; actual) actual = izquierda;  // inserción
+                 if (arriba &lt; actual) actual = arriba;  // eliminación
+                 actual++;
+                 si ((i != 0) &amp;&amp; (j != 0)
+                     &amp;&amp; (sChar == prevtChar)
+                     &amp;&amp; (prevsChar == tChar)) {
+                     esteTransCost++;
+                     if (thisTransCost &lt; actual) actual = thisTransCost;  // transposición
+                 }
+             }
+             v0[j] = actual;
+         }
+         if (haveMax &amp;&amp; (v0[i + lenDiff] &gt; maxDistance)) return -1;
+     }
+     volver (actual &lt;= maxDistance) ?  actual : -1;
+ } </font></pre>
+<div style=clear:both></div>
+</div>
+<div class=post-footer>
+<div class="post-footer-line post-footer-line-1">
+<span class="post-author vcard"><font style=vertical-align:inherit>
+publicado por
+ </font><span class=fn itemprop=author itemscope itemtype=http://schema.org/Person>
+<a class=g-profile href=https://www.blogger.com/profile/00424027621936625044 rel=author title="perfil del autor" data-gapiscan=true data-onload=true data-gapiattached=true>
+<span itemprop=name><font style=vertical-align:inherit>Anónimo </font></span>
+</a>
+</span>
+</span>
+<span class=post-timestamp><font style=vertical-align:inherit>
+ a 
+ </font>
+<a class=timestamp-link href=http://blog.softwx.net/2015/01/optimizing-damerau-levenshtein_15.html rel=bookmark title="Enlace Permanente"><abbr class=published itemprop=datePublished title=2015-01-15T00:27:00-07:00><font style=vertical-align:inherit>00:27 </font></abbr></a>
+</span>
+<span class=post-comment-link>
+</span>
+<span class=post-icons>
+<span class="item-control blog-admin pid-1172955722 sf-hidden">
+</span>
+</span>
+<div class="post-share-buttons goog-inline-block">
+<a class="goog-inline-block share-button sb-email" href="https://www.blogger.com/share-post.g?blogID=7963198204855313475&amp;postID=5047407733264257765&amp;target=email" target=_blank title="Enviar esto por correo electrónico"><span class=share-button-link-text><font style=vertical-align:inherit>Enviar por correo electrónico este </font></span></a><a class="goog-inline-block share-button sb-blog" href="https://www.blogger.com/share-post.g?blogID=7963198204855313475&amp;postID=5047407733264257765&amp;target=blog" target=_blank title=BlogEsto!><span class=share-button-link-text><font style=vertical-align:inherit>BlogThis! </font></span></a><a class="goog-inline-block share-button sb-twitter" href="https://www.blogger.com/share-post.g?blogID=7963198204855313475&amp;postID=5047407733264257765&amp;target=twitter" target=_blank title="Compartir en Twitter"><span class=share-button-link-text><font style=vertical-align:inherit>Compartir en Twitter </font></span></a><a class="goog-inline-block share-button sb-facebook" href="https://www.blogger.com/share-post.g?blogID=7963198204855313475&amp;postID=5047407733264257765&amp;target=facebook" target=_blank title="Compartir en Facebook"><span class=share-button-link-text><font style=vertical-align:inherit>Compartir en Facebook </font></span></a><a class="goog-inline-block share-button sb-pinterest" href="https://www.blogger.com/share-post.g?blogID=7963198204855313475&amp;postID=5047407733264257765&amp;target=pinterest" target=_blank title="Compartir en Pinterest"><span class=share-button-link-text><font style=vertical-align:inherit>Compartir en Pinterest </font></span></a>
+</div>
+</div>
+<div class="post-footer-line post-footer-line-2">
+<span class=post-labels>
+</span>
+</div>
+<div class="post-footer-line post-footer-line-3">
+<span class=post-location>
+</span>
+</div>
+</div>
+</div>
+<div class=comments id=comments>
+<a name=comments></a>
+</div>
+</div>
+<div class="inline-ad sf-hidden">
+</div>
+ </div></div>
+ 
+</div>
+<div class=blog-pager id=blog-pager>
+<span id=blog-pager-newer-link>
+<a class=blog-pager-newer-link href=http://blog.softwx.net/2015/01/optimizing-damerau-levenshtein_19.html id=Blog1_blog-pager-newer-link title="Publicación más reciente"><font style=vertical-align:inherit>reciente Publicación </font></a>
+</span>
+<span id=blog-pager-older-link>
+<a class=blog-pager-older-link href=http://blog.softwx.net/2014/12/optimizing-levenshtein-algorithm-in-tsql.html id=Blog1_blog-pager-older-link title="Entrada antigua"><font style=vertical-align:inherit>anterior </font></a>
+</span>
+<a class=home-link href=http://blog.softwx.net/><font style=vertical-align:inherit>Inicio </font></a>
+</div>
+<div class=clear></div>
+<div class=post-feeds>
+</div>
+</div></div>
+</div>
+</div>
+<div class=column-left-outer>
+<div class=column-left-inner>
+<aside>
+</aside>
+</div>
+</div>
+<div class=column-right-outer>
+<div class=column-right-inner>
+<aside>
+<div class="sidebar section" id=sidebar-right-1><div class="widget AdSense sf-hidden" data-version=1 id=AdSense1>
+<div class="widget-content sf-hidden">
+</div>
+</div><div class="widget Profile" data-version=1 id=Profile1>
+<h2><font style=vertical-align:inherit>¿Quién? </font></h2>
+<div class=widget-content>
+<dl class=profile-datablock>
+<dt class=profile-data>
+<a class="profile-name-link g-profile" href=https://www.blogger.com/profile/00424027621936625044 rel=author style=background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA3klEQVQ4y2P4l8YUCsT/ycT6DBRoBmNMA5IZ/v+LB+IYKI5lgIgRZUACUOH2jv//3j/5/+//fwj+8/P/vyNz/v8rliRgQDJUM0jTv39oGCh2ceP/f0kMeAwAORtkM0gDyJBzqyEYZiCILpXCYwDIvzDF1/YAFUtCMIgNM2BVyf9/hWJEGPD3LyIMQGx0sRgGEgxAN4goA2BeqJCDYHSvYDUAWyCCQh6EkQPz08v//+IYSI3GfwiD58cTSEggBSBb0MMAJAaSS2AgkJRBOA4pKcNwHAOReYGMzKRPgQEGAIvy2M2lOZIeAAAAAElFTkSuQmCC) data-gapiscan=true data-onload=true data-gapiattached=true><font style=vertical-align:inherit>
+Anónimo
+ </font></a>
+</dt>
+<dd class=profile-textblock><font style=vertical-align:inherit>Soy un desarrollador de software en los EE.UU. La mayor parte de mi trabajo en estos días es C#, ASP.Net MVC y Servicios de Windows. El trabajo actual se relaciona principalmente con la comparación de datos personales y la vinculación de registros. El trabajo anterior incluye el desarrollo de algoritmos de optimización para la industria del transporte y software de acústica subacuática para la Marina.
+ </font><br>
+<b><font style=vertical-align:inherit>Aunque conservo los derechos de autor, libero todo el código de este blog con la </font><a href=https://opensource.org/licenses/MIT><font style=vertical-align:inherit>licencia MIT </font></a></b><font style=vertical-align:inherit>. </font></dd>
+</dl>
+<a class=profile-link href=https://www.blogger.com/profile/00424027621936625044 rel=author><font style=vertical-align:inherit>mira mi perfil completo </font></a>
+<div class=clear></div>
+</div>
+</div><div class="widget Translate" data-version=1 id=Translate1>
+<h2 class=title><font style=vertical-align:inherit>Traducir </font></h2>
+<div id=google_translate_element><div class="skiptranslate goog-te-gadget" dir=ltr><div id=:0.targetLanguage><select class=goog-te-combo aria-label="Widget de idiomas del Traductor"><option value selected>Seleccionar idioma<option value=es>español<option value=af>afrikáans<option value=ay>aimara<option value=sq>albanés<option value=de>alemán<option value=am>amhárico<option value=ar>árabe<option value=hy>armenio<option value=as>asamés<option value=az>azerí<option value=bm>bambara<option value=bn>bengalí<option value=bho>bhoyapurí<option value=be>bielorruso<option value=my>birmano<option value=bs>bosnio<option value=bg>búlgaro<option value=km>camboyano<option value=kn>canarés<option value=ca>catalán<option value=ceb>cebuano<option value=cs>checo<option value=ny>chichewa<option value=zh-CN>chino (simplificado)<option value=zh-TW>chino (tradicional)<option value=si>cingalés<option value=ko>coreano<option value=co>corso<option value=ht>criollo haitiano<option value=hr>croata<option value=da>danés<option value=dv>divehi<option value=doi>dogri<option value=sk>eslovaco<option value=sl>esloveno<option value=eo>esperanto<option value=et>estonio<option value=eu>euskera<option value=ee>ewé<option value=fi>finlandés<option value=fr>francés<option value=fy>frisio<option value=gd>gaélico escocés<option value=cy>galés<option value=gl>gallego<option value=ka>georgiano<option value=el>griego<option value=gn>guaraní<option value=gu>gujarati<option value=ha>hausa<option value=haw>hawaiano<option value=iw>hebreo<option value=hi>hindi<option value=hmn>hmong<option value=hu>húngaro<option value=ig>igbo<option value=ilo>ilocano<option value=id>indonesio<option value=ga>irlandés<option value=is>islandés<option value=it>italiano<option value=ja>japonés<option value=jw>javanés<option value=kk>kazajo<option value=rw>kinyarwanda<option value=ky>kirguís<option value=gom>konkaní<option value=kri>krio<option value=ku>kurdo (kurmanyi)<option value=ckb>kurdo (sorani)<option value=lo>lao<option value=la>latín<option value=lv>letón<option value=ln>lingala<option value=lt>lituano<option value=lg>luganda<option value=lb>luxemburgués<option value=mk>macedonio<option value=mai>maithili<option value=ml>malayalam<option value=ms>malayo<option value=mg>malgache<option value=mt>maltés<option value=mi>maorí<option value=mr>maratí<option value=mni-Mtei>meiteilon (manipuri)<option value=lus>mizo<option value=mn>mongol<option value=nl>neerlandés<option value=ne>nepalí<option value=no>noruego<option value=or>oriya<option value=om>oromo<option value=pa>panyabí<option value=ps>pastún<option value=fa>persa<option value=pl>polaco<option value=pt>portugués<option value=qu>quechua<option value=ro>rumano<option value=ru>ruso<option value=sm>samoano<option value=sa>sánscrito<option value=nso>sepedi<option value=sr>serbio<option value=st>sesoto<option value=sn>shona<option value=sd>sindhi<option value=so>somalí<option value=sw>suajili<option value=sv>sueco<option value=su>sundanés<option value=tl>tagalo<option value=th>tailandés<option value=ta>tamil<option value=tt>tártaro<option value=tg>tayiko<option value=te>telugu<option value=ti>tigriña<option value=ts>tsonga<option value=tr>turco<option value=tk>turkmeno<option value=ak>twi<option value=uk>ucraniano<option value=ug>uigur<option value=ur>urdu<option value=uz>uzbeco<option value=vi>vietnamita<option value=xh>xhosa<option value=yi>yidis<option value=yo>yoruba<option value=zu>zulú</select></div><font style=vertical-align:inherit>Con la tecnología de </font><span style=white-space:nowrap><a class=goog-logo-link href=https://translate.google.com/ target=_blank><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAQCAYAAABgIu2QAAADVUlEQVR4AcxUA9AdPRRNbdu2+7K//+4mW9vWqNbYU2z21bZt27Zt+6nK5lUftrkPO7V1Zu7iZnJycoUc2HYC4hZVKROjqCnmEdMaoDJRHv1g4HmNKuCFjVX0OajeO5CWML5eCrSlnaGMr5VCr4X+mdXrhwpd0GgKXtDgAPoUIJIgTDPFE42JalF37952QspE+6rG0zy/hVDdsDSInHy3Qp8Jr6pk99A/s7333ttRdrD3ramDRHbd/STTp4QG6F+5fNUq5kCvg5qWmxr8qWuincTxsWAu1bRKR42avCT4H1TFeXxU2ePTFRvMo7t2AmlI4ObkeWM2J9kTsyWJDSa/d8ZvSRFaU3vzzJohNkFA5Fnx8sz9mmGJt4XeVV2ZvTreFuWXZy29rqrJEYAwMUYKuYccgM+aAKRR0wweayOUwEdc++Tm034dK/e1in96CT7nocoO20YJpLh9MVsSnX65ObHyclviP+X3ORAbvri1kjJ+mxi8EmWiIjHFKeB9W6hXV+Z7iXITuMF8RBHyPDeKkHSDTeqAYO7XU6SavDgYYWKEjEYgoP6RG27pp7iOUwI6bgQ+MShn+XAkkzprMZuTNgLfxlmNC0AUNca7OIEwecP3CZXCglLsCMk7xEtcDyAwcAYC/GfyLHKTRQ2xEBoIvYbave2U0n8exhWkPZKS2o7Qyrgh+F70z1khnO5EzlrMpqQNwbdhVuvC4cwEO0bXNBas9yGhYF6qTPRWUd4ZjRDVJprJ42TktgEJzE/ZXM3k/0kp9CExHheC1Huo67CPuo7fr4JLy2YqC2Ughe6NpP6wTPfxFxuTlH6xJUlZKAOoWeCH0QfjTmVBHM4SP/Zeoboy20OUu16C//GSioW8FM/1UNwavQ4pVKUmP/x6bRJTbAdiFAFslkTHosXuJcqhe6RCPlh7tjlZwZhNiY46zbQpycH4rcnzRUuJGmKPw834ifcJffzffxl8FG8A7ohd9tGKFdEHR0g/q4wzRt5CKLI6LggG36+vQWRB8LONyQrAt8PZ25ta7/+sIBhMFBnd7pAp9AFAP/gJLmb3RgnRz4QUNhm6HsqKuIN1iclvUWZNQ78b/hnoT0MMMVsz+Qtq8JfQuGrvR+nR74omi+xEYOjVBgEYBQDoQD6ep9ySZwAAAABJRU5ErkJggg==" style=padding-right:3px alt="Google Traductor de Google" width=37px height=14px><font style=vertical-align:inherit>Traductor de Google </font></a></span></div></div>
+<div class=clear></div>
+</div></div>
+<table class="section-columns columns-2" cellspacing=0 cellpadding=0 border=0>
+<tbody>
+<tr>
+<td class="first columns-cell">
+<div class="sidebar no-items section" id=sidebar-right-2-1></div>
+</td>
+<td class=columns-cell>
+<div class="sidebar section" id=sidebar-right-2-2><div class="widget Subscribe" data-version=1 id=Subscribe1>
+<div style=white-space:nowrap>
+<h2 class=title><font style=vertical-align:inherit>Suscribirse a </font></h2>
+<div class=widget-content>
+<div class="subscribe-wrapper subscribe-type-POST">
+<div class="subscribe expanded subscribe-type-POST" id=SW_READER_LIST_Subscribe1POST style=display:none>
+</div>
+<div class=subscribe id=SW_READER_LIST_CLOSED_Subscribe1POST>
+<div class=top>
+<span class=inner>
+<img class=subscribe-dropdown-arrow src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="13" height="10"><rect fill-opacity="0"/></svg>' style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-10)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">
+<span>
+<img alt class=feed-icon src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"><rect fill-opacity="0"/></svg>' style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-11)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important" border=0 align=absmiddle><font style=vertical-align:inherit>
+Publicaciones
+ </font></span>
+</span>
+</div>
+<div class=bottom></div>
+</div>
+</div>
+<div class="subscribe-wrapper subscribe-type-PER_POST">
+<div class="subscribe expanded subscribe-type-PER_POST" id=SW_READER_LIST_Subscribe1PER_POST style=display:none>
+</div>
+<div class=subscribe id=SW_READER_LIST_CLOSED_Subscribe1PER_POST>
+<div class=top>
+<span class=inner>
+<img class=subscribe-dropdown-arrow src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="13" height="10"><rect fill-opacity="0"/></svg>' style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-10)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">
+<span>
+<img alt class=feed-icon src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"><rect fill-opacity="0"/></svg>' style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-11)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important" border=0 align=absmiddle><font style=vertical-align:inherit>
+Comentarios
+ </font></span>
+</span>
+</div>
+<div class=bottom></div>
+</div>
+</div>
+<div style=clear:both></div>
+</div>
+</div>
+<div class=clear></div>
+</div></div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="sidebar section" id=sidebar-right-3><div class="widget BlogArchive" data-version=1 id=BlogArchive1>
+<h2><font style=vertical-align:inherit>Archivo de blog </font></h2>
+<div class=widget-content>
+<div id=ArchiveList>
+<div id=BlogArchive1_ArchiveList>
+<ul class=hierarchy>
+<li class="archivedate expanded">
+<a class=toggle>
+<span class="zippy toggle-open"><font style=vertical-align:inherit>
+ ▼&nbsp;
+ 
+ </font></span>
+</a>
+<a class=post-count-link href=http://blog.softwx.net/2015/><font style=vertical-align:inherit>
+2015
+ </font></a>
+<span class=post-count dir=ltr><font style=vertical-align:inherit>(3) </font></span>
+<ul class=hierarchy>
+<li class="archivedate collapsed">
+<a class=toggle>
+<span class=zippy><font style=vertical-align:inherit>► &nbsp;
+ 
+ </font></span>
+</a>
+<a class=post-count-link href=http://blog.softwx.net/2015/12/><font style=vertical-align:inherit>
+ Diciembre 
+ </font></a>
+<span class=post-count dir=ltr><font style=vertical-align:inherit>(1) </font></span>
+</li>
+</ul>
+<ul class=hierarchy>
+<li class="archivedate expanded">
+<a class=toggle>
+<span class="zippy toggle-open"><font style=vertical-align:inherit>▼ &nbsp;
+ 
+ </font></span>
+</a>
+<a class=post-count-link href=http://blog.softwx.net/2015/01/><font style=vertical-align:inherit>
+ enero 
+ </font></a>
+<span class=post-count dir=ltr><font style=vertical-align:inherit>(2) </font></span>
+<ul class=posts>
+<li><a href=http://blog.softwx.net/2015/01/optimizing-damerau-levenshtein_19.html><font style=vertical-align:inherit>Optimización del Algoritmo Damerau-Levenshtein en TSQL </font></a></li>
+<li><a href=http://blog.softwx.net/2015/01/optimizing-damerau-levenshtein_15.html><font style=vertical-align:inherit>Optimización del algoritmo Damerau-Levenshtein en C# </font></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class=hierarchy>
+<li class="archivedate collapsed">
+<a class=toggle>
+<span class=zippy><font style=vertical-align:inherit>
+ ►&nbsp;
+ 
+ </font></span>
+</a>
+<a class=post-count-link href=http://blog.softwx.net/2014/><font style=vertical-align:inherit>
+2014
+ </font></a>
+<span class=post-count dir=ltr><font style=vertical-align:inherit>(2) </font></span>
+<ul class="hierarchy sf-hidden">
+</ul>
+</li>
+</ul>
+<ul class=hierarchy>
+<li class="archivedate collapsed">
+<a class=toggle>
+<span class=zippy><font style=vertical-align:inherit>
+ ►&nbsp;
+ 
+ </font></span>
+</a>
+<a class=post-count-link href=http://blog.softwx.net/2013/><font style=vertical-align:inherit>
+2013
+ </font></a>
+<span class=post-count dir=ltr><font style=vertical-align:inherit>(4) </font></span>
+<ul class="hierarchy sf-hidden">
+</ul>
+<ul class="hierarchy sf-hidden">
+</ul>
+<ul class="hierarchy sf-hidden">
+</ul>
+</li>
+</ul>
+<ul class=hierarchy>
+<li class="archivedate collapsed">
+<a class=toggle>
+<span class=zippy><font style=vertical-align:inherit>
+ ►&nbsp;
+ 
+ </font></span>
+</a>
+<a class=post-count-link href=http://blog.softwx.net/2012/><font style=vertical-align:inherit>
+2012
+ </font></a>
+<span class=post-count dir=ltr><font style=vertical-align:inherit>(7) </font></span>
+<ul class="hierarchy sf-hidden">
+</ul>
+<ul class="hierarchy sf-hidden">
+</ul>
+<ul class="hierarchy sf-hidden">
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class=clear></div>
+</div>
+</div></div>
+</aside>
+</div>
+</div>
+</div>
+<div style=clear:both></div>
+</div>
+</div>
+</div>
+<div class="main-cap-bottom cap-bottom">
+<div class=cap-left></div>
+<div class=cap-right></div>
+</div>
+</div>
+<footer>
+<div class=footer-outer>
+<div class="footer-cap-top cap-top">
+<div class=cap-left></div>
+<div class=cap-right></div>
+</div>
+<div class="fauxborder-left footer-fauxborder-left">
+<div class="fauxborder-right footer-fauxborder-right"></div>
+<div class="region-inner footer-inner">
+<div class="foot no-items section" id=footer-1></div>
+<table class="section-columns columns-2" cellspacing=0 cellpadding=0 border=0>
+<tbody>
+<tr>
+<td class="first columns-cell">
+<div class="foot no-items section" id=footer-2-1></div>
+</td>
+<td class=columns-cell>
+<div class="foot no-items section" id=footer-2-2></div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="foot section" id=footer-3 name=Footer><div class="widget Attribution" data-version=1 id=Attribution1>
+<div class=widget-content style=text-align:center><font style=vertical-align:inherit>© 2018 SoftWx, Inc.. Tema simple. tecnología de </font><a href=https://www.blogger.com/ target=_blank><font style=vertical-align:inherit>Blogger </font></a><font style=vertical-align:inherit>. 
+ </font></div>
+<div class=clear></div>
+</div></div>
+</div>
+</div>
+<div class="footer-cap-bottom cap-bottom">
+<div class=cap-left></div>
+<div class=cap-right></div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+<div class="content-cap-bottom cap-bottom">
+<div class=cap-left></div>
+<div class=cap-right></div>
+</div>
+</div>
+</div>
+<div id=goog-gt-tt class="skiptranslate sf-hidden" dir=ltr></div>
+<div class=goog-te-spinner-pos><div class=goog-te-spinner-animation><svg xmlns=http://www.w3.org/2000/svg class=goog-te-spinner width=96px height=96px viewBox="0 0 66 66"><circle class=goog-te-spinner-path fill=none stroke-width=6 stroke-linecap=round cx=33 cy=33 r=30></circle></svg></div></div><iframe class="goog-te-menu-frame skiptranslate" title="Widget de idiomas del Traductor" style=visibility:visible;box-sizing:content-box;width:1052px;height:274px;display:none frameborder=0></iframe><iframe class="goog-te-menu-frame skiptranslate" title="Widget de idiomas del Traductor" style=visibility:visible;box-sizing:content-box;width:231px;height:71px;display:none frameborder=0></iframe>

@@ -77,7 +77,7 @@ while ($true) {
                         continue
                     }
                     "Año:" {
-                        $aux_ano = $aux_data[$k + 1].trim()
+                        $aux_ano = $aux_data[$k + 1].replace('&nbsp','').trim()
                         continue
                     }
                     "Archivos:" {
@@ -98,8 +98,10 @@ while ($true) {
             if ( ( $series_name -notlike "Reseña*" )  ) {
                 
                 # Compongo en nuevo nombre de la serie
-                $series_name = $series_name + " ($aux_editorial)" + "($aux_ano)" + "(comics $aux_archivos)" -replace '[\:\\\/\r\n]', ' -'
+                $series_name = $series_name + " ($aux_editorial)" + "($aux_ano)" -replace '[\:\\\/\r\n]', ' -'
                 
+                # He quitado ' + "(comics $aux_archivos)' depues de aux_ano y antes del replace ya que al final no aporta nada
+
                 # Miro si ya lo he bajado, para no volver a bajarlo de nuevo
                 # si quisiera volver a bajarlo solo tengo que quitar el fichero con extension crawljob de la carpeta "added"    
                 if ( -Not (Test-Path -path "$jd_downloaded_dir\$series_name.crawljob" -PathType Leaf) ) {    
