@@ -1,0 +1,184 @@
+**********************
+PowerShell transcript start
+Start time: 20220809194939
+Username: SERVER\server
+RunAs User: SERVER\server
+Configuration Name: 
+Machine: SERVER (Microsoft Windows NT 10.0.19044.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -NoProfile -ExecutionPolicy Bypass -Command Import-Module 'c:\Users\server\.vscode\extensions\ms-vscode.powershell-2022.7.2\modules\PowerShellEditorServices\PowerShellEditorServices.psd1'; Start-EditorServices -HostName 'Visual Studio Code Host' -HostProfileId 'Microsoft.VSCode' -HostVersion '2022.7.2' -AdditionalModules @('PowerShellEditorServices.VSCode') -BundledModulesPath 'c:\Users\server\.vscode\extensions\ms-vscode.powershell-2022.7.2\modules' -EnableConsoleRepl -StartupBanner "PowerShell Extension v2022.7.2
+Copyright (c) Microsoft Corporation.
+
+https://aka.ms/vscode-powershell
+Type 'help' to get help.
+" -LogLevel 'Normal' -LogPath 'c:\Users\server\AppData\Roaming\Code\User\globalStorage\ms-vscode.powershell\logs\1660067365-01bebeb1-48d4-4a67-ab1b-968e9aa46d531660067362364\EditorServices.log' -SessionDetailsPath 'c:\Users\server\AppData\Roaming\Code\User\globalStorage\ms-vscode.powershell\sessions\PSES-VSCode-20444-427646.json' -FeatureFlags @() 
+Process ID: 21680
+PSVersion: 7.2.5
+PSEdition: Core
+GitCommitId: 7.2.5
+OS: Microsoft Windows 10.0.19044
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.10032.0, 6.0.0, 6.1.0, 6.2.0, 7.0.0, 7.1.0, 7.2.5
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+
+#####################################################################################################
+#### PROCESANDO NUEVA SERIE: A Righteous Thirst for Vengeance
+#####################################################################################################
+
+    >> Lista de ficheros a procesar:
+
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #01.cbz
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #02.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #03.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #04.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #05.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #06.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #07.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #08.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #09.cbr
+
+MUEVO TODOS LOS COMIS AL DIRECTORIO RAIZ DE LA SERIE Y BORRO DIRECTORIOS VACIOS RECURSIVAMENTE
+
+
+LIMPIO EL NOMBRE DEL COMIC
+
+#####################################################################################################
+#### PROCESANDO NUEVO COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #01.cbz
+#####################################################################################################
+DESCOMPRIMO EL COMIC
+    >> Borro los directorios temporales
+    >> Descomprimo el comic
+    >> Cambio los atributos a los ficheros para poder tener acceso
+EJECUTO UNA LIMPIEZA DEL COMIC
+    >> Borro todos los ficheros menores de 5k que son thumbnais y los visores de comics no entienden
+    >> Quito directorios de MACOSX
+    >> Elimino todos los ficheros que nos son jpg, png, xml ó webp
+CONVIERTO LOS FICHEROS DE IMAGENES DEL COMIC A UN FORMATO ADECUADO
+    >> Convirtiendo imagenes.... ( ¡Espere!, este proceso puede durar varios minutos )
+ELIMINO LAS IMAGENES DE CREDITOS
+    >> Borro ciertas imagenes que añaden lo recopiladores
+    >> Genero las ultimas 7 miniaturas en formato 32x32
+    >> Buscando creditos en las 7 ultimas imagenes del comic
+**********************
+Command start time: 20220809195018
+**********************
+PS>CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809195018
+**********************
+PS>CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809195018
+**********************
+PS>CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809195018
+**********************
+PS>CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+
+busca_serie_comicvine: C:\scripts\convierte\comic-convert.ps1:441:9
+Line |
+ 441 |          busca_serie_comicvine $vine_series $vine_issue $vine_año $vin …
+     |          ~~~~~~~~~~~~~~~~~~~~~
+     | The term 'busca_serie_comicvine' is not recognized as a name of a cmdlet, function, script file, or executable program. Check the spelling of the name, or if a path was included,
+     | verify that the path is correct and try again.
+
+CREO EL NUEVO NOMBRE
+    >> Creo el nuevo nombre del comic:  Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #01.cbz
+HAGO UNA COPIA DE SEGURIDAD DEL COMIC
+    >> Borro la copia de seguridad antes de crearla por si existe
+    >> Creo la copia de seguridad por si fallase algun proceso despues
+COMPRIMO EL NUEVO COMIC
+COMPRUEBO EL NUEVO COMIC
+    >> EL COMIC ES CORRECTO
+    >> Borro el backup
+HAGO UN SCRAPPING DEL COMIC CON COMICTAGGER
+========================================================
+=================== DATOS OBTENIDOS ====================
+Serie: A Righteous Thirst for Vengeance
+Numero: 1
+Comic: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #01.cbz
+Año de la serie:  2021
+========================================================
+========================================================
+
+BUSCANDO DATOS (SCRAPPING) DEL COMIC
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 1 | AÑO: 2021 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #01.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+**********************
+Command start time: 20220809195027
+**********************
+
+busca_serie_comicvine: C:\scripts\convierte\comic-convert.ps1:441:9
+Line |
+ 441 |          busca_serie_comicvine $vine_series $vine_issue $vine_año $vin …
+     |          ~~~~~~~~~~~~~~~~~~~~~
+     | The term 'busca_serie_comicvine' is not recognized as a name of a cmdlet, function, script file, or executable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+
+TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+**********************
+Command start time: 20220809195129
+**********************
+PS C:\scripts> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="get-childitem"
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Get-ChildItem                                      7.0.0.0    Microsoft.PowerShell.Management
+
+**********************
+Command start time: 20220809195129
+**********************
+PS C:\scripts> CommandInvocation(Get-Help): "Get-Help"
+>> ParameterBinding(Get-Help): name="Name"; value="Get-ChildItem"
+>> ParameterBinding(Get-Help): name="Online"; value="False"
+>> ParameterBinding(Get-Help): name="ErrorAction"; value="Ignore"
+
+NAME
+    Get-ChildItem
+
+SYNTAX
+    Get-ChildItem [[-Path] <string[]>] [[-Filter] <string>] [-Include <string[]>] [-Exclude <string[]>] [-Recurse] [-Depth <uint>] [-Force] [-Name] [-Attributes {ReadOnly | Hidden | System |
+    Directory | Archive | Device | Normal | Temporary | SparseFile | ReparsePoint | Compressed | Offline | NotContentIndexed | Encrypted | IntegrityStream | NoScrubData}] [-FollowSymlink]
+    [-Directory] [-File] [-Hidden] [-ReadOnly] [-System] [<CommonParameters>]
+
+    Get-ChildItem [[-Filter] <string>] -LiteralPath <string[]> [-Include <string[]>] [-Exclude <string[]>] [-Recurse] [-Depth <uint>] [-Force] [-Name] [-Attributes {ReadOnly | Hidden | System |
+    Directory | Archive | Device | Normal | Temporary | SparseFile | ReparsePoint | Compressed | Offline | NotContentIndexed | Encrypted | IntegrityStream | NoScrubData}] [-FollowSymlink]
+    [-Directory] [-File] [-Hidden] [-ReadOnly] [-System] [<CommonParameters>]
+
+
+ALIASES
+    gci
+    ls
+    dir
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+        -- To view the Help topic for this cmdlet online, type: "Get-Help Get-ChildItem -Online" or
+           go to https://go.microsoft.com/fwlink/?LinkID=2096492.
+
+
+**********************
+Command start time: 20220809195137
+**********************
+PS C:\scripts> . "c:\scripts\convierte\comic-convert.ps1"
+PATH DEL SCRIPT = C:\scripts\convierte
+
+**********************
+PowerShell transcript end
+End time: 20220809195138
+**********************

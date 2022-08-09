@@ -1,0 +1,413 @@
+**********************
+PowerShell transcript start
+Start time: 20220809195138
+Username: SERVER\server
+RunAs User: SERVER\server
+Configuration Name: 
+Machine: SERVER (Microsoft Windows NT 10.0.19044.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -NoProfile -ExecutionPolicy Bypass -Command Import-Module 'c:\Users\server\.vscode\extensions\ms-vscode.powershell-2022.7.2\modules\PowerShellEditorServices\PowerShellEditorServices.psd1'; Start-EditorServices -HostName 'Visual Studio Code Host' -HostProfileId 'Microsoft.VSCode' -HostVersion '2022.7.2' -AdditionalModules @('PowerShellEditorServices.VSCode') -BundledModulesPath 'c:\Users\server\.vscode\extensions\ms-vscode.powershell-2022.7.2\modules' -EnableConsoleRepl -StartupBanner "PowerShell Extension v2022.7.2
+Copyright (c) Microsoft Corporation.
+
+https://aka.ms/vscode-powershell
+Type 'help' to get help.
+" -LogLevel 'Normal' -LogPath 'c:\Users\server\AppData\Roaming\Code\User\globalStorage\ms-vscode.powershell\logs\1660067365-01bebeb1-48d4-4a67-ab1b-968e9aa46d531660067362364\EditorServices.log' -SessionDetailsPath 'c:\Users\server\AppData\Roaming\Code\User\globalStorage\ms-vscode.powershell\sessions\PSES-VSCode-20444-427646.json' -FeatureFlags @() 
+Process ID: 21680
+PSVersion: 7.2.5
+PSEdition: Core
+GitCommitId: 7.2.5
+OS: Microsoft Windows 10.0.19044
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.10032.0, 6.0.0, 6.1.0, 6.2.0, 7.0.0, 7.1.0, 7.2.5
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+
+#####################################################################################################
+#### PROCESANDO NUEVA SERIE: A Righteous Thirst for Vengeance
+#####################################################################################################
+
+    >> Lista de ficheros a procesar:
+
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #01.cbz
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #02.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #03.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #04.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #05.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #06.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #07.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #08.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #09.cbr
+
+MUEVO TODOS LOS COMIS AL DIRECTORIO RAIZ DE LA SERIE Y BORRO DIRECTORIOS VACIOS RECURSIVAMENTE
+
+
+LIMPIO EL NOMBRE DEL COMIC
+
+#####################################################################################################
+#### PROCESANDO NUEVO COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #01.cbz
+#####################################################################################################
+DESCOMPRIMO EL COMIC
+    >> Borro los directorios temporales
+    >> Descomprimo el comic
+    >> Cambio los atributos a los ficheros para poder tener acceso
+EJECUTO UNA LIMPIEZA DEL COMIC
+    >> Borro todos los ficheros menores de 5k que son thumbnais y los visores de comics no entienden
+    >> Quito directorios de MACOSX
+    >> Elimino todos los ficheros que nos son jpg, png, xml ó webp
+CONVIERTO LOS FICHEROS DE IMAGENES DEL COMIC A UN FORMATO ADECUADO
+    >> Convirtiendo imagenes.... ( ¡Espere!, este proceso puede durar varios minutos )
+ELIMINO LAS IMAGENES DE CREDITOS
+    >> Borro ciertas imagenes que añaden lo recopiladores
+    >> Genero las ultimas 7 miniaturas en formato 32x32
+    >> Buscando creditos en las 7 ultimas imagenes del comic
+**********************
+Command start time: 20220809195217
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809195217
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809195217
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809195217
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809195217
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809195217
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809195217
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809195217
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+ENCONTRADO VOLUMEN:  A Righteous Thirst For Vengeance
+CUMPLE TODOS LOS PARAMETROS
+Identificador: 0
+COMIC:  A Righteous Thirst For Vengeance
+ISSUE: 001
+AÑO:  2021
+NUMERO DE COMICS:  10
+EDITORIAL:  Image
+ID:  139442
+URL:  https://comicvine.gamespot.com/api/volume/4050-139442/
+ID:  139442
+(139442 , 4050-139442)(Image)(2021).jpg JPEG 1988x3056=>32x32 32x32+0+0 8-bit Grayscale Gray 627B 0.234u 0:00.228
+**********************
+Command start time: 20220809195222
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809195222
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809195222
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809195222
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809195222
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809195222
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809195222
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809195222
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+.Arsenio_LupÃ­n.jpg JPEG 1440x2214=>32x32 32x32+0+0 8-bit Grayscale Gray 421B 0.109u 0:00.127
+**********************
+Command start time: 20220809195226
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809195226
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809195226
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809195226
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809195226
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809195226
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809195226
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809195226
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809195229
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809195229
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809195229
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809195229
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809195229
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809195229
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809195229
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809195229
+**********************
+PS C:\scripts> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809195416
+**********************
+PS C:\scripts> CommandInvocation(Resolve-Path): "Resolve-Path"
+>> ParameterBinding(Resolve-Path): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Resolve-Path): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Resolve-Path): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Resolve-Path): name="Verbose"; value="False"
+>> ParameterBinding(Resolve-Path): name="Debug"; value="False"
+>> ParameterBinding(Resolve-Path): name="Path"; value="g*"
+**********************
+Command start time: 20220809195416
+**********************
+PS C:\scripts> CommandInvocation(Get-ChildItem): "Get-ChildItem"
+>> ParameterBinding(Get-ChildItem): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-ChildItem): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-ChildItem): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-ChildItem): name="Verbose"; value="False"
+>> ParameterBinding(Get-ChildItem): name="Debug"; value="False"
+>> ParameterBinding(Get-ChildItem): name="Path"; value="g*"
+>> ParameterBinding(Get-ChildItem): name="Hidden"; value="True"
+**********************
+Command start time: 20220809195417
+**********************
+PS C:\scripts> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="git-gui.exe"
+**********************
+Command start time: 20220809195417
+**********************
+PS C:\scripts> CommandInvocation(Resolve-Path): "Resolve-Path"
+>> ParameterBinding(Resolve-Path): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Resolve-Path): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Resolve-Path): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Resolve-Path): name="Verbose"; value="False"
+>> ParameterBinding(Resolve-Path): name="Debug"; value="False"
+>> ParameterBinding(Resolve-Path): name="Path"; value="*"
+**********************
+Command start time: 20220809195418
+**********************
+PS C:\scripts> CommandInvocation(Resolve-Path): "Resolve-Path"
+>> ParameterBinding(Resolve-Path): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Resolve-Path): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Resolve-Path): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Resolve-Path): name="Verbose"; value="False"
+>> ParameterBinding(Resolve-Path): name="Debug"; value="False"
+>> ParameterBinding(Resolve-Path): name="Path"; value="a*"
+**********************
+Command start time: 20220809195418
+**********************
+PS C:\scripts> CommandInvocation(Get-ChildItem): "Get-ChildItem"
+>> ParameterBinding(Get-ChildItem): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-ChildItem): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-ChildItem): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-ChildItem): name="Verbose"; value="False"
+>> ParameterBinding(Get-ChildItem): name="Debug"; value="False"
+>> ParameterBinding(Get-ChildItem): name="Path"; value="a*"
+>> ParameterBinding(Get-ChildItem): name="Hidden"; value="True"
+**********************
+Command start time: 20220809195418
+**********************
+PS C:\scripts> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="git"
+**********************
+Command start time: 20220809195418
+**********************
+PS C:\scripts> CommandInvocation(Resolve-Path): "Resolve-Path"
+>> ParameterBinding(Resolve-Path): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Resolve-Path): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Resolve-Path): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Resolve-Path): name="Verbose"; value="False"
+>> ParameterBinding(Resolve-Path): name="Debug"; value="False"
+>> ParameterBinding(Resolve-Path): name="Path"; value="*"
+**********************
+Command start time: 20220809195418
+**********************
+PS C:\scripts> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="git"
+**********************
+Command start time: 20220809195421
+**********************
+PS C:\scripts> CommandInvocation(Resolve-Path): "Resolve-Path"
+>> ParameterBinding(Resolve-Path): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Resolve-Path): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Resolve-Path): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Resolve-Path): name="Verbose"; value="False"
+>> ParameterBinding(Resolve-Path): name="Debug"; value="False"
+>> ParameterBinding(Resolve-Path): name="Path"; value=".*"
+**********************
+Command start time: 20220809195421
+**********************
+PS C:\scripts> CommandInvocation(Get-ChildItem): "Get-ChildItem"
+>> ParameterBinding(Get-ChildItem): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-ChildItem): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-ChildItem): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-ChildItem): name="Verbose"; value="False"
+>> ParameterBinding(Get-ChildItem): name="Debug"; value="False"
+>> ParameterBinding(Get-ChildItem): name="Path"; value=".*"
+>> ParameterBinding(Get-ChildItem): name="Hidden"; value="True"
+**********************
+Command start time: 20220809195431
+**********************
+PS C:\scripts> git add .
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+**********************
+Command start time: 20220809195441
+**********************
+warning: in the working copy of 'convierte/comic/unzip/Info.xml', LF will be replaced by CRLF the next time Git touches it
+ParameterBinding(Out-String): name="InputObject"; value="warning: in the working copy of 'convierte/comic/unzip/Info.xml', LF will be replaced by CRLF the next time Git touches it"
+**********************
+Command start time: 20220809195441
+**********************
+warning: in the working copy of 'convierte/log/A Righteous Thirst for Vengeance _2022_08_09_06_27_01.log', LF will be replaced by CRLF the next time Git touches it
+ParameterBinding(Out-String): name="InputObject"; value="warning: in the working copy of 'convierte/log/A Righteous Thirst for Vengeance _2022_08_09_06_27_01.log', LF will be replaced by CRLF the next time Git touches it"
+**********************
+Command start time: 20220809195441
+**********************
+warning: in the working copy of 'convierte/log/A Righteous Thirst for Vengeance _2022_08_09_06_34_33.log', LF will be replaced by CRLF the next time Git touches it
+ParameterBinding(Out-String): name="InputObject"; value="warning: in the working copy of 'convierte/log/A Righteous Thirst for Vengeance _2022_08_09_06_34_33.log', LF will be replaced by CRLF the next time Git touches it"
+**********************
+Command start time: 20220809195441
+**********************
+warning: in the working copy of 'convierte/log/A Righteous Thirst for Vengeance _2022_08_09_06_37_44.log', LF will be replaced by CRLF the next time Git touches it
+ParameterBinding(Out-String): name="InputObject"; value="warning: in the working copy of 'convierte/log/A Righteous Thirst for Vengeance _2022_08_09_06_37_44.log', LF will be replaced by CRLF the next time Git touches it"
+**********************
+Command start time: 20220809195442
+**********************
+warning: in the working copy of 'convierte/log/A Righteous Thirst for Vengeance _2022_08_09_06_40_38.log', LF will be replaced by CRLF the next time Git touches it
+ParameterBinding(Out-String): name="InputObject"; value="warning: in the working copy of 'convierte/log/A Righteous Thirst for Vengeance _2022_08_09_06_40_38.log', LF will be replaced by CRLF the next time Git touches it"
+**********************
+Command start time: 20220809195442
+**********************
+warning: in the working copy of 'convierte/log/A Righteous Thirst for Vengeance _2022_08_09_06_51_51.log', LF will be replaced by CRLF the next time Git touches it
+ParameterBinding(Out-String): name="InputObject"; value="warning: in the working copy of 'convierte/log/A Righteous Thirst for Vengeance _2022_08_09_06_51_51.log', LF will be replaced by CRLF the next time Git touches it"
+**********************
+Command start time: 20220809195442
+**********************
+warning: in the working copy of 'convierte/log/A Righteous Thirst for Vengeance _2022_08_09_06_54_09.log', LF will be replaced by CRLF the next time Git touches it
+ParameterBinding(Out-String): name="InputObject"; value="warning: in the working copy of 'convierte/log/A Righteous Thirst for Vengeance _2022_08_09_06_54_09.log', LF will be replaced by CRLF the next time Git touches it"
+**********************
+Command start time: 20220809195442
+**********************
+warning: in the working copy of 'convierte/log/A Righteous Thirst for Vengeance _2022_08_09_07_04_15.log', LF will be replaced by CRLF the next time Git touches it
+ParameterBinding(Out-String): name="InputObject"; value="warning: in the working copy of 'convierte/log/A Righteous Thirst for Vengeance _2022_08_09_07_04_15.log', LF will be replaced by CRLF the next time Git touches it"
+**********************
+Command start time: 20220809195442
+**********************
+warning: in the working copy of 'convierte/log/A Righteous Thirst for Vengeance _2022_08_09_07_14_18.log', LF will be replaced by CRLF the next time Git touches it
+ParameterBinding(Out-String): name="InputObject"; value="warning: in the working copy of 'convierte/log/A Righteous Thirst for Vengeance _2022_08_09_07_14_18.log', LF will be replaced by CRLF the next time Git touches it"
+**********************
+Command start time: 20220809195442
+**********************
+warning: in the working copy of 'convierte/log/A Righteous Thirst for Vengeance _2022_08_09_07_32_23.log', LF will be replaced by CRLF the next time Git touches it
+ParameterBinding(Out-String): name="InputObject"; value="warning: in the working copy of 'convierte/log/A Righteous Thirst for Vengeance _2022_08_09_07_32_23.log', LF will be replaced by CRLF the next time Git touches it"
+**********************
+Command start time: 20220809195442
+**********************
+warning: in the working copy of 'convierte/log/A Righteous Thirst for Vengeance _2022_08_09_07_44_09.log', LF will be replaced by CRLF the next time Git touches it
+ParameterBinding(Out-String): name="InputObject"; value="warning: in the working copy of 'convierte/log/A Righteous Thirst for Vengeance _2022_08_09_07_44_09.log', LF will be replaced by CRLF the next time Git touches it"
+**********************
+Command start time: 20220809195442
+**********************
+warning: in the working copy of 'convierte/log/A Righteous Thirst for Vengeance _2022_08_09_07_46_19.log', LF will be replaced by CRLF the next time Git touches it
+ParameterBinding(Out-String): name="InputObject"; value="warning: in the working copy of 'convierte/log/A Righteous Thirst for Vengeance _2022_08_09_07_46_19.log', LF will be replaced by CRLF the next time Git touches it"
+**********************
+Command start time: 20220809195442
+**********************
+warning: in the working copy of 'convierte/log/A Righteous Thirst for Vengeance _2022_08_09_07_49_39.log', LF will be replaced by CRLF the next time Git touches it
+ParameterBinding(Out-String): name="InputObject"; value="warning: in the working copy of 'convierte/log/A Righteous Thirst for Vengeance _2022_08_09_07_49_39.log', LF will be replaced by CRLF the next time Git touches it"
+**********************
+Command start time: 20220809195442
+**********************
+warning: in the working copy of 'convierte/log/A Righteous Thirst for Vengeance _2022_08_09_07_51_38.log', LF will be replaced by CRLF the next time Git touches it
+ParameterBinding(Out-String): name="InputObject"; value="warning: in the working copy of 'convierte/log/A Righteous Thirst for Vengeance _2022_08_09_07_51_38.log', LF will be replaced by CRLF the next time Git touches it"

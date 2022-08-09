@@ -52,6 +52,8 @@ $Global:comic32x32           = "$prog_dir\comic\32x32"
 $Global:original_credits_dir = "$prog_dir\original_credits"
 $Global:credits_dir          = "$prog_dir\credits" 
 $Global:backup_dir           = "$prog_dir\backup"
+$Global:scrapping_cache_dir  = "$prog_dir\scrapping_cache"
+$Global:scrapping_temp_dir   = "$prog_dir\scrapping_temp"
 $Global:fichero_temporal     = "C:\windows\temp\temp.jpg"
 
 # Incluimos los modulos necesarios
@@ -62,6 +64,7 @@ $Global:fichero_temporal     = "C:\windows\temp\temp.jpg"
 . $prog_dir\limpiar_nombre.ps1
 . $prog_dir\identifica_comic.ps1
 . $prog_dir\ocr.ps1
+. $prog_dir\ask_comicvine.ps1
 
 
 # Rutas de los ejecutables auxiliares
@@ -76,6 +79,7 @@ $Global:renamer    = "C:\Program Files (x86)\ReNamer\ReNamer.exe"
 
 # Con esta expresion de regex se puede extraer la cadena que contenga el año en $3
 # Para que acepte acentos, dieresis y la ñ pongo 'a-zA-ZÀ-ÿ\u00f1\u00d1' 
+#! Esto a configuracion
 $Global:cadena_año = '((\(|\[)([a-zA-ZÀ-ÿ\u00f1\u00d1\w\d\s\-\,])*?\s?([(1|2][9|0][67890123]\d)\s?([a-zA-ZÀ-ÿ\u00f1\u00d1\w\d\s\-\,])*?(\)|\]))'
 $Global:cadena_issue = '( #| t| t.| T| T.| Tomo| Tomo.|-|-#| )(\d{1,3})'
 
@@ -181,8 +185,8 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
     $series_dir = $new_series_dir  
 
 
-    #! aqui empiezo a buscar datos del comic. <- Esto hay que moverlo a una funciona de identificar comics
     # Extraigo el nombre de la serie del nombre del directorio
+    #! Esto hay que sustiruirlo / moverlo a idetifica_comic.ps1 como una funcion
     if ( $scrapper_comic -eq $true ) {
         $series_name = extraer_serie $series_dir 
         # $dir_list[$i].name.split("(")[0].trim()
@@ -348,7 +352,7 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
         # 2.- La segunda forma y la mas complicada es extraer de los comics las imagenes de creditos de los recopiladores
         #     y almacenarlas en el directorio 'original_credits', para despues eliminarlas de los comics comparando las imagenes.
         #! Podria existir una tercera forma y es haciendo un OCR a las 'n' ultimas imagenes del comic y buscando patrones de texto, 
-        #! pero no esta implementada 
+        #! pero no esta implementada HACERLO YA
         
         if ( $buscar_creditos -eq $true ) {
             write-host "ELIMINO LAS IMAGENES DE CREDITOS"
@@ -359,7 +363,7 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
             
             # Antes de borrar los ficheros los paso por renamer para que limpie los nombres ya que se me ha
             # dado el caso de que todos ficheros tenian nombres con que coincidian con los filtros a borrar.
-            #! Esto habria que cambiarlo por una funcion
+            #! Esto habria que cambiarlo por una funcion pero ya!
             if ($tipo_renombrado = 'comic'){
                 & "C:\Program Files (x86)\ReNamer\ReNamer.exe" /silent /rename "COMICS" $comic_unzip
             }
@@ -425,6 +429,19 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
                 remove-item -LiteralPath $imagen -Force -Confirm:$False -ErrorAction:Stop -verbose:$verbose 
             }
         }
+
+        #! =================================================
+        #! =========== PRUEBA DE ASK_COMIC_VINE ============
+        #! =================================================
+
+        $vine_series = $series_name.trim()
+        $vine_año = (extraer_año $lista_comics[$j].directory.name).trim()
+        $vine_dir = $lista_comics[$j].directory.name.trim()
+        $vine_issue = 1
+        $vine_publisher = ""
+        busca_serie_comicvine $vine_series $vine_issue $vine_año $vine_publisher $vine_dir
+
+
 
         ##################################
         # CREO EL NUEVO COMIC

@@ -36,7 +36,7 @@ function scrap_comic {
     write-host "Serie: $series_name"
     write-host "Numero: $issue"
     write-host "Comic: $new_comic"
-    write-host "Año serie: $v_año"
+    write-host "Año de la serie: "($v_año -join (' , '))
     write-host "========================================================"
     write-host "========================================================"
     write-host 
@@ -62,12 +62,21 @@ function scrap_comic {
         # Tanto en el año de comicvine como en el año del directorio. 
         $posibles_años=@()
         $posibles_años.clear
-        $posibles_años += ''
-        for ( $i = 0 ; $i -lt $v_año.count ; $i++ ) {
-            $posibles_años += [int]( $v_año[$i] )
-            $posibles_años += [int]( $v_año[$i] - 1 )
-            $posibles_años += [int]( $v_año[$i] + 1 )
-        }
+        # $posibles_años += ''
+
+        if ( $v_año.gettype().name -eq 'String' ) {
+            # Si se devuelve un sollo año en un string
+            $posibles_años += [int]$v_año 
+            $posibles_años += ( [int]$v_año - 1 )
+            $posibles_años += ( [int]$v_año + 1 )
+        } else {
+            for ( $i = 0 ; $i -lt $v_año.count ; $i++ ) {
+                # Si devuelve un array de años
+                $posibles_años += [int]$v_año[$i] 
+                $posibles_años += ( [int]$v_año[$i] - 1 )
+                $posibles_años += ( [int]$v_año[$i] + 1 )
+            }
+        } 
     }
 
     # Existen varias posiblilidades dependiendo de los años encontrados durante el OCR
@@ -100,7 +109,7 @@ function scrap_comic {
                         # Renombro el comic
                         llamar_a_comictagger '' '' '' $new_comic 'renombra_comic'
                         # Me salgo del bucle
-                        break:outer
+                        break outer
                 } else {
                         # NO LO HA ENCONTRADO A LA PRIMERA
                         write-host "SCRAPPING FALLIDO. ERROR: "$respuesta_ct[1] -ForegroundColor Red

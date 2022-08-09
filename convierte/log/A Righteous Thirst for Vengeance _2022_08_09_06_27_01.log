@@ -1,0 +1,430 @@
+**********************
+PowerShell transcript start
+Start time: 20220809182701
+Username: SERVER\server
+RunAs User: SERVER\server
+Configuration Name: 
+Machine: SERVER (Microsoft Windows NT 10.0.19044.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -NoProfile -ExecutionPolicy Bypass -Command Import-Module 'c:\Users\server\.vscode\extensions\ms-vscode.powershell-2022.7.2\modules\PowerShellEditorServices\PowerShellEditorServices.psd1'; Start-EditorServices -HostName 'Visual Studio Code Host' -HostProfileId 'Microsoft.VSCode' -HostVersion '2022.7.2' -AdditionalModules @('PowerShellEditorServices.VSCode') -BundledModulesPath 'c:\Users\server\.vscode\extensions\ms-vscode.powershell-2022.7.2\modules' -EnableConsoleRepl -StartupBanner "PowerShell Extension v2022.7.2
+Copyright (c) Microsoft Corporation.
+
+https://aka.ms/vscode-powershell
+Type 'help' to get help.
+" -LogLevel 'Normal' -LogPath 'c:\Users\server\AppData\Roaming\Code\User\globalStorage\ms-vscode.powershell\logs\1660060903-dd3729fa-4dd4-439f-879f-e3d56200b0c21660060898929\EditorServices.log' -SessionDetailsPath 'c:\Users\server\AppData\Roaming\Code\User\globalStorage\ms-vscode.powershell\sessions\PSES-VSCode-19360-603308.json' -FeatureFlags @() 
+Process ID: 20104
+PSVersion: 7.2.5
+PSEdition: Core
+GitCommitId: 7.2.5
+OS: Microsoft Windows 10.0.19044
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.10032.0, 6.0.0, 6.1.0, 6.2.0, 7.0.0, 7.1.0, 7.2.5
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+
+#####################################################################################################
+#### PROCESANDO NUEVA SERIE: A Righteous Thirst for Vengeance
+#####################################################################################################
+
+    >> Lista de ficheros a procesar:
+
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #01.cbz
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #02.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #03.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #04.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #05.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #06.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #07.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #08.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #09.cbr
+
+MUEVO TODOS LOS COMIS AL DIRECTORIO RAIZ DE LA SERIE Y BORRO DIRECTORIOS VACIOS RECURSIVAMENTE
+
+
+LIMPIO EL NOMBRE DEL COMIC
+
+#####################################################################################################
+#### PROCESANDO NUEVO COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #01.cbz
+#####################################################################################################
+DESCOMPRIMO EL COMIC
+    >> Borro los directorios temporales
+    >> Descomprimo el comic
+    >> Cambio los atributos a los ficheros para poder tener acceso
+EJECUTO UNA LIMPIEZA DEL COMIC
+    >> Borro todos los ficheros menores de 5k que son thumbnais y los visores de comics no entienden
+    >> Quito directorios de MACOSX
+    >> Elimino todos los ficheros que nos son jpg, png, xml ó webp
+CONVIERTO LOS FICHEROS DE IMAGENES DEL COMIC A UN FORMATO ADECUADO
+    >> Convirtiendo imagenes.... ( ¡Espere!, este proceso puede durar varios minutos )
+ELIMINO LAS IMAGENES DE CREDITOS
+    >> Borro ciertas imagenes que añaden lo recopiladores
+    >> Genero las ultimas 7 miniaturas en formato 32x32
+    >> Buscando creditos en las 7 ultimas imagenes del comic
+**********************
+Command start time: 20220809182743
+**********************
+PS>CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809182743
+**********************
+PS>CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809182743
+**********************
+PS>CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809182743
+**********************
+PS>CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809182743
+**********************
+PS>CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809182743
+**********************
+PS>CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809182743
+**********************
+PS>CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809182743
+**********************
+PS>CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809182743
+**********************
+PS>CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809182743
+**********************
+PS>CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809182743
+**********************
+PS>CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809182743
+**********************
+PS>CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809182743
+**********************
+PS>CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809182743
+**********************
+PS>CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809182743
+**********************
+PS>CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809182743
+**********************
+PS>CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809182743
+**********************
+PS>CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809182743
+**********************
+PS>CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809182743
+**********************
+PS>CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809182743
+**********************
+PS>CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809182751
+**********************
+PS>$_
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+**********************
+Command start time: 20220809182806
+**********************
+PS>$comic_name
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+**********************
+Command start time: 20220809182835
+**********************
+PS>$comic_fname
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #01.cbz"
+**********************
+Command start time: 20220809182850
+**********************
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #01.cbzsplit-path $comic_fname -leaf
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="A Righteous Thirst for Vengeance #01.cbz"
+**********************
+Command start time: 20220809182857
+**********************
+A Righteous Thirst for Vengeance #01.cbzsplit-path $comic_fname -leaf 2
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> TerminatingError(Split-Path): "A positional parameter cannot be found that accepts argument '2'."
+**********************
+Command start time: 20220809182857
+**********************
+
+Split-Path: A positional parameter cannot be found that accepts argument '2'.
+ParameterBinding(Out-String): name="InputObject"; value="A positional parameter cannot be found that accepts argument '2'."
+**********************
+Command start time: 20220809182904
+**********************
+[91mSplit-Path: [91mA positional parameter cannot be found that accepts argument '2'.[0msplit-path $comic_fname -leaf(1)
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> TerminatingError(Split-Path): "A positional parameter cannot be found that accepts argument '1'."
+**********************
+Command start time: 20220809182904
+**********************
+
+Split-Path: A positional parameter cannot be found that accepts argument '1'.
+ParameterBinding(Out-String): name="InputObject"; value="A positional parameter cannot be found that accepts argument '1'."
+**********************
+Command start time: 20220809182933
+**********************
+[91mSplit-Path: [91mA positional parameter cannot be found that accepts argument '1'.[0msplit-path $lista_comics[$j]
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)"
+**********************
+Command start time: 20220809182944
+**********************
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)$lista_comics[$j]
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #01.cbz"
+**********************
+Command start time: 20220809182950
+**********************
+$lista_comics[$j] | get-member
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="Target = LinkTarget"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.String LinkType{get=GetLinkType;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.String Mode{get=Mode;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.String ModeWithoutHardLink{get=ModeWithoutHardLink;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.IO.StreamWriter AppendText()"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.IO.FileInfo CopyTo(string destFileName), System.IO.FileInfo CopyTo(string destFileName, bool overwrite)"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.IO.FileStream Create()"
+>> ParameterBinding(Out-String): name="InputObject"; value="void CreateAsSymbolicLink(string pathToTarget)"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.IO.StreamWriter CreateText()"
+>> ParameterBinding(Out-String): name="InputObject"; value="void Decrypt()"
+>> ParameterBinding(Out-String): name="InputObject"; value="void Delete()"
+>> ParameterBinding(Out-String): name="InputObject"; value="void Encrypt()"
+>> ParameterBinding(Out-String): name="InputObject"; value="bool Equals(System.Object obj)"
+>> ParameterBinding(Out-String): name="InputObject"; value="int GetHashCode()"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.Object GetLifetimeService()"
+>> ParameterBinding(Out-String): name="InputObject"; value="void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context), void ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)"
+>> ParameterBinding(Out-String): name="InputObject"; value="type GetType()"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.Object InitializeLifetimeService()"
+>> ParameterBinding(Out-String): name="InputObject"; value="void MoveTo(string destFileName), void MoveTo(string destFileName, bool overwrite)"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.IO.FileStream Open(System.IO.FileMode mode), System.IO.FileStream Open(System.IO.FileMode mode, System.IO.FileAccess access), System.IO.FileStream Open(System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share), System.IO.FileStream Open(System.IO.FileStreamOptions options)"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.IO.FileStream OpenRead()"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.IO.StreamReader OpenText()"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.IO.FileStream OpenWrite()"
+>> ParameterBinding(Out-String): name="InputObject"; value="void Refresh()"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.IO.FileInfo Replace(string destinationFileName, string destinationBackupFileName), System.IO.FileInfo Replace(string destinationFileName, string destinationBackupFileName, bool ignoreMetadataErrors)"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.IO.FileSystemInfo ResolveLinkTarget(bool returnFinalTarget)"
+>> ParameterBinding(Out-String): name="InputObject"; value="string ToString()"
+>> ParameterBinding(Out-String): name="InputObject"; value="string PSChildName=A Righteous Thirst for Vengeance #01.cbz"
+>> ParameterBinding(Out-String): name="InputObject"; value="PSDriveInfo PSDrive=Q"
+>> ParameterBinding(Out-String): name="InputObject"; value="bool PSIsContainer=False"
+>> ParameterBinding(Out-String): name="InputObject"; value="string PSParentPath=Microsoft.PowerShell.Core\FileSystem::Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)"
+>> ParameterBinding(Out-String): name="InputObject"; value="string PSPath=Microsoft.PowerShell.Core\FileSystem::Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #01.cbz"
+>> ParameterBinding(Out-String): name="InputObject"; value="ProviderInfo PSProvider=Microsoft.PowerShell.Core\FileSystem"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.IO.FileAttributes Attributes {get;set;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="datetime CreationTime {get;set;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="datetime CreationTimeUtc {get;set;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.IO.DirectoryInfo Directory {get;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="string DirectoryName {get;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="bool Exists {get;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="string Extension {get;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="string FullName {get;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="bool IsReadOnly {get;set;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="datetime LastAccessTime {get;set;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="datetime LastAccessTimeUtc {get;set;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="datetime LastWriteTime {get;set;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="datetime LastWriteTimeUtc {get;set;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="long Length {get;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="string LinkTarget {get;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="string Name {get;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.Object BaseName {get=if ($this.Extension.Length -gt 0){$this.Name.Remove($this.Name.Length - $this.Extension.Length)}else{$this.Name};}"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.Object VersionInfo {get=[System.Diagnostics.FileVersionInfo]::GetVersionInfo($this.FullName);}"
+**********************
+Command start time: 20220809183008
+**********************
+$lista_comics[$j].directory
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)"
+**********************
+Command start time: 20220809183022
+**********************
+$lista_comics[$j].directory | get-member
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="Target = LinkTarget"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.String LinkType{get=GetLinkType;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.String Mode{get=Mode;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.String ModeWithoutHardLink{get=ModeWithoutHardLink;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="void Create()"
+>> ParameterBinding(Out-String): name="InputObject"; value="void CreateAsSymbolicLink(string pathToTarget)"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.IO.DirectoryInfo CreateSubdirectory(string path)"
+>> ParameterBinding(Out-String): name="InputObject"; value="void Delete(), void Delete(bool recursive)"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.Collections.Generic.IEnumerable[System.IO.DirectoryInfo] EnumerateDirectories(), System.Collections.Generic.IEnumerable[System.IO.DirectoryInfo] EnumerateDirectories(string searchPattern), System.Collections.Generic.IEnumerable[System.IO.DirectoryInfo] EnumerateDirectories(string searchPattern, System.IO.SearchOption searchOption), System.Collections.Generic.IEnumerable[System.IO.DirectoryInfo] EnumerateDirectories(string searchPattern, System.IO.EnumerationOptions enumerationOptions)"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.Collections.Generic.IEnumerable[System.IO.FileInfo] EnumerateFiles(), System.Collections.Generic.IEnumerable[System.IO.FileInfo] EnumerateFiles(string searchPattern), System.Collections.Generic.IEnumerable[System.IO.FileInfo] EnumerateFiles(string searchPattern, System.IO.SearchOption searchOption), System.Collections.Generic.IEnumerable[System.IO.FileInfo] EnumerateFiles(string searchPattern, System.IO.EnumerationOptions enumerationOptions)"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.Collections.Generic.IEnumerable[System.IO.FileSystemInfo] EnumerateFileSystemInfos(), System.Collections.Generic.IEnumerable[System.IO.FileSystemInfo] EnumerateFileSystemInfos(string searchPattern), System.Collections.Generic.IEnumerable[System.IO.FileSystemInfo] EnumerateFileSystemInfos(string searchPattern, System.IO.SearchOption searchOption), System.Collections.Generic.IEnumerable[System.IO.FileSystemInfo] EnumerateFileSystemInfos(string searchPattern, System.IO.EnumerationOptions enumerationOptions)"
+>> ParameterBinding(Out-String): name="InputObject"; value="bool Equals(System.Object obj)"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.IO.DirectoryInfo[] GetDirectories(), System.IO.DirectoryInfo[] GetDirectories(string searchPattern), System.IO.DirectoryInfo[] GetDirectories(string searchPattern, System.IO.SearchOption searchOption), System.IO.DirectoryInfo[] GetDirectories(string searchPattern, System.IO.EnumerationOptions enumerationOptions)"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.IO.FileInfo[] GetFiles(), System.IO.FileInfo[] GetFiles(string searchPattern), System.IO.FileInfo[] GetFiles(string searchPattern, System.IO.SearchOption searchOption), System.IO.FileInfo[] GetFiles(string searchPattern, System.IO.EnumerationOptions enumerationOptions)"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.IO.FileSystemInfo[] GetFileSystemInfos(), System.IO.FileSystemInfo[] GetFileSystemInfos(string searchPattern), System.IO.FileSystemInfo[] GetFileSystemInfos(string searchPattern, System.IO.SearchOption searchOption), System.IO.FileSystemInfo[] GetFileSystemInfos(string searchPattern, System.IO.EnumerationOptions enumerationOptions)"
+>> ParameterBinding(Out-String): name="InputObject"; value="int GetHashCode()"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.Object GetLifetimeService()"
+>> ParameterBinding(Out-String): name="InputObject"; value="void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context), void ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)"
+>> ParameterBinding(Out-String): name="InputObject"; value="type GetType()"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.Object InitializeLifetimeService()"
+>> ParameterBinding(Out-String): name="InputObject"; value="void MoveTo(string destDirName)"
+>> ParameterBinding(Out-String): name="InputObject"; value="void Refresh()"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.IO.FileSystemInfo ResolveLinkTarget(bool returnFinalTarget)"
+>> ParameterBinding(Out-String): name="InputObject"; value="string ToString()"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.IO.FileAttributes Attributes {get;set;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="datetime CreationTime {get;set;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="datetime CreationTimeUtc {get;set;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="bool Exists {get;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="string Extension {get;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="string FullName {get;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="datetime LastAccessTime {get;set;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="datetime LastAccessTimeUtc {get;set;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="datetime LastWriteTime {get;set;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="datetime LastWriteTimeUtc {get;set;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="string LinkTarget {get;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="string Name {get;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.IO.DirectoryInfo Parent {get;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.IO.DirectoryInfo Root {get;}"
+>> ParameterBinding(Out-String): name="InputObject"; value="System.Object BaseName {get=$this.Name;}"
+**********************
+Command start time: 20220809183032
+**********************
+$lista_comics[$j].directory.name
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)"
+**********************
+Command start time: 20220809183045
+**********************
+A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)split-path ($lista_comics[$j].directory.name)
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value=""
+**********************
+Command start time: 20220809183050
+**********************
+split-path $lista_comics[$j].directory.name
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value=""
+**********************
+Command start time: 20220809183058
+**********************
+split-path $lista_comics[$j].director
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> TerminatingError(Split-Path): "Cannot bind argument to parameter 'Path' because it is null."
+**********************
+Command start time: 20220809183059
+**********************
+
+Split-Path: Cannot bind argument to parameter 'Path' because it is null.
+ParameterBinding(Out-String): name="InputObject"; value="Cannot bind argument to parameter 'Path' because it is null."
+**********************
+Command start time: 20220809183106
+**********************
+[91mSplit-Path: [91mCannot bind argument to parameter 'Path' because it is null.[0msplit-path $lista_comics[$j].directory
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="Q:\PRUEBAS"
+**********************
+Command start time: 20220809183119
+**********************
+Q:\PRUEBAS$lista_comics[$j].directory.name
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)"
+**********************
+Command start time: 20220809183236
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="extraer_año"
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Function        extraer_año
+
+**********************
+Command start time: 20220809183236
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Help): "Get-Help"
+>> ParameterBinding(Get-Help): name="Name"; value="extraer_año"
+>> ParameterBinding(Get-Help): name="Online"; value="False"
+>> ParameterBinding(Get-Help): name="ErrorAction"; value="Ignore"
+
+NAME
+    extraer_año
+
+SYNTAX
+    extraer_año [-ruta_ficheros] <Object> [<CommonParameters>]
+
+
+ALIASES
+    None
+
+
+REMARKS
+    None
+
+
+**********************
+Command start time: 20220809183432
+**********************
+PS C:\scripts\Folderwatch> . "c:\scripts\convierte\comic-convert.ps1"
+PATH DEL SCRIPT = C:\scripts\convierte
+
+**********************
+PowerShell transcript end
+End time: 20220809183433
+**********************

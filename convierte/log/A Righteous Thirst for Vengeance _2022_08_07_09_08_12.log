@@ -1,0 +1,689 @@
+**********************
+PowerShell transcript start
+Start time: 20220807210813
+Username: SERVER\server
+RunAs User: SERVER\server
+Configuration Name: 
+Machine: SERVER (Microsoft Windows NT 10.0.19044.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -NoProfile -ExecutionPolicy Bypass -Command Import-Module 'c:\Users\server\.vscode\extensions\ms-vscode.powershell-2022.7.2\modules\PowerShellEditorServices\PowerShellEditorServices.psd1'; Start-EditorServices -HostName 'Visual Studio Code Host' -HostProfileId 'Microsoft.VSCode' -HostVersion '2022.7.2' -AdditionalModules @('PowerShellEditorServices.VSCode') -BundledModulesPath 'c:\Users\server\.vscode\extensions\ms-vscode.powershell-2022.7.2\modules' -EnableConsoleRepl -StartupBanner "PowerShell Extension v2022.7.2
+Copyright (c) Microsoft Corporation.
+
+https://aka.ms/vscode-powershell
+Type 'help' to get help.
+" -LogLevel 'Normal' -LogPath 'c:\Users\server\AppData\Roaming\Code\User\globalStorage\ms-vscode.powershell\logs\1659895993-0bcda2fe-4671-4f92-b0ac-1d21c8d90a5f1659895989767\EditorServices.log' -SessionDetailsPath 'c:\Users\server\AppData\Roaming\Code\User\globalStorage\ms-vscode.powershell\sessions\PSES-VSCode-1424-105698.json' -FeatureFlags @() 
+Process ID: 7124
+PSVersion: 7.2.5
+PSEdition: Core
+GitCommitId: 7.2.5
+OS: Microsoft Windows 10.0.19044
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.10032.0, 6.0.0, 6.1.0, 6.2.0, 7.0.0, 7.1.0, 7.2.5
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+
+#####################################################################################################
+#### PROCESANDO NUEVA SERIE: A Righteous Thirst for Vengeance
+#####################################################################################################
+
+    >> Lista de ficheros a procesar:
+
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance 01 por Ash Gb Williams y Arsenio Lupín.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance 02 por Ash Gb Williams y Arsenio Lupín.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance 03 por Ash Gb Williams y Arsenio Lupín.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance 04 por Ash Gb Williams y Arsenio Lupín.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance 05 por Ash Gb Williams y Arsenio Lupín.CBR
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance 06 por Ash Gb Williams y Arsenio Lupín.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance 07 por Ash Gb Williams y Arsenio Lupín.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance 08 por Ash Gb Williams y Arsenio Lupín.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A_Righteous_Thirst_for_Vengeance_09_por_Ash_Gb_Williams_y_Arsenio.cbr
+
+MUEVO TODOS LOS COMIS AL DIRECTORIO RAIZ DE LA SERIE Y BORRO DIRECTORIOS VACIOS RECURSIVAMENTE
+
+
+LIMPIO EL NOMBRE DEL COMIC
+
+#####################################################################################################
+#### PROCESANDO NUEVO COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #01.cbr
+#####################################################################################################
+DESCOMPRIMO EL COMIC
+    >> Borro los directorios temporales
+    >> Descomprimo el comic
+    >> Cambio los atributos a los ficheros para poder tener acceso
+EJECUTO UNA LIMPIEZA DEL COMIC
+    >> Borro todos los ficheros menores de 5k que son thumbnais y los visores de comics no entienden
+    >> Quito directorios de MACOSX
+    >> Elimino todos los ficheros que nos son jpg, png, xml ó webp
+CONVIERTO LOS FICHEROS DE IMAGENES DEL COMIC A UN FORMATO ADECUADO
+    >> Convirtiendo imagenes.... ( ¡Espere!, este proceso puede durar varios minutos )
+ELIMINO LAS IMAGENES DE CREDITOS
+    >> Borro ciertas imagenes que añaden lo recopiladores
+    >> Genero las ultimas 7 miniaturas en formato 32x32
+    >> Buscando creditos en las 7 ultimas imagenes del comic
+    >> Borrando la imagen del comic C:\scripts\convierte\comic\32x32\A_Righteous_Thirst_for_Vengeance_01_32_Ash_Gb_Williams.Arsenio_Lupín.jpg por ser igual a la imagen del credito
+CREO EL NUEVO NOMBRE
+    >> Creo el nuevo nombre del comic:  Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #01.cbz
+HAGO UNA COPIA DE SEGURIDAD DEL COMIC
+    >> Borro la copia de seguridad antes de crearla por si existe
+    >> Creo la copia de seguridad por si fallase algun proceso despues
+COMPRIMO EL NUEVO COMIC
+COMPRUEBO EL NUEVO COMIC
+    >> EL COMIC ES CORRECTO
+    >> Borro el backup
+HAGO UN SCRAPPING DEL COMIC CON COMICTAGGER
+========================================================
+=================== DATOS OBTENIDOS ====================
+Serie: A Righteous Thirst for Vengeance
+Numero: 1
+Comic: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #01.cbz
+Año de la serie:  2021
+========================================================
+========================================================
+
+BUSCANDO DATOS (SCRAPPING) DEL COMIC
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 1 | AÑO: 2021 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #01.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+SCRAPPING EXITOSO
+LIMPIO DIRECTORIOS TEMPORALES Y DE LOGS
+
+
+#####################################################################################################
+#### PROCESANDO NUEVO COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #02.cbr
+#####################################################################################################
+DESCOMPRIMO EL COMIC
+    >> Borro los directorios temporales
+    >> Descomprimo el comic
+    >> Cambio los atributos a los ficheros para poder tener acceso
+EJECUTO UNA LIMPIEZA DEL COMIC
+    >> Borro todos los ficheros menores de 5k que son thumbnais y los visores de comics no entienden
+    >> Quito directorios de MACOSX
+    >> Elimino todos los ficheros que nos son jpg, png, xml ó webp
+CONVIERTO LOS FICHEROS DE IMAGENES DEL COMIC A UN FORMATO ADECUADO
+    >> Convirtiendo imagenes.... ( ¡Espere!, este proceso puede durar varios minutos )
+ELIMINO LAS IMAGENES DE CREDITOS
+    >> Borro ciertas imagenes que añaden lo recopiladores
+    >> Genero las ultimas 7 miniaturas en formato 32x32
+    >> Buscando creditos en las 7 ultimas imagenes del comic
+CREO EL NUEVO NOMBRE
+    >> Creo el nuevo nombre del comic:  Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #02.cbz
+HAGO UNA COPIA DE SEGURIDAD DEL COMIC
+    >> Borro la copia de seguridad antes de crearla por si existe
+    >> Creo la copia de seguridad por si fallase algun proceso despues
+COMPRIMO EL NUEVO COMIC
+COMPRUEBO EL NUEVO COMIC
+    >> EL COMIC ES CORRECTO
+    >> Borro el backup
+HAGO UN SCRAPPING DEL COMIC CON COMICTAGGER
+========================================================
+=================== DATOS OBTENIDOS ====================
+Serie: A Righteous Thirst for Vengeance
+Numero: 2
+Comic: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #02.cbz
+Año de la serie:  2021
+========================================================
+========================================================
+
+BUSCANDO DATOS (SCRAPPING) DEL COMIC
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 2 | AÑO: 2021 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #02.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+SCRAPPING EXITOSO
+LIMPIO DIRECTORIOS TEMPORALES Y DE LOGS
+
+
+#####################################################################################################
+#### PROCESANDO NUEVO COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #03.cbr
+#####################################################################################################
+DESCOMPRIMO EL COMIC
+    >> Borro los directorios temporales
+    >> Descomprimo el comic
+    >> Cambio los atributos a los ficheros para poder tener acceso
+EJECUTO UNA LIMPIEZA DEL COMIC
+    >> Borro todos los ficheros menores de 5k que son thumbnais y los visores de comics no entienden
+    >> Quito directorios de MACOSX
+    >> Elimino todos los ficheros que nos son jpg, png, xml ó webp
+CONVIERTO LOS FICHEROS DE IMAGENES DEL COMIC A UN FORMATO ADECUADO
+    >> Convirtiendo imagenes.... ( ¡Espere!, este proceso puede durar varios minutos )
+ELIMINO LAS IMAGENES DE CREDITOS
+    >> Borro ciertas imagenes que añaden lo recopiladores
+    >> Genero las ultimas 7 miniaturas en formato 32x32
+    >> Buscando creditos en las 7 ultimas imagenes del comic
+    >> Borrando la imagen del comic C:\scripts\convierte\comic\32x32\A_Righteous_Thirst_for_Vengeance_03_28_Ash_Gb_Williams.Arsenio_Lupín.jpg por ser igual a la imagen del credito
+CREO EL NUEVO NOMBRE
+    >> Creo el nuevo nombre del comic:  Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #03.cbz
+HAGO UNA COPIA DE SEGURIDAD DEL COMIC
+    >> Borro la copia de seguridad antes de crearla por si existe
+    >> Creo la copia de seguridad por si fallase algun proceso despues
+COMPRIMO EL NUEVO COMIC
+COMPRUEBO EL NUEVO COMIC
+    >> EL COMIC ES CORRECTO
+    >> Borro el backup
+HAGO UN SCRAPPING DEL COMIC CON COMICTAGGER
+========================================================
+=================== DATOS OBTENIDOS ====================
+Serie: A Righteous Thirst for Vengeance
+Numero: 3
+Comic: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #03.cbz
+Año de la serie:  2021
+========================================================
+========================================================
+
+BUSCANDO DATOS (SCRAPPING) DEL COMIC
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 3 | AÑO: 2021 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #03.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+SCRAPPING EXITOSO
+LIMPIO DIRECTORIOS TEMPORALES Y DE LOGS
+
+
+#####################################################################################################
+#### PROCESANDO NUEVO COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #04.cbr
+#####################################################################################################
+DESCOMPRIMO EL COMIC
+    >> Borro los directorios temporales
+    >> Descomprimo el comic
+    >> Cambio los atributos a los ficheros para poder tener acceso
+EJECUTO UNA LIMPIEZA DEL COMIC
+    >> Borro todos los ficheros menores de 5k que son thumbnais y los visores de comics no entienden
+    >> Quito directorios de MACOSX
+    >> Elimino todos los ficheros que nos son jpg, png, xml ó webp
+CONVIERTO LOS FICHEROS DE IMAGENES DEL COMIC A UN FORMATO ADECUADO
+    >> Convirtiendo imagenes.... ( ¡Espere!, este proceso puede durar varios minutos )
+ELIMINO LAS IMAGENES DE CREDITOS
+    >> Borro ciertas imagenes que añaden lo recopiladores
+    >> Genero las ultimas 7 miniaturas en formato 32x32
+    >> Buscando creditos en las 7 ultimas imagenes del comic
+    >> Borrando la imagen del comic C:\scripts\convierte\comic\32x32\A_Righteous_Thirst_for_Vengeance_04_30_Ash_Gb_Williams.Arsenio_Lupín.jpg por ser igual a la imagen del credito
+CREO EL NUEVO NOMBRE
+    >> Creo el nuevo nombre del comic:  Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #04.cbz
+HAGO UNA COPIA DE SEGURIDAD DEL COMIC
+    >> Borro la copia de seguridad antes de crearla por si existe
+    >> Creo la copia de seguridad por si fallase algun proceso despues
+COMPRIMO EL NUEVO COMIC
+COMPRUEBO EL NUEVO COMIC
+    >> EL COMIC ES CORRECTO
+    >> Borro el backup
+HAGO UN SCRAPPING DEL COMIC CON COMICTAGGER
+========================================================
+=================== DATOS OBTENIDOS ====================
+Serie: A Righteous Thirst for Vengeance
+Numero: 4
+Comic: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #04.cbz
+Año de la serie:  2021
+========================================================
+========================================================
+
+BUSCANDO DATOS (SCRAPPING) DEL COMIC
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 4 | AÑO: 2021 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #04.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:12:02 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 4 | AÑO: 2021 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #04.cbz | IDIOMA: ingles
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:12:11 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 4 | AÑO: 2021 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #04.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:12:21 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 4 | AÑO: 2021 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #04.cbz | IDIOMA: ingles
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:12:32 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 4 | AÑO: 2020 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #04.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:12:40 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 4 | AÑO: 2020 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #04.cbz | IDIOMA: ingles
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:12:49 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 4 | AÑO: 2020 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #04.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:12:58 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 4 | AÑO: 2020 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #04.cbz | IDIOMA: ingles
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:13:07 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 4 | AÑO: 2022 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #04.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+SCRAPPING EXITOSO
+LIMPIO DIRECTORIOS TEMPORALES Y DE LOGS
+
+
+#####################################################################################################
+#### PROCESANDO NUEVO COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #05.cbr
+#####################################################################################################
+DESCOMPRIMO EL COMIC
+    >> Borro los directorios temporales
+    >> Descomprimo el comic
+    >> Cambio los atributos a los ficheros para poder tener acceso
+EJECUTO UNA LIMPIEZA DEL COMIC
+    >> Borro todos los ficheros menores de 5k que son thumbnais y los visores de comics no entienden
+    >> Quito directorios de MACOSX
+    >> Elimino todos los ficheros que nos son jpg, png, xml ó webp
+CONVIERTO LOS FICHEROS DE IMAGENES DEL COMIC A UN FORMATO ADECUADO
+    >> Convirtiendo imagenes.... ( ¡Espere!, este proceso puede durar varios minutos )
+ELIMINO LAS IMAGENES DE CREDITOS
+    >> Borro ciertas imagenes que añaden lo recopiladores
+    >> Genero las ultimas 7 miniaturas en formato 32x32
+    >> Buscando creditos en las 7 ultimas imagenes del comic
+CREO EL NUEVO NOMBRE
+    >> Creo el nuevo nombre del comic:  Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #05.cbz
+HAGO UNA COPIA DE SEGURIDAD DEL COMIC
+    >> Borro la copia de seguridad antes de crearla por si existe
+    >> Creo la copia de seguridad por si fallase algun proceso despues
+COMPRIMO EL NUEVO COMIC
+COMPRUEBO EL NUEVO COMIC
+    >> EL COMIC ES CORRECTO
+    >> Borro el backup
+HAGO UN SCRAPPING DEL COMIC CON COMICTAGGER
+========================================================
+=================== DATOS OBTENIDOS ====================
+Serie: A Righteous Thirst for Vengeance
+Numero: 5
+Comic: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #05.cbz
+Año de la serie:  2021
+========================================================
+========================================================
+
+BUSCANDO DATOS (SCRAPPING) DEL COMIC
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 5 | AÑO: 2021 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #05.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:14:19 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 5 | AÑO: 2021 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #05.cbz | IDIOMA: ingles
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:14:28 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 5 | AÑO: 2021 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #05.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:14:37 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 5 | AÑO: 2021 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #05.cbz | IDIOMA: ingles
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:14:47 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 5 | AÑO: 2020 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #05.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:14:55 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 5 | AÑO: 2020 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #05.cbz | IDIOMA: ingles
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:15:03 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 5 | AÑO: 2020 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #05.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:15:12 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 5 | AÑO: 2020 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #05.cbz | IDIOMA: ingles
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:15:21 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 5 | AÑO: 2022 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #05.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+SCRAPPING EXITOSO
+LIMPIO DIRECTORIOS TEMPORALES Y DE LOGS
+
+
+#####################################################################################################
+#### PROCESANDO NUEVO COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #06.cbr
+#####################################################################################################
+DESCOMPRIMO EL COMIC
+    >> Borro los directorios temporales
+    >> Descomprimo el comic
+    >> Cambio los atributos a los ficheros para poder tener acceso
+EJECUTO UNA LIMPIEZA DEL COMIC
+    >> Borro todos los ficheros menores de 5k que son thumbnais y los visores de comics no entienden
+    >> Quito directorios de MACOSX
+    >> Elimino todos los ficheros que nos son jpg, png, xml ó webp
+CONVIERTO LOS FICHEROS DE IMAGENES DEL COMIC A UN FORMATO ADECUADO
+    >> Convirtiendo imagenes.... ( ¡Espere!, este proceso puede durar varios minutos )
+ELIMINO LAS IMAGENES DE CREDITOS
+    >> Borro ciertas imagenes que añaden lo recopiladores
+    >> Genero las ultimas 7 miniaturas en formato 32x32
+    >> Buscando creditos en las 7 ultimas imagenes del comic
+CREO EL NUEVO NOMBRE
+    >> Creo el nuevo nombre del comic:  Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #06.cbz
+HAGO UNA COPIA DE SEGURIDAD DEL COMIC
+    >> Borro la copia de seguridad antes de crearla por si existe
+    >> Creo la copia de seguridad por si fallase algun proceso despues
+COMPRIMO EL NUEVO COMIC
+COMPRUEBO EL NUEVO COMIC
+    >> EL COMIC ES CORRECTO
+    >> Borro el backup
+HAGO UN SCRAPPING DEL COMIC CON COMICTAGGER
+========================================================
+=================== DATOS OBTENIDOS ====================
+Serie: A Righteous Thirst for Vengeance
+Numero: 6
+Comic: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #06.cbz
+Año de la serie:  2021
+========================================================
+========================================================
+
+BUSCANDO DATOS (SCRAPPING) DEL COMIC
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 6 | AÑO: 2021 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #06.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:16:31 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 6 | AÑO: 2021 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #06.cbz | IDIOMA: ingles
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:16:41 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 6 | AÑO: 2021 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #06.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:16:52 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 6 | AÑO: 2021 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #06.cbz | IDIOMA: ingles
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:17:03 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 6 | AÑO: 2020 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #06.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:17:12 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 6 | AÑO: 2020 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #06.cbz | IDIOMA: ingles
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:17:22 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 6 | AÑO: 2020 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #06.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:17:32 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 6 | AÑO: 2020 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #06.cbz | IDIOMA: ingles
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:17:42 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 6 | AÑO: 2022 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #06.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+SCRAPPING EXITOSO
+LIMPIO DIRECTORIOS TEMPORALES Y DE LOGS
+
+
+#####################################################################################################
+#### PROCESANDO NUEVO COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #07.cbr
+#####################################################################################################
+DESCOMPRIMO EL COMIC
+    >> Borro los directorios temporales
+    >> Descomprimo el comic
+    >> Cambio los atributos a los ficheros para poder tener acceso
+EJECUTO UNA LIMPIEZA DEL COMIC
+    >> Borro todos los ficheros menores de 5k que son thumbnais y los visores de comics no entienden
+    >> Quito directorios de MACOSX
+    >> Elimino todos los ficheros que nos son jpg, png, xml ó webp
+CONVIERTO LOS FICHEROS DE IMAGENES DEL COMIC A UN FORMATO ADECUADO
+    >> Convirtiendo imagenes.... ( ¡Espere!, este proceso puede durar varios minutos )
+ELIMINO LAS IMAGENES DE CREDITOS
+    >> Borro ciertas imagenes que añaden lo recopiladores
+    >> Genero las ultimas 7 miniaturas en formato 32x32
+    >> Buscando creditos en las 7 ultimas imagenes del comic
+CREO EL NUEVO NOMBRE
+    >> Creo el nuevo nombre del comic:  Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #07.cbz
+HAGO UNA COPIA DE SEGURIDAD DEL COMIC
+    >> Borro la copia de seguridad antes de crearla por si existe
+    >> Creo la copia de seguridad por si fallase algun proceso despues
+COMPRIMO EL NUEVO COMIC
+COMPRUEBO EL NUEVO COMIC
+    >> EL COMIC ES CORRECTO
+    >> Borro el backup
+HAGO UN SCRAPPING DEL COMIC CON COMICTAGGER
+========================================================
+=================== DATOS OBTENIDOS ====================
+Serie: A Righteous Thirst for Vengeance
+Numero: 7
+Comic: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #07.cbz
+Año de la serie:  2021
+========================================================
+========================================================
+
+BUSCANDO DATOS (SCRAPPING) DEL COMIC
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 7 | AÑO: 2021 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #07.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:18:55 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 7 | AÑO: 2021 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #07.cbz | IDIOMA: ingles
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:19:05 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 7 | AÑO: 2021 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #07.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:19:14 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 7 | AÑO: 2021 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #07.cbz | IDIOMA: ingles
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:19:23 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 7 | AÑO: 2020 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #07.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:19:31 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 7 | AÑO: 2020 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #07.cbz | IDIOMA: ingles
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:19:41 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 7 | AÑO: 2020 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #07.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:19:50 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 7 | AÑO: 2020 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #07.cbz | IDIOMA: ingles
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:19:59 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 7 | AÑO: 2022 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #07.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+SCRAPPING EXITOSO
+LIMPIO DIRECTORIOS TEMPORALES Y DE LOGS
+
+
+#####################################################################################################
+#### PROCESANDO NUEVO COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #08.cbr
+#####################################################################################################
+DESCOMPRIMO EL COMIC
+    >> Borro los directorios temporales
+    >> Descomprimo el comic
+    >> Cambio los atributos a los ficheros para poder tener acceso
+EJECUTO UNA LIMPIEZA DEL COMIC
+    >> Borro todos los ficheros menores de 5k que son thumbnais y los visores de comics no entienden
+    >> Quito directorios de MACOSX
+    >> Elimino todos los ficheros que nos son jpg, png, xml ó webp
+CONVIERTO LOS FICHEROS DE IMAGENES DEL COMIC A UN FORMATO ADECUADO
+    >> Convirtiendo imagenes.... ( ¡Espere!, este proceso puede durar varios minutos )
+ELIMINO LAS IMAGENES DE CREDITOS
+    >> Borro ciertas imagenes que añaden lo recopiladores
+    >> Genero las ultimas 7 miniaturas en formato 32x32
+    >> Buscando creditos en las 7 ultimas imagenes del comic
+CREO EL NUEVO NOMBRE
+    >> Creo el nuevo nombre del comic:  Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #08.cbz
+HAGO UNA COPIA DE SEGURIDAD DEL COMIC
+    >> Borro la copia de seguridad antes de crearla por si existe
+    >> Creo la copia de seguridad por si fallase algun proceso despues
+COMPRIMO EL NUEVO COMIC
+COMPRUEBO EL NUEVO COMIC
+    >> EL COMIC ES CORRECTO
+    >> Borro el backup
+HAGO UN SCRAPPING DEL COMIC CON COMICTAGGER
+========================================================
+=================== DATOS OBTENIDOS ====================
+Serie: A Righteous Thirst for Vengeance
+Numero: 8
+Comic: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #08.cbz
+Año de la serie:  2021
+========================================================
+========================================================
+
+BUSCANDO DATOS (SCRAPPING) DEL COMIC
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 8 | AÑO: 2021 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #08.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:21:11 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 8 | AÑO: 2021 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #08.cbz | IDIOMA: ingles
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:21:20 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 8 | AÑO: 2021 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #08.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:21:30 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 8 | AÑO: 2021 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #08.cbz | IDIOMA: ingles
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:21:41 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 8 | AÑO: 2020 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #08.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:21:50 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 8 | AÑO: 2020 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #08.cbz | IDIOMA: ingles
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:21:59 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 8 | AÑO: 2020 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #08.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:22:07 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 8 | AÑO: 2020 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #08.cbz | IDIOMA: ingles
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:22:16 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 8 | AÑO: 2022 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #08.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+SCRAPPING EXITOSO
+LIMPIO DIRECTORIOS TEMPORALES Y DE LOGS
+
+
+#####################################################################################################
+#### PROCESANDO NUEVO COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #09.cbr
+#####################################################################################################
+DESCOMPRIMO EL COMIC
+    >> Borro los directorios temporales
+    >> Descomprimo el comic
+    >> Cambio los atributos a los ficheros para poder tener acceso
+EJECUTO UNA LIMPIEZA DEL COMIC
+    >> Borro todos los ficheros menores de 5k que son thumbnais y los visores de comics no entienden
+    >> Quito directorios de MACOSX
+    >> Elimino todos los ficheros que nos son jpg, png, xml ó webp
+CONVIERTO LOS FICHEROS DE IMAGENES DEL COMIC A UN FORMATO ADECUADO
+    >> Convirtiendo imagenes.... ( ¡Espere!, este proceso puede durar varios minutos )
+ELIMINO LAS IMAGENES DE CREDITOS
+    >> Borro ciertas imagenes que añaden lo recopiladores
+    >> Genero las ultimas 7 miniaturas en formato 32x32
+    >> Buscando creditos en las 7 ultimas imagenes del comic
+CREO EL NUEVO NOMBRE
+    >> Creo el nuevo nombre del comic:  Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #09.cbz
+HAGO UNA COPIA DE SEGURIDAD DEL COMIC
+    >> Borro la copia de seguridad antes de crearla por si existe
+    >> Creo la copia de seguridad por si fallase algun proceso despues
+COMPRIMO EL NUEVO COMIC
+COMPRUEBO EL NUEVO COMIC
+    >> EL COMIC ES CORRECTO
+    >> Borro el backup
+HAGO UN SCRAPPING DEL COMIC CON COMICTAGGER
+========================================================
+=================== DATOS OBTENIDOS ====================
+Serie: A Righteous Thirst for Vengeance
+Numero: 9
+Comic: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #09.cbz
+Año de la serie:  2021
+========================================================
+========================================================
+
+BUSCANDO DATOS (SCRAPPING) DEL COMIC
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 9 | AÑO: 2021 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #09.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:23:27 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 9 | AÑO: 2021 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #09.cbz | IDIOMA: ingles
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:23:35 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 9 | AÑO: 2021 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #09.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:23:45 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 9 | AÑO: 2021 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #09.cbz | IDIOMA: ingles
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:23:56 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 9 | AÑO: 2020 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #09.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:24:05 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 9 | AÑO: 2020 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #09.cbz | IDIOMA: ingles
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:24:14 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 9 | AÑO: 2020 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #09.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:24:23 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 9 | AÑO: 2020 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #09.cbz | IDIOMA: ingles
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+2022-08-07T21:24:32 | comictaggerlib.cli | ERROR | Online search: No match found. Save aborted
+SCRAPPING FALLIDO. ERROR:  No matches:
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 9 | AÑO: 2022 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #09.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+SCRAPPING EXITOSO
+LIMPIO DIRECTORIOS TEMPORALES Y DE LOGS
+
+
+**********************
+PowerShell transcript end
+End time: 20220807212452
+**********************

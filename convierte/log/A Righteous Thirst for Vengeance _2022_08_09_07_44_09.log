@@ -1,0 +1,518 @@
+**********************
+PowerShell transcript start
+Start time: 20220809194409
+Username: SERVER\server
+RunAs User: SERVER\server
+Configuration Name: 
+Machine: SERVER (Microsoft Windows NT 10.0.19044.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -NoProfile -ExecutionPolicy Bypass -Command Import-Module 'c:\Users\server\.vscode\extensions\ms-vscode.powershell-2022.7.2\modules\PowerShellEditorServices\PowerShellEditorServices.psd1'; Start-EditorServices -HostName 'Visual Studio Code Host' -HostProfileId 'Microsoft.VSCode' -HostVersion '2022.7.2' -AdditionalModules @('PowerShellEditorServices.VSCode') -BundledModulesPath 'c:\Users\server\.vscode\extensions\ms-vscode.powershell-2022.7.2\modules' -EnableConsoleRepl -StartupBanner "PowerShell Extension v2022.7.2
+Copyright (c) Microsoft Corporation.
+
+https://aka.ms/vscode-powershell
+Type 'help' to get help.
+" -LogLevel 'Normal' -LogPath 'c:\Users\server\AppData\Roaming\Code\User\globalStorage\ms-vscode.powershell\logs\1660060903-dd3729fa-4dd4-439f-879f-e3d56200b0c21660060898929\EditorServices.log' -SessionDetailsPath 'c:\Users\server\AppData\Roaming\Code\User\globalStorage\ms-vscode.powershell\sessions\PSES-VSCode-19360-603308.json' -FeatureFlags @() 
+Process ID: 20104
+PSVersion: 7.2.5
+PSEdition: Core
+GitCommitId: 7.2.5
+OS: Microsoft Windows 10.0.19044
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.10032.0, 6.0.0, 6.1.0, 6.2.0, 7.0.0, 7.1.0, 7.2.5
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+
+#####################################################################################################
+#### PROCESANDO NUEVA SERIE: A Righteous Thirst for Vengeance
+#####################################################################################################
+
+    >> Lista de ficheros a procesar:
+
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #01.cbz
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #02.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #03.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #04.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #05.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #06.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #07.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #08.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #09.cbr
+
+MUEVO TODOS LOS COMIS AL DIRECTORIO RAIZ DE LA SERIE Y BORRO DIRECTORIOS VACIOS RECURSIVAMENTE
+
+
+LIMPIO EL NOMBRE DEL COMIC
+
+#####################################################################################################
+#### PROCESANDO NUEVO COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #01.cbz
+#####################################################################################################
+DESCOMPRIMO EL COMIC
+    >> Borro los directorios temporales
+    >> Descomprimo el comic
+    >> Cambio los atributos a los ficheros para poder tener acceso
+EJECUTO UNA LIMPIEZA DEL COMIC
+    >> Borro todos los ficheros menores de 5k que son thumbnais y los visores de comics no entienden
+    >> Quito directorios de MACOSX
+    >> Elimino todos los ficheros que nos son jpg, png, xml ó webp
+CONVIERTO LOS FICHEROS DE IMAGENES DEL COMIC A UN FORMATO ADECUADO
+    >> Convirtiendo imagenes.... ( ¡Espere!, este proceso puede durar varios minutos )
+ELIMINO LAS IMAGENES DE CREDITOS
+    >> Borro ciertas imagenes que añaden lo recopiladores
+    >> Genero las ultimas 7 miniaturas en formato 32x32
+    >> Buscando creditos en las 7 ultimas imagenes del comic
+ENCONTRADO VOLUMEN:  A Righteous Thirst For Vengeance
+CUMPLE TODOS LOS PARAMETROS
+Identificador: 0
+COMIC:  A Righteous Thirst For Vengeance
+ISSUE: 001
+AÑO:  2021
+NUMERO DE COMICS:  10
+EDITORIAL:  Image
+ID:  139442
+URL:  https://comicvine.gamespot.com/api/volume/4050-139442/
+ID:  139442
+(139442 , 4050-139442)(Image)(2021).jpg JPEG 1988x3056=>32x32 32x32+0+0 8-bit Grayscale Gray 627B 0.250u 0:00.259
+
+SITE DETAIL URL:  https://comicvine.gamespot.com/a-righteous-thirst-for-vengeance/4050-139442/
+BUSCANDO COMICS
+A Righteous Thirst for Vengeance # 1  -    -  888679
+A Righteous Thirst for Vengeance # 2  -    -  894193
+A Righteous Thirst for Vengeance # 3  -    -  899153
+A Righteous Thirst for Vengeance # 4  -    -  903598
+A Righteous Thirst for Vengeance # 5  -    -  907418
+A Righteous Thirst for Vengeance # 6  -    -  913211
+A Righteous Thirst for Vengeance # 7  -    -  921207
+A Righteous Thirst for Vengeance # 8  -    -  928857
+A Righteous Thirst for Vengeance # 9  -    -  933153
+A Righteous Thirst for Vengeance # 10  -    -  939181
+=========================================================================================
+CREO EL NUEVO NOMBRE
+    >> Creo el nuevo nombre del comic:  Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #01.cbz
+HAGO UNA COPIA DE SEGURIDAD DEL COMIC
+    >> Borro la copia de seguridad antes de crearla por si existe
+    >> Creo la copia de seguridad por si fallase algun proceso despues
+COMPRIMO EL NUEVO COMIC
+COMPRUEBO EL NUEVO COMIC
+    >> EL COMIC ES CORRECTO
+    >> Borro el backup
+HAGO UN SCRAPPING DEL COMIC CON COMICTAGGER
+========================================================
+=================== DATOS OBTENIDOS ====================
+Serie: A Righteous Thirst for Vengeance
+Numero: 1
+Comic: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #01.cbz
+Año de la serie:  2021
+========================================================
+========================================================
+
+BUSCANDO DATOS (SCRAPPING) DEL COMIC
+   >> Buscando comic SERIE: A Righteous Thirst for Vengeance  | ISSUE: 1 | AÑO: 2021 | COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #01.cbz | IDIOMA: español
+    >> Escribiendo metadatos
+    >> Buscando datos online del comic
+SCRAPPING EXITOSO
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="$prog_dir\identifica_comic.ps1"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="$prog_dir\identifica_comic.ps1"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="$prog_dir\identifica_comic.ps1"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="$prog_dir\identifica_comic.ps1"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="$prog_dir\identifica_comic.ps1"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194506
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809194521
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="$prog_dir\compara_imagenes.ps1"
+**********************
+Command start time: 20220809194610
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-CompareImage"
+**********************
+Command start time: 20220809194610
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Help): "Get-Help"
+>> ParameterBinding(Get-Help): name="Name"; value="Get-CompareImage"
+>> ParameterBinding(Get-Help): name="Online"; value="False"
+>> ParameterBinding(Get-Help): name="ErrorAction"; value="Ignore"
+**********************
+Command start time: 20220809194611
+**********************
+PS C:\scripts\Folderwatch> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+**********************
+Command start time: 20220809194618
+**********************
+PS C:\scripts\Folderwatch> . "c:\scripts\convierte\comic-convert.ps1"
+PATH DEL SCRIPT = C:\scripts\convierte
+
+**********************
+PowerShell transcript end
+End time: 20220809194619
+**********************

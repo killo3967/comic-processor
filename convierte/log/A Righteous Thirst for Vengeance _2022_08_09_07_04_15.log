@@ -1,0 +1,2232 @@
+**********************
+PowerShell transcript start
+Start time: 20220809190416
+Username: SERVER\server
+RunAs User: SERVER\server
+Configuration Name: 
+Machine: SERVER (Microsoft Windows NT 10.0.19044.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -NoProfile -ExecutionPolicy Bypass -Command Import-Module 'c:\Users\server\.vscode\extensions\ms-vscode.powershell-2022.7.2\modules\PowerShellEditorServices\PowerShellEditorServices.psd1'; Start-EditorServices -HostName 'Visual Studio Code Host' -HostProfileId 'Microsoft.VSCode' -HostVersion '2022.7.2' -AdditionalModules @('PowerShellEditorServices.VSCode') -BundledModulesPath 'c:\Users\server\.vscode\extensions\ms-vscode.powershell-2022.7.2\modules' -EnableConsoleRepl -StartupBanner "PowerShell Extension v2022.7.2
+Copyright (c) Microsoft Corporation.
+
+https://aka.ms/vscode-powershell
+Type 'help' to get help.
+" -LogLevel 'Normal' -LogPath 'c:\Users\server\AppData\Roaming\Code\User\globalStorage\ms-vscode.powershell\logs\1660060903-dd3729fa-4dd4-439f-879f-e3d56200b0c21660060898929\EditorServices.log' -SessionDetailsPath 'c:\Users\server\AppData\Roaming\Code\User\globalStorage\ms-vscode.powershell\sessions\PSES-VSCode-19360-603308.json' -FeatureFlags @() 
+Process ID: 20104
+PSVersion: 7.2.5
+PSEdition: Core
+GitCommitId: 7.2.5
+OS: Microsoft Windows 10.0.19044
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.10032.0, 6.0.0, 6.1.0, 6.2.0, 7.0.0, 7.1.0, 7.2.5
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+
+#####################################################################################################
+#### PROCESANDO NUEVA SERIE: A Righteous Thirst for Vengeance
+#####################################################################################################
+
+    >> Lista de ficheros a procesar:
+
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #01.cbz
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #02.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #03.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #04.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #05.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #06.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #07.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #08.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #09.cbr
+
+MUEVO TODOS LOS COMIS AL DIRECTORIO RAIZ DE LA SERIE Y BORRO DIRECTORIOS VACIOS RECURSIVAMENTE
+
+
+LIMPIO EL NOMBRE DEL COMIC
+
+#####################################################################################################
+#### PROCESANDO NUEVO COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #01.cbz
+#####################################################################################################
+DESCOMPRIMO EL COMIC
+    >> Borro los directorios temporales
+    >> Descomprimo el comic
+    >> Cambio los atributos a los ficheros para poder tener acceso
+EJECUTO UNA LIMPIEZA DEL COMIC
+    >> Borro todos los ficheros menores de 5k que son thumbnais y los visores de comics no entienden
+    >> Quito directorios de MACOSX
+    >> Elimino todos los ficheros que nos son jpg, png, xml ó webp
+CONVIERTO LOS FICHEROS DE IMAGENES DEL COMIC A UN FORMATO ADECUADO
+    >> Convirtiendo imagenes.... ( ¡Espere!, este proceso puede durar varios minutos )
+ELIMINO LAS IMAGENES DE CREDITOS
+    >> Borro ciertas imagenes que añaden lo recopiladores
+    >> Genero las ultimas 7 miniaturas en formato 32x32
+    >> Buscando creditos en las 7 ultimas imagenes del comic
+ENCONTRADO VOLUMEN:  A Righteous Thirst For Vengeance
+CUMPLE TODOS LOS PARAMETROS
+Identificador: 0
+COMIC:  A Righteous Thirst For Vengeance
+ISSUE: 001
+AÑO:  2021
+NUMERO DE COMICS:  10
+EDITORIAL:  Image
+ID:  139442
+URL:  https://comicvine.gamespot.com/api/volume/4050-139442/
+ID:  139442
+ighteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpg JPEG 1988x3056=>32x32 32x32+0+0 8-bit Grayscale Gray 627B 0.234u 0:00.268
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809190456
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809190545
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="variable:*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.NullVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSCultureVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSUICultureVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.QuestionMarkVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+**********************
+Command start time: 20220809190545
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="env:*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Key"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+**********************
+Command start time: 20220809190545
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-PSDrive): "Get-PSDrive"
+>> ParameterBinding(Get-PSDrive): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="Verbose"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Debug"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Name"; value="*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809190545
+**********************
+PS C:\scripts\Folderwatch> ParameterBinding(Sort-Object): name="InputObject"; value="Alias"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="C"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="Cert"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="D"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="E"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="Env"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="F"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="Function"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="G"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="H"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="HKCU"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="HKLM"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="I"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="J"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="K"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="L"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="M"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="N"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="O"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="P"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="Q"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="R"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="S"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="T"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="Temp"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="U"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="V"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="Variable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="W"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="WSMan"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="X"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="Y"
+**********************
+Command start time: 20220809190546
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="variable:p*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSCultureVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSUICultureVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+**********************
+Command start time: 20220809190546
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-PSDrive): "Get-PSDrive"
+>> ParameterBinding(Get-PSDrive): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="Verbose"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Debug"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Name"; value="p*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809190546
+**********************
+PS C:\scripts\Folderwatch> ParameterBinding(Sort-Object): name="InputObject"; value="P"
+**********************
+Command start time: 20220809190546
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="variable:pr*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+**********************
+Command start time: 20220809190546
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-PSDrive): "Get-PSDrive"
+>> ParameterBinding(Get-PSDrive): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="Verbose"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Debug"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Name"; value="pr*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809190546
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="variable:pri*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809190546
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-PSDrive): "Get-PSDrive"
+>> ParameterBinding(Get-PSDrive): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="Verbose"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Debug"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Name"; value="pri*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809190547
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="variable:primer*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809190547
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-PSDrive): "Get-PSDrive"
+>> ParameterBinding(Get-PSDrive): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="Verbose"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Debug"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Name"; value="primer*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809190547
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="variable:primera_*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809190547
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-PSDrive): "Get-PSDrive"
+>> ParameterBinding(Get-PSDrive): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="Verbose"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Debug"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Name"; value="primera_*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809190547
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="variable:primera_i*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809190547
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-PSDrive): "Get-PSDrive"
+>> ParameterBinding(Get-PSDrive): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="Verbose"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Debug"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Name"; value="primera_i*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809190548
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="variable:primera_in*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809190548
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-PSDrive): "Get-PSDrive"
+>> ParameterBinding(Get-PSDrive): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="Verbose"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Debug"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Name"; value="primera_in*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809190548
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="variable:primera_inam*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809190548
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-PSDrive): "Get-PSDrive"
+>> ParameterBinding(Get-PSDrive): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="Verbose"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Debug"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Name"; value="primera_inam*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809190554
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="variable:p*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSCultureVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSUICultureVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+**********************
+Command start time: 20220809190554
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-PSDrive): "Get-PSDrive"
+>> ParameterBinding(Get-PSDrive): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="Verbose"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Debug"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Name"; value="p*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809190554
+**********************
+PS C:\scripts\Folderwatch> ParameterBinding(Sort-Object): name="InputObject"; value="P"
+**********************
+Command start time: 20220809190554
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="variable:po*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+**********************
+Command start time: 20220809190554
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-PSDrive): "Get-PSDrive"
+>> ParameterBinding(Get-PSDrive): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="Verbose"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Debug"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Name"; value="po*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809190555
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="variable:portad*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809190555
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-PSDrive): "Get-PSDrive"
+>> ParameterBinding(Get-PSDrive): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="Verbose"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Debug"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Name"; value="portad*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809190612
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ListImported"; value="True"
+>> ParameterBinding(Get-Command): name="CommandType"; value="Alias"
+**********************
+Command start time: 20220809190649
+**********************
+PS C:\scripts\Folderwatch> get-childitem $comic_final 
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_01_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_02_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_03_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_04_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_05_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_06_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_07_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_08_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_09_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_10_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_11_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_12_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_13_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_14_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_15_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_16_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_17_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_18_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_19_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_20_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_21_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_22_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_23_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_24_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_25_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_26_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_27_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_28_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_29_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_30_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_31_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_33_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_34_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+**********************
+Command start time: 20220809190709
+**********************
+(get-childitem $comic_final)[0].fullname 
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+**********************
+Command start time: 20220809190709
+**********************
+ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_01_Ash_Gb_Williams.Arsenio_Lupín.jpg"
+**********************
+Command start time: 20220809190735
+**********************
+C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_01_Ash_Gb_Williams.Arsenio_Lupín.jpgCommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="variable:portada*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809190735
+**********************
+C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_01_Ash_Gb_Williams.Arsenio_Lupín.jpgCommandInvocation(Get-PSDrive): "Get-PSDrive"
+>> ParameterBinding(Get-PSDrive): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="Verbose"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Debug"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Name"; value="portada*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809190919
+**********************
+C:\scripts\convierte\comic\final\A_Righteous_Thirst_for_Vengeance_01_01_Ash_Gb_Williams.Arsenio_Lupín.jpg$out_image
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\scrapping_cacheA Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpg"
+**********************
+Command start time: 20220809190938
+**********************
+C:\scripts\convierte\scrapping_cacheA Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Resolve-Path): "Resolve-Path"
+>> ParameterBinding(Resolve-Path): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Resolve-Path): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Resolve-Path): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Resolve-Path): name="Verbose"; value="False"
+>> ParameterBinding(Resolve-Path): name="Debug"; value="False"
+>> ParameterBinding(Resolve-Path): name="Path"; value="\*"
+**********************
+Command start time: 20220809190954
+**********************
+C:\scripts\convierte\scrapping_cacheA Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpg$out_image = $scrapping_cache_dir + "\" + $comic + " #" + $issue + "1 de $num_comics " + "($id , " + (split-path $site_detail_url -leaf) + ")" + "($publisher)" + "($volume_year)"+".jpg"
+                        
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+**********************
+Command start time: 20220809191000
+**********************
+C:\scripts\convierte\scrapping_cacheA Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpg$out_image
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\scrapping_cache\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpg"
+**********************
+Command start time: 20220809191009
+**********************
+C:\scripts\convierte\scrapping_cache\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ListImported"; value="True"
+>> ParameterBinding(Get-Command): name="CommandType"; value="Alias"
+**********************
+Command start time: 20220809191009
+**********************
+C:\scripts\convierte\scrapping_cache\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ListImported"; value="True"
+>> ParameterBinding(Get-Command): name="CommandType"; value="Alias"
+**********************
+Command start time: 20220809191011
+**********************
+C:\scripts\convierte\scrapping_cache\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpg& $mogrify -resize 32x32^! -colorspace Gray -verbose -path $scrapping_temp_dir $out_image
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+**********************
+Command start time: 20220809191011
+**********************
+C:\scripts\convierte\scrapping_cache\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpg JPEG 1988x3056 1988x3056+0+0 8-bit sRGB 1.36103MiB 0.063u 0:00.122
+ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\scrapping_cache\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpg JPEG 1988x3056 1988x3056+0+0 8-bit sRGB 1.36103MiB 0.063u 0:00.122"
+**********************
+Command start time: 20220809191012
+**********************
+C:\scripts\convierte\scrapping_cache\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpg JPEG 1988x3056 1988x3056+0+0 8-bit sRGB 1.36103MiB 0.063u 0:00.122ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\scrapping_cache\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpg=>C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpg JPEG 1988x3056=>32x32 32x32+0+0 8-bit Grayscale Gray 627B 0.219u 0:00.267"
+**********************
+Command start time: 20220809191042
+**********************
+C:\scripts\convierte\scrapping_cache\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpg=>C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpg JPEG 1988x3056=>32x32 32x32+0+0 8-bit Grayscale Gray 627B 0.219u 0:00.267$out_image.name
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+**********************
+Command start time: 20220809191046
+**********************
+C:\scripts\convierte\scrapping_cache\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpg=>C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpg JPEG 1988x3056=>32x32 32x32+0+0 8-bit Grayscale Gray 627B 0.219u 0:00.267$out_image
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\scrapping_cache\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpg"
+**********************
+Command start time: 20220809191124
+**********************
+C:\scripts\convierte\scrapping_cache\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpg(get-childitem $out_image).name
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+**********************
+Command start time: 20220809191124
+**********************
+C:\scripts\convierte\scrapping_cache\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgParameterBinding(Out-String): name="InputObject"; value="A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpg"
+**********************
+Command start time: 20220809191144
+**********************
+A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ListImported"; value="True"
+>> ParameterBinding(Get-Command): name="CommandType"; value="Alias"
+**********************
+Command start time: 20220809191144
+**********************
+A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ListImported"; value="True"
+>> ParameterBinding(Get-Command): name="CommandType"; value="Alias"
+**********************
+Command start time: 20220809191158
+**********************
+A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgscrapping_temp_dir + "(get-childitem $out_image).name"
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+**********************
+Command start time: 20220809191158
+**********************
+
+scrapping_temp_dir: The term 'scrapping_temp_dir' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+ParameterBinding(Out-String): name="InputObject"; value="The term 'scrapping_temp_dir' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again."
+**********************
+Command start time: 20220809191204
+**********************
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.[0m$scrapping_temp_dir + "(get-childitem $out_image).name"
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\scrapping_temp(get-childitem C:\scripts\convierte\scrapping_cache\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpg).name"
+**********************
+Command start time: 20220809191225
+**********************
+C:\scripts\convierte\scrapping_temp(get-childitem C:\scripts\convierte\scrapping_cache\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpg).name$scrapping_temp_dir + "\" + (get-childitem $out_image).name
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+**********************
+Command start time: 20220809191225
+**********************
+C:\scripts\convierte\scrapping_temp(get-childitem C:\scripts\convierte\scrapping_cache\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpg).nameParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpg"
+**********************
+Command start time: 20220809191316
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ListImported"; value="True"
+>> ParameterBinding(Get-Command): name="CommandType"; value="Alias"
+**********************
+Command start time: 20220809191317
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-CompareImage"
+**********************
+Command start time: 20220809191317
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Help): "Get-Help"
+>> ParameterBinding(Get-Help): name="Name"; value="Get-CompareImage"
+>> ParameterBinding(Get-Help): name="Online"; value="False"
+>> ParameterBinding(Get-Help): name="ErrorAction"; value="Ignore"
+**********************
+Command start time: 20220809191318
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-CompareImage"
+**********************
+Command start time: 20220809191318
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-CompareImage"
+**********************
+Command start time: 20220809191318
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-CompareImage"
+**********************
+Command start time: 20220809191318
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Help): "Get-Help"
+>> ParameterBinding(Get-Help): name="Name"; value="Get-CompareImage"
+>> ParameterBinding(Get-Help): name="Online"; value="False"
+>> ParameterBinding(Get-Help): name="ErrorAction"; value="Ignore"
+**********************
+Command start time: 20220809191318
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Help): "Get-Help"
+>> ParameterBinding(Get-Help): name="Name"; value="Get-CompareImage"
+>> ParameterBinding(Get-Help): name="Online"; value="False"
+>> ParameterBinding(Get-Help): name="ErrorAction"; value="Ignore"
+**********************
+Command start time: 20220809191318
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Help): "Get-Help"
+>> ParameterBinding(Get-Help): name="Name"; value="Get-CompareImage"
+>> ParameterBinding(Get-Help): name="Online"; value="False"
+>> ParameterBinding(Get-Help): name="ErrorAction"; value="Ignore"
+**********************
+Command start time: 20220809191321
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ListImported"; value="True"
+>> ParameterBinding(Get-Command): name="CommandType"; value="Alias"
+**********************
+Command start time: 20220809191321
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-CompareImage"
+**********************
+Command start time: 20220809191321
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Help): "Get-Help"
+>> ParameterBinding(Get-Help): name="Name"; value="Get-CompareImage"
+>> ParameterBinding(Get-Help): name="Online"; value="False"
+>> ParameterBinding(Get-Help): name="ErrorAction"; value="Ignore"
+**********************
+Command start time: 20220809191327
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Resolve-Path): "Resolve-Path"
+>> ParameterBinding(Resolve-Path): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Resolve-Path): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Resolve-Path): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Resolve-Path): name="Verbose"; value="False"
+>> ParameterBinding(Resolve-Path): name="Debug"; value="False"
+>> ParameterBinding(Resolve-Path): name="Path"; value="*"
+**********************
+Command start time: 20220809191327
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-CompareImage"
+**********************
+Command start time: 20220809191330
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="variable:*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.NullVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSCultureVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSUICultureVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.QuestionMarkVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+**********************
+Command start time: 20220809191330
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="env:*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Key"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+**********************
+Command start time: 20220809191330
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-PSDrive): "Get-PSDrive"
+>> ParameterBinding(Get-PSDrive): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="Verbose"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Debug"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Name"; value="*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809191330
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgParameterBinding(Sort-Object): name="InputObject"; value="Alias"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="C"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="Cert"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="D"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="E"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="Env"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="F"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="Function"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="G"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="H"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="HKCU"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="HKLM"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="I"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="J"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="K"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="L"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="M"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="N"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="O"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="P"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="Q"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="R"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="S"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="T"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="Temp"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="U"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="V"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="Variable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="W"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="WSMan"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="X"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="Y"
+**********************
+Command start time: 20220809191330
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="variable:por*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809191330
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-PSDrive): "Get-PSDrive"
+>> ParameterBinding(Get-PSDrive): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="Verbose"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Debug"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Name"; value="por*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809191330
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-CompareImage"
+**********************
+Command start time: 20220809191330
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-CompareImage"
+**********************
+Command start time: 20220809191330
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-CompareImage"
+**********************
+Command start time: 20220809191331
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-CompareImage"
+**********************
+Command start time: 20220809191331
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-CompareImage"
+**********************
+Command start time: 20220809191331
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Resolve-Path): "Resolve-Path"
+>> ParameterBinding(Resolve-Path): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Resolve-Path): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Resolve-Path): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Resolve-Path): name="Verbose"; value="False"
+>> ParameterBinding(Resolve-Path): name="Debug"; value="False"
+>> ParameterBinding(Resolve-Path): name="Path"; value="*"
+**********************
+Command start time: 20220809191332
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-CompareImage"
+**********************
+Command start time: 20220809191334
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Resolve-Path): "Resolve-Path"
+>> ParameterBinding(Resolve-Path): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Resolve-Path): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Resolve-Path): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Resolve-Path): name="Verbose"; value="False"
+>> ParameterBinding(Resolve-Path): name="Debug"; value="False"
+>> ParameterBinding(Resolve-Path): name="Path"; value="º*"
+**********************
+Command start time: 20220809191334
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-ChildItem): "Get-ChildItem"
+>> ParameterBinding(Get-ChildItem): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-ChildItem): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-ChildItem): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-ChildItem): name="Verbose"; value="False"
+>> ParameterBinding(Get-ChildItem): name="Debug"; value="False"
+>> ParameterBinding(Get-ChildItem): name="Path"; value="º*"
+>> ParameterBinding(Get-ChildItem): name="Hidden"; value="True"
+**********************
+Command start time: 20220809191336
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="variable:*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.NullVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSCultureVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSUICultureVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.QuestionMarkVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+**********************
+Command start time: 20220809191336
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="env:*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Key"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+**********************
+Command start time: 20220809191336
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-PSDrive): "Get-PSDrive"
+>> ParameterBinding(Get-PSDrive): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="Verbose"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Debug"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Name"; value="*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809191336
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgParameterBinding(Sort-Object): name="InputObject"; value="Alias"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="C"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="Cert"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="D"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="E"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="Env"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="F"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="Function"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="G"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="H"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="HKCU"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="HKLM"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="I"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="J"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="K"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="L"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="M"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="N"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="O"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="P"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="Q"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="R"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="S"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="T"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="Temp"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="U"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="V"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="Variable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="W"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="WSMan"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="X"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="Y"
+**********************
+Command start time: 20220809191337
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="variable:o*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+**********************
+Command start time: 20220809191337
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-PSDrive): "Get-PSDrive"
+>> ParameterBinding(Get-PSDrive): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="Verbose"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Debug"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Name"; value="o*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809191337
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgParameterBinding(Sort-Object): name="InputObject"; value="O"
+**********************
+Command start time: 20220809191347
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="variable:Get*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809191347
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-PSDrive): "Get-PSDrive"
+>> ParameterBinding(Get-PSDrive): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="Verbose"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Debug"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Name"; value="Get*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809191357
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-CompareImage"
+**********************
+Command start time: 20220809191358
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-CompareImage"
+**********************
+Command start time: 20220809191358
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgCommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-CompareImage"
+**********************
+Command start time: 20220809191407
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpgTerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+**********************
+Command start time: 20220809191414
+**********************
+PS C:\scripts\Folderwatch> . "c:\scripts\convierte\ask_comicvine.ps1"
+**********************
+Command start time: 20220809191417
+**********************
+PS C:\scripts\Folderwatch> . "c:\scripts\convierte\comic-convert.ps1"
+PATH DEL SCRIPT = C:\scripts\convierte
+
+**********************
+PowerShell transcript end
+End time: 20220809191418
+**********************

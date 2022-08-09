@@ -1,0 +1,3081 @@
+**********************
+PowerShell transcript start
+Start time: 20220809193223
+Username: SERVER\server
+RunAs User: SERVER\server
+Configuration Name: 
+Machine: SERVER (Microsoft Windows NT 10.0.19044.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -NoProfile -ExecutionPolicy Bypass -Command Import-Module 'c:\Users\server\.vscode\extensions\ms-vscode.powershell-2022.7.2\modules\PowerShellEditorServices\PowerShellEditorServices.psd1'; Start-EditorServices -HostName 'Visual Studio Code Host' -HostProfileId 'Microsoft.VSCode' -HostVersion '2022.7.2' -AdditionalModules @('PowerShellEditorServices.VSCode') -BundledModulesPath 'c:\Users\server\.vscode\extensions\ms-vscode.powershell-2022.7.2\modules' -EnableConsoleRepl -StartupBanner "PowerShell Extension v2022.7.2
+Copyright (c) Microsoft Corporation.
+
+https://aka.ms/vscode-powershell
+Type 'help' to get help.
+" -LogLevel 'Normal' -LogPath 'c:\Users\server\AppData\Roaming\Code\User\globalStorage\ms-vscode.powershell\logs\1660060903-dd3729fa-4dd4-439f-879f-e3d56200b0c21660060898929\EditorServices.log' -SessionDetailsPath 'c:\Users\server\AppData\Roaming\Code\User\globalStorage\ms-vscode.powershell\sessions\PSES-VSCode-19360-603308.json' -FeatureFlags @() 
+Process ID: 20104
+PSVersion: 7.2.5
+PSEdition: Core
+GitCommitId: 7.2.5
+OS: Microsoft Windows 10.0.19044
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.10032.0, 6.0.0, 6.1.0, 6.2.0, 7.0.0, 7.1.0, 7.2.5
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+
+#####################################################################################################
+#### PROCESANDO NUEVA SERIE: A Righteous Thirst for Vengeance
+#####################################################################################################
+
+    >> Lista de ficheros a procesar:
+
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #01.cbz
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #02.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #03.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #04.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #05.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #06.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #07.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #08.cbr
+Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #09.cbr
+
+MUEVO TODOS LOS COMIS AL DIRECTORIO RAIZ DE LA SERIE Y BORRO DIRECTORIOS VACIOS RECURSIVAMENTE
+
+
+LIMPIO EL NOMBRE DEL COMIC
+
+#####################################################################################################
+#### PROCESANDO NUEVO COMIC: Q:\PRUEBAS\A Righteous Thirst for Vengeance (Image)(2021)(comics 8 continua)\A Righteous Thirst for Vengeance #01.cbz
+#####################################################################################################
+DESCOMPRIMO EL COMIC
+    >> Borro los directorios temporales
+    >> Descomprimo el comic
+    >> Cambio los atributos a los ficheros para poder tener acceso
+EJECUTO UNA LIMPIEZA DEL COMIC
+    >> Borro todos los ficheros menores de 5k que son thumbnais y los visores de comics no entienden
+    >> Quito directorios de MACOSX
+    >> Elimino todos los ficheros que nos son jpg, png, xml ó webp
+CONVIERTO LOS FICHEROS DE IMAGENES DEL COMIC A UN FORMATO ADECUADO
+    >> Convirtiendo imagenes.... ( ¡Espere!, este proceso puede durar varios minutos )
+ELIMINO LAS IMAGENES DE CREDITOS
+    >> Borro ciertas imagenes que añaden lo recopiladores
+    >> Genero las ultimas 7 miniaturas en formato 32x32
+    >> Buscando creditos en las 7 ultimas imagenes del comic
+ENCONTRADO VOLUMEN:  A Righteous Thirst For Vengeance
+CUMPLE TODOS LOS PARAMETROS
+Identificador: 0
+COMIC:  A Righteous Thirst For Vengeance
+ISSUE: 001
+AÑO:  2021
+NUMERO DE COMICS:  10
+EDITORIAL:  Image
+ID:  139442
+URL:  https://comicvine.gamespot.com/api/volume/4050-139442/
+ID:  139442
+(139442 , 4050-139442)(Image)(2021).jpg JPEG 1988x3056=>32x32 32x32+0+0 8-bit Grayscale Gray 627B 0.219u 0:00.264
+
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193305
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193306
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193306
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193306
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193306
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193306
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193306
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193306
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193306
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193306
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193306
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193306
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193306
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193306
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193306
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193306
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193306
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193309
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193310
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ListImported"; value="True"
+>> ParameterBinding(Get-Command): name="CommandType"; value="Alias"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193325
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193327
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193329
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193347
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ListImported"; value="True"
+>> ParameterBinding(Get-Command): name="CommandType"; value="Alias"
+**********************
+Command start time: 20220809193347
+**********************
+PS C:\scripts\Folderwatch> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ListImported"; value="True"
+>> ParameterBinding(Get-Command): name="CommandType"; value="Alias"
+**********************
+Command start time: 20220809193349
+**********************
+PS C:\scripts\Folderwatch> & $compara $imagen_origen -colorspace Gray -metric RMSE $imagen_almacenada $fichero_temporal
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+**********************
+Command start time: 20220809193349
+**********************
+21787.6 (0.332457)
+ParameterBinding(Out-String): name="InputObject"; value="21787.6 (0.332457)"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Global"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Script"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Variable): "Get-Variable"
+>> ParameterBinding(Get-Variable): name="Scope"; value="Local"
+**********************
+Command start time: 20220809193407
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ListImported"; value="True"
+>> ParameterBinding(Get-Command): name="CommandType"; value="Alias"
+**********************
+Command start time: 20220809193417
+**********************
+21787.6 (0.332457)[int](($comp -split '\(')[0]) * 100 / 65535
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="33,2463569085222"
+**********************
+Command start time: 20220809193450
+**********************
+33,2463569085222$comp -split '\(')[0]
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="At line:1 char:18
++ $comp -split '\(')[0]
++                  ~
+Unexpected token ')' in expression or statement.
+
+At line:1 char:20
++ $comp -split '\(')[0]
++                    ~
+Missing type name after '['."
+**********************
+Command start time: 20220809193504
+**********************
+[0m($comp -split '\(')[0]
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="21787.6 "
+**********************
+Command start time: 20220809193512
+**********************
+21787.6 ($comp -split '\(')[0]*100/65535
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+**********************
+Command start time: 20220809193512
+**********************
+
+InvalidArgument: Cannot convert value "21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6" to type "System.Int32". Error: "Input string was not in a correct format."
+ParameterBinding(Out-String): name="InputObject"; value="Cannot convert value "21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6" to type "System.Int32". Error: "Input string was not in a correct format.""
+**********************
+Command start time: 20220809193526
+**********************
+[91mInvalidArgument: [91mCannot convert value "21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6" to type "System.Int32". Error: "Input string was not in a correct format."[0m(($comp -split '\(')[0])*100/65535
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+**********************
+Command start time: 20220809193526
+**********************
+
+InvalidArgument: Cannot convert value "21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6" to type "System.Int32". Error: "Input string was not in a correct format."
+ParameterBinding(Out-String): name="InputObject"; value="Cannot convert value "21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6" to type "System.Int32". Error: "Input string was not in a correct format.""
+**********************
+Command start time: 20220809193541
+**********************
+[91mInvalidArgument: [91mCannot convert value "21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6 21787.6" to type "System.Int32". Error: "Input string was not in a correct format."[0m(int($comp -split '\(')[0])*100/65535
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+**********************
+Command start time: 20220809193541
+**********************
+
+int: The term 'int' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+ParameterBinding(Out-String): name="InputObject"; value="The term 'int' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again."
+**********************
+Command start time: 20220809193546
+**********************
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.[0m($comp -split '\(')[0]
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="21787.6 "
+**********************
+Command start time: 20220809193552
+**********************
+21787.6 [int]($comp -split '\(')[0]
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="21788"
+**********************
+Command start time: 20220809193604
+**********************
+21788[int]($comp -split '\(')[0]*100/65535
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="33,2463569085222"
+**********************
+Command start time: 20220809193630
+**********************
+33,2463569085222($comp -split '\(')[1]
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="0.332457)"
+**********************
+Command start time: 20220809193654
+**********************
+0.332457)($comp -split '\(')[1].replace(')'.'')
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+**********************
+Command start time: 20220809193654
+**********************
+
+MethodException: Cannot find an overload for "replace" and the argument count: "1".
+ParameterBinding(Out-String): name="InputObject"; value="Cannot find an overload for "replace" and the argument count: "1"."
+**********************
+Command start time: 20220809193703
+**********************
+[91mMethodException: [91mCannot find an overload for "replace" and the argument count: "1".[0m(($comp -split '\(')[1]).replace(')'.'')
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+**********************
+Command start time: 20220809193703
+**********************
+
+MethodException: Cannot find an overload for "replace" and the argument count: "1".
+ParameterBinding(Out-String): name="InputObject"; value="Cannot find an overload for "replace" and the argument count: "1"."
+**********************
+Command start time: 20220809193714
+**********************
+[91mMethodException: [91mCannot find an overload for "replace" and the argument count: "1".[0m(($comp -split '\(')[1]).replace(')','')
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="0.332457"
+**********************
+Command start time: 20220809193730
+**********************
+0.332457[int](($comp -split '\(')[1]).replace(')','')*100
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="0"
+**********************
+Command start time: 20220809193745
+**********************
+0([int](($comp -split '\(')[1]).replace(')',''))*100
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="0"
+**********************
+Command start time: 20220809193803
+**********************
+0[int64](($comp -split '\(')[1]).replace(')','')*100
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="0"
+**********************
+Command start time: 20220809193809
+**********************
+0(($comp -split '\(')[1]).replace(')','')
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="0.332457"
+**********************
+Command start time: 20220809193815
+**********************
+0.332457[int]($comp -split '\(')[0]*100/65535
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="33,2463569085222"
+**********************
+Command start time: 20220809193828
+**********************
+33,2463569085222CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ListImported"; value="True"
+>> ParameterBinding(Get-Command): name="CommandType"; value="Alias"
+**********************
+Command start time: 20220809193833
+**********************
+33,2463569085222CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ListImported"; value="True"
+>> ParameterBinding(Get-Command): name="CommandType"; value="Alias"
+**********************
+Command start time: 20220809193838
+**********************
+33,2463569085222CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ListImported"; value="True"
+>> ParameterBinding(Get-Command): name="CommandType"; value="Alias"
+**********************
+Command start time: 20220809193933
+**********************
+33,2463569085222& $compara $imagen_origen -colorspace Gray -metric RMSE $imagen_almacenada $fichero_temporal
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+**********************
+Command start time: 20220809193934
+**********************
+21787.6 (0.332457)
+ParameterBinding(Out-String): name="InputObject"; value="21787.6 (0.332457)"
+**********************
+Command start time: 20220809193958
+**********************
+21787.6 (0.332457)CommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="variable:ima*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+**********************
+Command start time: 20220809193958
+**********************
+21787.6 (0.332457)CommandInvocation(Get-PSDrive): "Get-PSDrive"
+>> ParameterBinding(Get-PSDrive): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="Verbose"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Debug"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Name"; value="ima*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809194006
+**********************
+21787.6 (0.332457)$imagen_almacenada
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpg"
+**********************
+Command start time: 20220809194018
+**********************
+C:\scripts\convierte\scrapping_temp\A Righteous Thirst For Vengeance #1 de 10 (139442 , 4050-139442)(Image)(2021).jpg$fichero_temporal
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\windows\temp\temp.jpg"
+**********************
+Command start time: 20220809194028
+**********************
+C:\windows\temp\temp.jpgCommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ListImported"; value="True"
+>> ParameterBinding(Get-Command): name="CommandType"; value="Alias"
+**********************
+Command start time: 20220809194054
+**********************
+C:\windows\temp\temp.jpgCommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ListImported"; value="True"
+>> ParameterBinding(Get-Command): name="CommandType"; value="Alias"
+**********************
+Command start time: 20220809194055
+**********************
+C:\windows\temp\temp.jpgCommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ListImported"; value="True"
+>> ParameterBinding(Get-Command): name="CommandType"; value="Alias"
+**********************
+Command start time: 20220809194112
+**********************
+C:\windows\temp\temp.jpg& $compara $imagen_origen -colorspace Gray -metric RMSE $imagen_almacenada $imagen_origen
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+**********************
+Command start time: 20220809194112
+**********************
+21787.6 (0.332457)
+ParameterBinding(Out-String): name="InputObject"; value="21787.6 (0.332457)"
+**********************
+Command start time: 20220809194134
+**********************
+21787.6 (0.332457)& $compara $imagen_origen -colorspace Gray -metric RMSE $imagen_almacenada $fichero_temporal
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+**********************
+Command start time: 20220809194134
+**********************
+7485.81 (0.114226)
+ParameterBinding(Out-String): name="InputObject"; value="7485.81 (0.114226)"
+**********************
+Command start time: 20220809194144
+**********************
+7485.81 (0.114226)& $compara $imagen_origen -colorspace Gray -metric RMSE $imagen_almacenada :
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+**********************
+Command start time: 20220809194145
+**********************
+7485.81 (0.114226)compare.exe: unable to open image ':': Invalid argument @ error/blob.c/OpenBlob/3533.
+ParameterBinding(Out-String): name="InputObject"; value="7485.81 (0.114226)compare.exe: unable to open image ':': Invalid argument @ error/blob.c/OpenBlob/3533."
+**********************
+Command start time: 20220809194151
+**********************
+7485.81 (0.114226)compare.exe: unable to open image ':': Invalid argument @ error/blob.c/OpenBlob/3533.& $compara $imagen_origen -colorspace Gray -metric RMSE $imagen_almacenada null
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+**********************
+Command start time: 20220809194152
+**********************
+7485.81 (0.114226)
+ParameterBinding(Out-String): name="InputObject"; value="7485.81 (0.114226)"
+**********************
+Command start time: 20220809194209
+**********************
+7485.81 (0.114226)$compara
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+>> ParameterBinding(Out-String): name="InputObject"; value="C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exe"
+**********************
+Command start time: 20220809194236
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exeCommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ListImported"; value="True"
+>> ParameterBinding(Get-Command): name="CommandType"; value="Alias"
+**********************
+Command start time: 20220809194236
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exeCommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ListImported"; value="True"
+>> ParameterBinding(Get-Command): name="CommandType"; value="Alias"
+**********************
+Command start time: 20220809194238
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exe$portada = (get-childitem $comic_final)[0].fullname
+>> CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="Stream"; value="True"
+**********************
+Command start time: 20220809194240
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exeCommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="lista_comics_comicvine"
+**********************
+Command start time: 20220809194240
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exeCommandInvocation(Get-Help): "Get-Help"
+>> ParameterBinding(Get-Help): name="Name"; value="lista_comics_comicvine"
+>> ParameterBinding(Get-Help): name="Online"; value="False"
+>> ParameterBinding(Get-Help): name="ErrorAction"; value="Ignore"
+**********************
+Command start time: 20220809194257
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exeCommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="variable:*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.NullVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSCultureVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSUICultureVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.QuestionMarkVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+**********************
+Command start time: 20220809194257
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exeCommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="env:*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Key"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Collections.DictionaryEntry"
+**********************
+Command start time: 20220809194257
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exeCommandInvocation(Get-PSDrive): "Get-PSDrive"
+>> ParameterBinding(Get-PSDrive): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="Verbose"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Debug"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Name"; value="*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809194257
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exeParameterBinding(Sort-Object): name="InputObject"; value="Alias"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="C"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="Cert"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="D"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="E"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="Env"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="F"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="Function"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="G"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="H"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="HKCU"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="HKLM"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="I"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="J"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="K"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="L"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="M"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="N"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="O"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="P"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="Q"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="R"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="S"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="T"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="Temp"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="U"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="V"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="Variable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="W"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="WSMan"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="X"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="Y"
+**********************
+Command start time: 20220809194258
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exeCommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="variable:p*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSCultureVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSUICultureVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+**********************
+Command start time: 20220809194258
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exeCommandInvocation(Get-PSDrive): "Get-PSDrive"
+>> ParameterBinding(Get-PSDrive): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="Verbose"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Debug"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Name"; value="p*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809194258
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exeParameterBinding(Sort-Object): name="InputObject"; value="P"
+**********************
+Command start time: 20220809194258
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exeCommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="variable:po*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+**********************
+Command start time: 20220809194258
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exeCommandInvocation(Get-PSDrive): "Get-PSDrive"
+>> ParameterBinding(Get-PSDrive): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="Verbose"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Debug"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Name"; value="po*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809194259
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exeCommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="variable:portada_c*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809194259
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exeCommandInvocation(Get-PSDrive): "Get-PSDrive"
+>> ParameterBinding(Get-PSDrive): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="Verbose"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Debug"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Name"; value="portada_c*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809194300
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exeCommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="variable:portada_co*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809194300
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exeCommandInvocation(Get-PSDrive): "Get-PSDrive"
+>> ParameterBinding(Get-PSDrive): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="Verbose"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Debug"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Name"; value="portada_co*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809194301
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exeCommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="variable:portada_comprim*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809194301
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exeCommandInvocation(Get-PSDrive): "Get-PSDrive"
+>> ParameterBinding(Get-PSDrive): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="Verbose"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Debug"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Name"; value="portada_comprim*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809194301
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exeCommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="variable:portada_comprimida*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809194301
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exeCommandInvocation(Get-PSDrive): "Get-PSDrive"
+>> ParameterBinding(Get-PSDrive): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="Verbose"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Debug"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Name"; value="portada_comprimida*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809194324
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exeCommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="variable:p*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSCultureVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSUICultureVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.LocalVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+**********************
+Command start time: 20220809194324
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exeCommandInvocation(Get-PSDrive): "Get-PSDrive"
+>> ParameterBinding(Get-PSDrive): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="Verbose"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Debug"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Name"; value="p*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809194324
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exeParameterBinding(Sort-Object): name="InputObject"; value="P"
+**********************
+Command start time: 20220809194325
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exeCommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="variable:por*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+>> ParameterBinding(Sort-Object): name="InputObject"; value="System.Management.Automation.PSVariable"
+**********************
+Command start time: 20220809194325
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exeCommandInvocation(Get-PSDrive): "Get-PSDrive"
+>> ParameterBinding(Get-PSDrive): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="Verbose"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Debug"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Name"; value="por*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809194330
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exeCommandInvocation(Get-Item): "Get-Item"
+>> ParameterBinding(Get-Item): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-Item): name="Verbose"; value="False"
+>> ParameterBinding(Get-Item): name="Debug"; value="False"
+>> ParameterBinding(Get-Item): name="Path"; value="variable:portada_*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809194330
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exeCommandInvocation(Get-PSDrive): "Get-PSDrive"
+>> ParameterBinding(Get-PSDrive): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Get-PSDrive): name="Verbose"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Debug"; value="False"
+>> ParameterBinding(Get-PSDrive): name="Name"; value="portada_*"
+>> CommandInvocation(Sort-Object): "Sort-Object"
+>> ParameterBinding(Sort-Object): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="WarningAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="InformationAction"; value="Ignore"
+>> ParameterBinding(Sort-Object): name="Verbose"; value="False"
+>> ParameterBinding(Sort-Object): name="Debug"; value="False"
+>> ParameterBinding(Sort-Object): name="Property"; value="Name"
+**********************
+Command start time: 20220809194405
+**********************
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\compare.exeTerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+**********************
+Command start time: 20220809194408
+**********************
+PS C:\scripts\Folderwatch> . "c:\scripts\convierte\comic-convert.ps1"
+PATH DEL SCRIPT = C:\scripts\convierte
+
+**********************
+PowerShell transcript end
+End time: 20220809194409
+**********************
