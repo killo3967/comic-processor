@@ -46,9 +46,9 @@ if ( (get-childitem $comic_dir -File -Recurse).count -eq 0 ) {
 $Global:prog_dir             = "$prog_dir"
 $Global:config_dir           = "$prog_dir\config" 
 $Global:log_dir              = "$prog_dir\log"
-$Global:comic_unzip          = "$prog_dir\comic\unzip"
-$Global:comic_final          = "$prog_dir\comic\final"
-$Global:comic32x32           = "$prog_dir\comic\32x32"
+$Global:comic_unzip_dir      = "$prog_dir\comic\unzip"
+$Global:comic_final_dir      = "$prog_dir\comic\final"
+$Global:comic32x32_dir       = "$prog_dir\comic\32x32"
 $Global:original_credits_dir = "$prog_dir\original_credits"
 $Global:credits_dir          = "$prog_dir\credits" 
 $Global:backup_dir           = "$prog_dir\backup"
@@ -101,12 +101,15 @@ $Global:comic_year  = ''
 
 $directorios_necesarios = @(
     $log_dir,
-    $comic_unzip,
-    $comic_final,
-    $comic32x32
+    $comic_unzip_dir,
+    $comic_final_dir,
+    $comic32x32_dir
     $original_credits_dir,
     $credits_dir,
-    $backup_dir
+    $backup_dir,
+    $scrapping_cache_dir,
+    $scrapping_temp_dir,
+    $fichero_temporal
 )
 
 # Creo los directorios necesarios para el funcionamiento del script
@@ -121,8 +124,8 @@ for ($i = 1; $i -lt $directorios_necesarios.count; $i++) {
 }
 
 # Limpio los directorios temporales
-Remove-item $comic_unzip\*.* -Recurse -Force -Confirm:$False -ErrorAction SilentlyContinue -Verbose:$verbose | out-null
-Remove-item $comic_final\*.* -Recurse -Force -Confirm:$False -ErrorAction SilentlyContinue -Verbose:$verbose | out-null
+Remove-item $comic_unzip_dir\*.* -Recurse -Force -Confirm:$False -ErrorAction SilentlyContinue -Verbose:$verbose | out-null
+Remove-item $comic_final_dir\*.* -Recurse -Force -Confirm:$False -ErrorAction SilentlyContinue -Verbose:$verbose | out-null
 
 # Hago un backup de las imagenes de creditos
 copy-item $original_credits_dir\*.* $backup_dir -Force -ErrorAction Stop
@@ -186,10 +189,8 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
 
 
     # Extraigo el nombre de la serie del nombre del directorio
-    #! Esto hay que sustiruirlo / moverlo a idetifica_comic.ps1 como una funcion
     if ( $scrapper_comic -eq $true ) {
         $series_name = extraer_serie $series_dir 
-        # $dir_list[$i].name.split("(")[0].trim()
     }
    
     # Defino el fichero de log. Hago un log para cada serie, que contiene la conversion de varios comics.
@@ -269,20 +270,20 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
         
         # Limpio los directorios temporales
         write-host "    >> Borro los directorios temporales"
-        Remove-item $comic_unzip\*.* -Recurse -Force -Confirm:$False -verbose:$verbose  
-        Remove-item $comic_final\*.* -Recurse -Force -Confirm:$False -verbose:$verbose 
-        Remove-item $comic32x32\*.*  -Recurse -Force -Confirm:$False -verbose:$verbose  
+        Remove-item $comic_unzip_dir\*.* -Recurse -Force -Confirm:$False -verbose:$verbose  
+        Remove-item $comic_final_dir\*.* -Recurse -Force -Confirm:$False -verbose:$verbose 
+        Remove-item $comic32x32_dir\*.*  -Recurse -Force -Confirm:$False -verbose:$verbose  
         
         # Llamo a 7Z para descomprimir el comic
         write-host "    >> Descomprimo el comic"
-        start-process -wait -verbose:$verbose -nonewwindow "C:\program files\7-zip\7z.exe" -ArgumentList "e `"$comic_fname`" -o$comic_unzip -y -bb3" -RedirectStandardOutput "$log_dir\descomprime.log" 
+        start-process -wait -verbose:$verbose -nonewwindow "C:\program files\7-zip\7z.exe" -ArgumentList "e `"$comic_fname`" -o$comic_unzip_dir -y -bb3" -RedirectStandardOutput "$log_dir\descomprime.log" 
         if ( $verbose -eq $true ) {
         Get-Content -LiteralPath "$log_dir\descomprime.log" -verbose:$verbose 
         }
 
         # Le cambio los atributos a -R,-H,-S ya que he encontrado con algunos casos raros de que los ficheros estaban con attributos de oculto, de sistema etc.
         write-host "    >> Cambio los atributos a los ficheros para poder tener acceso"
-        Get-ChildItem -LiteralPath $comic_unzip -Attribute h,r,s -Recurse -verbose:$verbose  | foreach-object { $_.Attributes = 'Normal'} 
+        Get-ChildItem -LiteralPath $comic_unzip_dir -Attribute h,r,s -Recurse -verbose:$verbose  | foreach-object { $_.Attributes = 'Normal'} 
          
         ###########################
         # LIMPIO EL COMIC 
@@ -290,7 +291,7 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
         # Borro todos los ficheros menores a 5k ya que algunos comics traen a demas de las imagenes unos pequeños iconos de ellas.
         write-host "EJECUTO UNA LIMPIEZA DEL COMIC"
         write-host "    >> Borro todos los ficheros menores de 5k que son thumbnais y los visores de comics no entienden"
-        get-childitem $comic_unzip | ForEach-Object { 
+        get-childitem $comic_unzip_dir | ForEach-Object { 
             if ($_.Length -lt 5000) {
                 remove-item -LiteralPath $_.FullName -Force -Confirm:$False -ErrorAction:Stop -verbose:$verbose  -exclude comicinfo.xml,cvinfo
             }
@@ -299,15 +300,15 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
         # Borro ciertos directorios de MAC/OSX ( y su contenido ). 
         # Es un fastidio encontrarse estos directorios que no reconoce ComicRack
         write-host "    >> Quito directorios de MACOSX"
-        remove-item -path $comic_unzip"\.DS_Store" -Recurse -Force -Confirm:$False -ErrorAction:SilentlyContinue -verbose:$verbose 
-        remove-item -path $comic_unzip"\__MACOSX"  -Recurse -Force -Confirm:$False -ErrorAction:SilentlyContinue -verbose:$verbose 
+        remove-item -path $comic_unzip_dir"\.DS_Store" -Recurse -Force -Confirm:$False -ErrorAction:SilentlyContinue -verbose:$verbose 
+        remove-item -path $comic_unzip_dir"\__MACOSX"  -Recurse -Force -Confirm:$False -ErrorAction:SilentlyContinue -verbose:$verbose 
         
 
         # Solo dejo los ficheros con extensiones que sean jpg, png, webp o xml.
         # Me he encontrado dentro de los ficheros de los comics muchos otros ficheros que no son imagenes,
         # como thumbnais, ficheros nfo, ficheros txt, etc.
         write-host "    >> Elimino todos los ficheros que nos son jpg, png, xml ó webp"
-        Get-ChildItem -literalpath $comic_unzip -Exclude *.jpg, *.png, *.xml, *.webp | foreach-object { 
+        Get-ChildItem -literalpath $comic_unzip_dir -Exclude *.jpg, *.png, *.xml, *.webp | foreach-object { 
             remove-item $_.fullname -Recurse -Force -verbose:$verbose -Confirm:$False -ErrorAction:SilentlyContinue -exclude cvinfo
         }
 
@@ -322,25 +323,29 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
         # Reduzco las dimensiones de las imagenes a un maximo de 1440x2210. He encontrado
         # que estas dimensiones son sufucientes y hay una buena relacion tamaño del comic / calidad de la imagen
         
-        write-host "CONVIERTO LOS FICHEROS DE IMAGENES DEL COMIC A UN FORMATO ADECUADO"
-        write-host "    >> Convirtiendo imagenes.... ( ¡Espere!, este proceso puede durar varios minutos )"
+        if ( $true -eq $Global:reprocesar_imagen) {
+            write-host "CONVIERTO LOS FICHEROS DE IMAGENES DEL COMIC A UN FORMATO ADECUADO"
+            write-host "    >> Convirtiendo imagenes.... ( ¡Espere!, este proceso puede durar varios minutos )"
 
-        $lista_ficheros = (get-childitem -literalpath $comic_unzip -exclude *.xml).fullname
+            $lista_ficheros = (get-childitem -literalpath $comic_unzip_dir -exclude *.xml).fullname
 
-        if ( $verbose -eq $true ) {
-            if ( $tipo_conversion -eq "baja" ) {
-                $lista_ficheros | foreach-object { & $mogrify -verbose -resize 1440x2210^> -format jpg  -path $comic_final $_ 2>&1 } 
+            reprocesar_imagen $lista_ficheros $comic_final_dir
+            <#
+            if ( $verbose -eq $true ) {
+                if ( $tipo_conversion -eq "baja" ) {
+                    $lista_ficheros | foreach-object { & $mogrify -verbose -resize 1440x2210^> -format jpg  -path $comic_final_dir $_ 2>&1 } 
+                } else {
+                    $lista_ficheros | ForEach-Object { & $mogrify -verbose -resize 1440x2210^> -format jpg -gamma 2.2 -auto-level -auto-orient -colorspace RGB -quality 65 -sampling-factor 2x2 -depth 24 -interlace line -path $comic_final_dir $_ 2>&1 }
+                }
             } else {
-                $lista_ficheros | ForEach-Object { & $mogrify -verbose -resize 1440x2210^> -format jpg -gamma 2.2 -auto-level -auto-orient -colorspace RGB -quality 65 -sampling-factor 2x2 -depth 24 -interlace line -path $comic_final $_ 2>&1 }
+                if ( $tipo_conversion -eq "baja" ) {
+                    $lista_ficheros | foreach-object { & $mogrify -resize 1440x2210^> -format jpg  -path $comic_final_dir $_ 2>&1 }
+                } else {
+                    $lista_ficheros | ForEach-Object { & $mogrify -resize 1440x2210^> -format jpg -gamma 2.2 -auto-level -auto-orient -colorspace RGB -quality 65 -sampling-factor 2x2 -depth 24 -interlace line -path $comic_final_dir $_ 2>&1 }
+                }
             }
-        } else {
-            if ( $tipo_conversion -eq "baja" ) {
-                $lista_ficheros | foreach-object { & $mogrify -resize 1440x2210^> -format jpg  -path $comic_final $_ 2>&1 }
-            } else {
-                $lista_ficheros | ForEach-Object { & $mogrify -resize 1440x2210^> -format jpg -gamma 2.2 -auto-level -auto-orient -colorspace RGB -quality 65 -sampling-factor 2x2 -depth 24 -interlace line -path $comic_final $_ 2>&1 }
-            }
+            #>
         }
-        
                
         ############################################
         # ELIMINO LAS IMAGENES DE CREDITOS
@@ -365,17 +370,17 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
             # dado el caso de que todos ficheros tenian nombres con que coincidian con los filtros a borrar.
             #! Esto habria que cambiarlo por una funcion pero ya!
             if ($tipo_renombrado = 'comic'){
-                & "C:\Program Files (x86)\ReNamer\ReNamer.exe" /silent /rename "COMICS" $comic_unzip
+                & "C:\Program Files (x86)\ReNamer\ReNamer.exe" /silent /rename "COMICS" $comic_unzip_dir
             }
             if ($tipo_renombrado = 'manga'){
-                & "C:\Program Files (x86)\ReNamer\ReNamer.exe" /silent /rename "MANGA" $comic_unzip
+                & "C:\Program Files (x86)\ReNamer\ReNamer.exe" /silent /rename "MANGA" $comic_unzip_dir
             }
             # Tengo que poner esto para esperar a Renamer
             wait-process -name "ReNamer" -Timeout 500
             
             # Borro los ficheros que siguen un patron segun se define en el fichero que contiene la variable $exclude_files
             foreach ( $v_archivo in $excluded_files ) { 
-                get-childitem -path $comic_unzip -filter $v_archivo | foreach-object { 
+                get-childitem -path $comic_unzip_dir -filter $v_archivo | foreach-object { 
                     $fichero_a_borrar = $_.FullName
                     remove-item -LiteralPath $fichero_a_borrar -Force -Confirm:$False -ErrorAction:Stop -exclude comicinfo.xml,cvinfo -verbose:$verbose 
                 } 
@@ -385,16 +390,12 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
             
             write-host "    >> Genero las ultimas $numero_imagenes_creditos miniaturas en formato 32x32"
             # primero calculo el numero de imagenes que tiene el comic
-            [int]$num_imagenes = (get-childitem $comic_final -exclude comicinfo.xml,cvinfo -file).count
+            [int]$num_imagenes = (get-childitem $comic_final_dir -exclude comicinfo.xml,cvinfo -file).count
             
             # Solo genero las '$numero_imagenes_creditos' ultimas para acelerar el proceso
             for ( $k = ($num_imagenes - $numero_imagenes_creditos) ; $k -lt $num_imagenes ; $k++) {  
-                $imagen = (get-childitem $comic_final -exclude comicinfo.xml,cvinfo)[$k].fullname
-                if ( $verbose -eq $true ) {
-                    & $mogrify -resize 32x32^! -colorspace Gray -verbose -path $comic32x32 $imagen 2>&1
-                } else {
-                    & $mogrify -resize 32x32^! -colorspace Gray -path $comic32x32 $imagen 2>&1
-                }
+                $imagen = (get-childitem $comic_final_dir -exclude comicinfo.xml,cvinfo)[$k].fullname
+                genera_miniatura $imagen
             }
 
             # Inicializo el array de imagenes a eliminar
@@ -403,8 +404,8 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
             # Y ahora busco las imagenes que coinciden
             write-host "    >> Buscando creditos en las $numero_imagenes_creditos ultimas imagenes del comic"
             for ( $n = $num_imagenes - $numero_imagenes_creditos ; $n -lt $num_imagenes ; $n++ ) {
-                $imagen_miniatura = ( get-childitem $comic32x32 )[$n].fullname
-                $imagen_real  = ( get-childitem $comic_final )[$n].fullname
+                $imagen_miniatura = ( get-childitem $comic32x32_dir )[$n].fullname
+                $imagen_real  = ( get-childitem $comic_final_dir )[$n].fullname
                 
                 # Miro todas las imagenes de creditos que tengo almacenadas en el directorio de credits
                 $numero_creditos = (get-childitem -literalpath $credits_dir -file).count
@@ -464,7 +465,7 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
 
         # Comprimo el directorio temp con el nuevo nombre
         write-host "COMPRIMO EL NUEVO COMIC"
-        start-process -wait -NoNewWindow "C:\program files\7-zip\7z.exe" -ArgumentList "a -tzip -bb3 -mx0 -y -r `"$new_comic`" $comic_final\*.*" -RedirectStandardOutput "$log_dir\comprime.log"
+        start-process -wait -NoNewWindow "C:\program files\7-zip\7z.exe" -ArgumentList "a -tzip -bb3 -mx0 -y -r `"$new_comic`" $comic_final_dir\*.*" -RedirectStandardOutput "$log_dir\comprime.log"
         if ( $verbose -eq $true ) {
             Get-Content -LiteralPath "$log_dir\comprime.log"
         }
@@ -484,12 +485,13 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
             ##################################
  
             # Hago un scrapping del comic usando el software de comictagger
+            <# 
             if ( $scrapper_comic -eq $true ) {
 
                 write-host "HAGO UN SCRAPPING DEL COMIC CON COMICTAGGER"
                 $scrap_respuesta = scrap_comic $series_name (get-childitem $new_comic)
                 
-            }
+            }#>
         
         } else {
             ##################################
@@ -512,8 +514,8 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
             
         # Elimino el contenido de los directorios temporales
         write-host "LIMPIO DIRECTORIOS TEMPORALES Y DE LOGS"
-        Remove-item $comic_unzip\*.* -Recurse -Force -Confirm:$False -ErrorAction:SilentlyContinue -Verbose:$verbose
-        Remove-item $comic_final\*.* -Recurse -Force -Confirm:$False -ErrorAction:SilentlyContinue -Verbose:$verbose
+        Remove-item $comic_unzip_dir\*.* -Recurse -Force -Confirm:$False -ErrorAction:SilentlyContinue -Verbose:$verbose
+        Remove-item $comic_final_dir\*.* -Recurse -Force -Confirm:$False -ErrorAction:SilentlyContinue -Verbose:$verbose
         Remove-item $log_dir\comprime.log -Recurse -Force -Confirm:$False -ErrorAction:SilentlyContinue -Verbose:$verbose
         Remove-item $log_dir\descomprime.log -Recurse -Force -Confirm:$False -ErrorAction:SilentlyContinue -Verbose:$verbose
         Remove-item $log_dir\comictagger.log -Recurse -Force -Confirm:$False -ErrorAction:SilentlyContinue -Verbose:$verbose

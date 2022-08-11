@@ -14,46 +14,52 @@ $Global:correccion_gamma = "2.2"
 
 # Configuracion del comic
 $Global:formato_comic = "cbz"
+
+
+# Incluir directorio raiz en la lista de directorios a procesar
+#! Futuro
+$Global:incluir_directorio_raiz = $false
+
+# Mover todos los comics a directorio base y borra todo el arbol de subdirectorios
+$Global:un_solo_directorio  = $false
+
+# Renombrado de comics segun datos obtenidos del Scrapping
+$Global:renombrar_comics = $true
+
+# Indica que tipo de renombrado sera, de momento solo hay dos. 'Manga' y 'Comics'
+$Global:tipo_renombrado = "comics"
+
+# Indica si se buscan imagenes de creditos
+$Global:buscar_creditos = $true
+[int]$Global:numero_imagenes_creditos = 7       # Numero de imagenes al final del comic en las que busco los creditos
+
+# Indica si reproceso las imagenes del comic
+$Global:comic_convert = $true                   #! Ver cual de las dos opciones es la correcta
 $Global:reprocesar_imagen = $true
 
+# Indica tipo de procesado de imagenes
+$Global:tipo_conversion = "alta"
+
+# Indica si se hace y como se hace el scrapping
+$Global:scrapper_comic = $true
+$Global:scrapper_overwrite = $true
+$Global:scrapper_other_languages = $true
+
+# Variables del proceso de OCR
+$Global:confianza_ocr = 80                      # Define el nivel de confianza de lo escaneado
+
+# Indica si muevo un comic y a donde lo muevo
+$Global:mover_comic = $false
+$Global:directorio_destino_sin_scrapping = ""
+$Global:directorio_destino_con_scrapping = ""
 
 
-# CONFIGURACION DE PROCESOS POR DEFECTO
-
-    # Incluir directorio raiz en la lista de directorios a procesar
-    $Global:incluir_directorio_raiz = $false
-
-    # Fuerza a que todos los comics esten en directorio base y borra todo el arbol de subdirectorio
-    $Global:un_solo_directorio  = $false
-
-    # Indica si se procedera al renombrado de comics
-    $Global:renombrar_comics = $true
-
-    # Indica que tipo de renombrado sera, de momento solo hay dos. 'Manga' y 'Comics'
-    $Global:tipo_renombrado = "comics"
-
-    # Indica si se buscan imagenes de creditos
-    $Global:buscar_creditos = $true
-    [int]$Global:numero_imagenes_creditos = 7       # Numero de imagenes al final del comic en las que busco los creditos
-
-    # Indica si reproceso las imagenes del comic y el tipo
-    $Global:comic_convert = $true
-    $Global:tipo_conversion = "alta"
-
-    # Indica si se hace y como se hace el scrapping
-    $Global:scrapper_comic = $true
-    $Global:scrapper_overwrite = $true
-    $Global:scrapper_other_languages = $true
-
-    # Variables del proceso de OCR
-    $Global:confianza_ocr = 80                      # Define el nivel de confianza de lo escaneado
-
-    # Indica si muevo un comic y a donde lo muevo
-    $Global:mover_comic = $false
-    $Global:directorio_destino_sin_scrapping = ""
-    $Global:directorio_destino_con_scrapping = ""
 
 
+
+############
+# PERFILES #
+############
 Function perfil_nuevo_comic {
     $Global:tipo_conversion = "baja"
     $Global:un_solo_directorio              = $true
