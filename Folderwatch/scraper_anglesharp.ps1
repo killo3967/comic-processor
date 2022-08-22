@@ -100,7 +100,7 @@ while ($true) {
                 # Compongo en nuevo nombre de la serie
                 $series_name = $series_name + " ($aux_editorial)" + "($aux_ano)" -replace '[\:\\\/\r\n]', ' -'
                 
-                # He quitado ' + "(comics $aux_archivos)' depues de aux_ano y antes del replace ya que al final no aporta nada
+                # He quitado ' + "(comics $aux_archivos)' depues de aux_ano y antes del replace ya que no aporta nada
 
                 # Miro si ya lo he bajado, para no volver a bajarlo de nuevo
                 # si quisiera volver a bajarlo solo tengo que quitar el fichero con extension crawljob de la carpeta "added"    
