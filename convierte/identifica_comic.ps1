@@ -76,8 +76,8 @@ function extraer_serie {
     [Parameter(Mandatory=$true)]
     $ruta_fichero
     )
-    $series_directory = split-path -leaf $ruta_fichero
-    $series_directory = $series_directory -replace '(\[|\()[^\]\)]*(\]|\))' , ''
+    $series_directory = split-path $ruta_fichero -leaf
+    $series_directory = ($series_directory -replace '(\[|\()[^\]\)]*(\]|\))' , '').trim()
     
     return $series_directory
 }
@@ -87,9 +87,8 @@ function extraer_serie_nombre_comic {
     [Parameter(Mandatory=$true)]
     $ruta_fichero
     )
-    $series_directory = split-path -leaf $ruta_fichero
-    $series_name = $series_directory -replace '(\[|\()[^\]\)]*(\]|\))' , ''
-    
+    $nombre_fichero = split-path -leaf $ruta_fichero
+    $series_name = ($nombre_fichero.split('#'))[0].trim()
     return $series_name 
 }
 
@@ -159,7 +158,17 @@ function extraer_issue {
     }
     #>
 
-    return $issue
+return $issue
+}
+
+function get-publisher {
+    Param (
+        [Parameter(Mandatory=$true)]
+        $in_ruta_fichero
+    )
+    $out_publisher = ($in_ruta_fichero.split('('))[1].split(')')[0]
+    #! Si esto no contiene nada habra que implementar el OCR
+return $out_publisher
 }
 
 

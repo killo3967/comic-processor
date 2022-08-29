@@ -26,16 +26,19 @@ function scrap_comic {
     # Obtengo el numero del comic    
     $issue = extraer_issue $nombre_fichero   #! Extrae el issue de la serie en formato INT
     
-    # Extraigo el año de la serie o del comic
+    # Obtengo el año de la serie o del comic
     $v_año.clear
     $v_año = extraer_año (get-childitem $file_name)
-
+    $publisher = get-publisher $file_name
+    $num_issues = (get-childitem(get-childitem $full_name).directoryname).count
         
     write-host "========================================================"
     write-host "=================== DATOS OBTENIDOS ===================="
     write-host "Serie: $series_name"
     write-host "Numero: $issue"
     write-host "Comic: $new_comic"
+    write-host "Editorial" $publisher
+    write-host "Numero de comics:" $num_issues
     write-host "Año de la serie: "($v_año -join (' , '))
     write-host "========================================================"
     write-host "========================================================"
@@ -90,35 +93,64 @@ function scrap_comic {
                 } else {
                     $t_series_name = traduce_deepl $t_series_name
                 }
-                write-host "   >> Buscando comic SERIE: $series_name | ISSUE: $issue | AÑO: $t_año | COMIC: $new_comic | IDIOMA: $t_idioma"
-                # paso 2 - Grabo los datos de la serie y el numero en el fichero de metadatos sin usar el año 
-                write-host "    >> Escribiendo metadatos"
-                llamar_a_comictagger $series_name $issue $t_año $new_comic 'crea_xml'
+                write-host "   >> Buscando comic SERIE: $series_name | ISSUE: $issue | AÑO: $t_año | COMIC: $new_comic | IDIOMA: $t_idioma | ISSUES: $num_issues"
                 
-                # paso 4 busco datos online del comic
-                write-host "    >> Buscando datos online del comic"
-                llamar_a_comictagger "" "" "" $new_comic 'busca_online'
+                get-serie_cv $series_name $issue $t_año $publisher $new_comic $num_issues
 
-                $respuesta_ct = repuesta_comictagger 
-                if ($respuesta_ct[0] -eq 0 )
-                {
-                        # LO HA ENCONTRADO A LA PRIMERA
-                        write-host "SCRAPPING EXITOSO" -ForegroundColor Green
-                        # Imprimo los datos 
-                        llamar_a_comictagger '' '' '' $new_comic 'imprime_xml'
-                        # Renombro el comic
-                        llamar_a_comictagger '' '' '' $new_comic 'renombra_comic'
-                        # Me salgo del bucle
-                        break outer
-                } else {
-                        # NO LO HA ENCONTRADO A LA PRIMERA
-                        write-host "SCRAPPING FALLIDO. ERROR: "$respuesta_ct[1] -ForegroundColor Red
+                if ( $comicinfo_xml.ComicInfo.comicvine_volume_id -ne "" ) {
+                    #! Antes de salir tengo que obtener el resto de los valores y crear el XML
+
+                    # Obtengo los datos especificos de la serie y los escribo en el array XML
+                    get-seriesdetail_cv 
+
+                    # Obtengo los datos genericos del comic y los escribo en el array XML
+                    # get-issue_cv
+
+                    # Obtengo los datos especificos del comic y los escribo en el array XML
+                    get-issuedetail_cv
+
+                    # Traduzco el campo summary
+                    $comicinfo_xml.ComicInfo.Summary = traduce_deepl $comicinfo_xml.ComicInfo.Summary "EN" "ES"
+
+                    # creo la seccion de Paginal del XML
+                    create_xml_pages_section
+
+                    # Crear el XML llamado comicinfo dentro del comic
+                    [xml]$comicinfo_xml.save("C:\scripts\convierte\comic\final\comicinfo.xml")
+                    break outer
                 }
             }
         }
     }
 }
 
+<# ESTO ERA CON COMIC TAGGER
+                write-host "   >> Buscando comic SERIE: $series_name | ISSUE: $issue | AÑO: $t_año | COMIC: $new_comic | IDIOMA: $t_idioma"
+                paso 2 - Grabo los datos de la serie y el numero en el fichero de metadatos sin usar el año 
+                write-host "    >> Escribiendo metadatos"
+                llamar_a_comictagger $series_name $issue $t_año $new_comic 'crea_xml'
+                paso 4 busco datos online del comic
+                write-host "    >> Buscando datos online del comic"
+                llamar_a_comictagger "" "" "" $new_comic 'busca_online'
+                $respuesta_ct = repuesta_comictagger 
+                if ($respuesta_ct[0] -eq 0 )
+                {
+                        # LO HA ENCONTRADO A LA PRIMERA
+                        write-host "SCRAPPING EXITOSO" -ForegroundColor Green
+                        # Imprimo los datos 
+                        # llamar_a_comictagger '' '' '' $new_comic 'imprime_xml'
+                        # Renombro el comic
+                        # llamar_a_comictagger '' '' '' $new_comic 'renombra_comic'
+                        # Me salgo del bucle
+                        break outer
+                } else {
+                        # NO LO HA ENCONTRADO A LA PRIMERA
+                        # write-host "SCRAPPING FALLIDO. ERROR: "$respuesta_ct[1] -ForegroundColor Red
+                }
+                #>
+
+
+<#
 function llamar_a_comictagger {
 # Esta funcion se encarga de llamar al programa comictagger y asegurar que se ejecute correctamente
     Param (
@@ -182,3 +214,5 @@ function repuesta_comictagger {
     $error_code_return.getenumerator() | foreach-object { if ($respuesta -contains $_.key) { $vla_return = @($_.value , $_.key) } }
     return $vla_return
 }
+
+#>

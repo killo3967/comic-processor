@@ -16,13 +16,11 @@
 # Este script esta todavia en version ALPHA, por lo que no es seguro.
 
 clear-host
+$Error.clear()
 
-
-###################################################################
-###################################################################
-###############    DECLARACION DE VARIABLES   #####################
-###################################################################
-###################################################################
+##############################################################
+###############    CHEQUEOS DE MODULOS   #####################
+##############################################################
 
 # Esto es para comprobar que se ha instalado el modulo de parsing de html de Anglesharp
 If ( -Not ([System.Management.Automation.PSTypeName]'AngleSharp.Parser.Html.HtmlParser').Type ) {
@@ -30,18 +28,26 @@ If ( -Not ([System.Management.Automation.PSTypeName]'AngleSharp.Parser.Html.Html
     Add-Type -Path $standardAssemblyFullPath -ErrorAction 'SilentlyContinue'
 } # Terminate If - Not Loaded
 
+################################################################################
+###############    COMPROBACION DEL DIRECTORIO DE COMICS   #####################
+################################################################################
+
+
 # Defino el directorio donde estan los comics.
 $Global:comic_dir = "Q:\PRUEBAS\" 
-
-# Vero cual es el directorio del script
-$prog_dir = (Split-Path -parent $MyInvocation.MyCommand.Definition)
-write-output "PATH DEL SCRIPT = $prog_dir"
-
 
 if ( (get-childitem $comic_dir -File -Recurse).count -eq 0 ) {
     write-host "NO HAY COMICS A PROCESAR."
     break
 }
+
+
+###################################################################
+###############    DECLARACION DE VARIABLES   #####################
+###################################################################
+
+# Veo cual es el directorio del script
+$prog_dir = (Split-Path -parent $MyInvocation.MyCommand.Definition)
 
 $Global:prog_dir             = "$prog_dir"
 $Global:config_dir           = "$prog_dir\config" 
@@ -54,17 +60,21 @@ $Global:credits_dir          = "$prog_dir\credits"
 $Global:backup_dir           = "$prog_dir\backup"
 $Global:scrapping_cache_dir  = "$prog_dir\scrapping_cache"
 $Global:scrapping_temp_dir   = "$prog_dir\scrapping_temp"
+$Global:ocr_temp_dir         = "$prog_dir\ocr"
 $Global:fichero_temporal     = "C:\windows\temp\temp.jpg"
+        
 
 # Incluimos los modulos necesarios
 . $config_dir\configuracion.ps1
-. $prog_dir\compara_imagenes.ps1
+. $prog_dir\variables.ps1
+. $prog_dir\procesar_imagenes.ps1
 . $prog_dir\traducir.ps1
 . $prog_dir\scrapping.ps1
-. $prog_dir\limpiar_nombre.ps1
+. $prog_dir\procesar_nombre.ps1
 . $prog_dir\identifica_comic.ps1
 . $prog_dir\ocr.ps1
 . $prog_dir\ask_comicvine.ps1
+. $prog_dir\metadata.ps1
 
 
 # Rutas de los ejecutables auxiliares
@@ -73,17 +83,7 @@ $Global:compara    = "$img_dir\compare.exe"
 $Global:convierte  = "$img_dir\convert.exe"
 $Global:mogrify    = "$img_dir\mogrify.exe"
 $Global:renamer    = "C:\Program Files (x86)\ReNamer\ReNamer.exe"
-
-# A continuacion vienen las expresiones REGEX para buscar ciertas cadenas dentro del nombre del directorio
-# o del nombre del comic, que faciliten su scrapping
-
-# Con esta expresion de regex se puede extraer la cadena que contenga el año en $3
-# Para que acepte acentos, dieresis y la ñ pongo 'a-zA-ZÀ-ÿ\u00f1\u00d1' 
-#! Esto a configuracion
-$Global:cadena_año = '((\(|\[)([a-zA-ZÀ-ÿ\u00f1\u00d1\w\d\s\-\,])*?\s?([(1|2][9|0][67890123]\d)\s?([a-zA-ZÀ-ÿ\u00f1\u00d1\w\d\s\-\,])*?(\)|\]))'
-$Global:cadena_issue = '( #| t| t.| T| T.| Tomo| Tomo.|-|-#| )(\d{1,3})'
-
-
+$Global:tesseract  = "C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 
 # Variuables globales de los datos de la serie y del comic
@@ -92,27 +92,24 @@ $Global:series_year = ''
 $Global:comic_year  = ''
 
 
-
-###################################################################
 ###################################################################
 ###############    PREPARACION DEL ENTORNO    #####################
 ###################################################################
-###################################################################
 
+# Creo los directorios necesarios para el funcionamiento del script
 $directorios_necesarios = @(
     $log_dir,
     $comic_unzip_dir,
     $comic_final_dir,
-    $comic32x32_dir
+    $comic32x32_dir,
     $original_credits_dir,
     $credits_dir,
     $backup_dir,
     $scrapping_cache_dir,
     $scrapping_temp_dir,
+    $ocr_temp_dir,
     $fichero_temporal
 )
-
-# Creo los directorios necesarios para el funcionamiento del script
 for ($i = 1; $i -lt $directorios_necesarios.count; $i++) {
     if (Test-Path $directorios_necesarios[$i]) {
             if ($verbose -eq $true) {
@@ -124,8 +121,18 @@ for ($i = 1; $i -lt $directorios_necesarios.count; $i++) {
 }
 
 # Limpio los directorios temporales
-Remove-item $comic_unzip_dir\*.* -Recurse -Force -Confirm:$False -ErrorAction SilentlyContinue -Verbose:$verbose | out-null
-Remove-item $comic_final_dir\*.* -Recurse -Force -Confirm:$False -ErrorAction SilentlyContinue -Verbose:$verbose | out-null
+$directorios_temporales = @(
+    $comic_unzip_dir,
+    $comic_final_dir,
+    $comic32x32_dir,
+    $scrapping_temp_dir,
+    $ocr_temp_dir,
+    $fichero_temporal
+)
+foreach ( $temp_dir in $directorios_temporales){
+    Remove-item $temp_dir\*.* -Recurse -Force -Confirm:$False -ErrorAction SilentlyContinue -Verbose:$verbose | out-null
+}
+
 
 # Hago un backup de las imagenes de creditos
 copy-item $original_credits_dir\*.* $backup_dir -Force -ErrorAction Stop
@@ -136,30 +143,28 @@ get-childitem $original_credits_dir | foreach-object {
     rename-item -path $_.fullname -newname ($_.directoryname + "\" + "imagen_creditos_" + $(get-date -f yyyy_MM_dd_hh_mm_ss) + "_" + ($i++).tostring("000") + ".jpg") -verbose:$verbose 
 }
 
-# Las convierto a 32x32 en escala de grises para poder compararlas
+# Convierto las imagenes de creditos a 32x32 en escala de grises para poder compararlas
 if ( (get-childitem $original_credits_dir).count -ne (get-childitem $credits_dir).count  ){
     remove-item -path "$credits_dir\*.*" -force -verbose:$verbose -erroraction stop
     write-host "Creando minuatura de imagenes de creditos"
-    for ( $i=0 ; $i -lt (get-childitem $original_credits_dir).count ; $i++) {
+    $num_miniaturas = (get-childitem $original_credits_dir).count
+    for ( $i=0 ; $i -lt $num_miniaturas ; $i++) {
         $nombre_fichero_original = ((get-childitem $original_credits_dir)[$i]).fullname
         $nombre_fichero_convertido = $credits_dir + "\" + "Imagen_" + $i.tostring("D2") + ".jpg"
         (& $convierte $nombre_fichero_original -resize 32x32^! -colorspace Gray $nombre_fichero_convertido 2>&1)
         if ( $verbose -eq $true ) {
         write-host "Convirtiendo imagen " $nombre_fichero_original " -> " $nombre_fichero_convertido
         } else {
-            write-host -NoNewLine '.'
+            #write-host -NoNewLine '.'
+            $porcentaje = [int]$i*100/[int]$num_miniaturas
+            $displayname = ((get-childitem $original_credits_dir)[$i]).basename
+            Write-Progress -Activity "Procesando: $displayname" -PercentComplete ($porcentaje)
         }
     }
 }
 
-
-
-###################################################################
-###################################################################
 ###################################################################
 ###############       PROGRAMA PRINCIPAL      #####################
-###################################################################
-###################################################################
 ###################################################################
 
 # Creo un array con la lista de ficheros que me gustaria borrar que esta en el fichero exclude.cfg
@@ -189,9 +194,8 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
 
 
     # Extraigo el nombre de la serie del nombre del directorio
-    if ( $scrapper_comic -eq $true ) {
-        $series_name = extraer_serie $series_dir 
-    }
+    $series_name = extraer_serie $series_dir 
+    
    
     # Defino el fichero de log. Hago un log para cada serie, que contiene la conversion de varios comics.
     $log_file = $log_dir + "\" + $series_name + "_" + $(get-date -f yyyy_MM_dd_hh_mm_ss) + ".log"
@@ -323,28 +327,14 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
         # Reduzco las dimensiones de las imagenes a un maximo de 1440x2210. He encontrado
         # que estas dimensiones son sufucientes y hay una buena relacion tamaño del comic / calidad de la imagen
         
-        if ( $true -eq $Global:reprocesar_imagen) {
+        if ( $true -eq $reprocesar_imagen) {
             write-host "CONVIERTO LOS FICHEROS DE IMAGENES DEL COMIC A UN FORMATO ADECUADO"
             write-host "    >> Convirtiendo imagenes.... ( ¡Espere!, este proceso puede durar varios minutos )"
-
             $lista_ficheros = (get-childitem -literalpath $comic_unzip_dir -exclude *.xml).fullname
-
             reprocesar_imagen $lista_ficheros $comic_final_dir
-            <#
-            if ( $verbose -eq $true ) {
-                if ( $tipo_conversion -eq "baja" ) {
-                    $lista_ficheros | foreach-object { & $mogrify -verbose -resize 1440x2210^> -format jpg  -path $comic_final_dir $_ 2>&1 } 
-                } else {
-                    $lista_ficheros | ForEach-Object { & $mogrify -verbose -resize 1440x2210^> -format jpg -gamma 2.2 -auto-level -auto-orient -colorspace RGB -quality 65 -sampling-factor 2x2 -depth 24 -interlace line -path $comic_final_dir $_ 2>&1 }
-                }
-            } else {
-                if ( $tipo_conversion -eq "baja" ) {
-                    $lista_ficheros | foreach-object { & $mogrify -resize 1440x2210^> -format jpg  -path $comic_final_dir $_ 2>&1 }
-                } else {
-                    $lista_ficheros | ForEach-Object { & $mogrify -resize 1440x2210^> -format jpg -gamma 2.2 -auto-level -auto-orient -colorspace RGB -quality 65 -sampling-factor 2x2 -depth 24 -interlace line -path $comic_final_dir $_ 2>&1 }
-                }
-            }
-            #>
+        } else {
+            # Como no los reproceso los tengo que copiar
+            copy-item "$comic_unzip_dir\*" -Destination $comic_final_dir -verbose:$verbose -Confirm:$False -ErrorAction:SilentlyContinue
         }
                
         ############################################
@@ -432,15 +422,19 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
         }
 
         #! =================================================
-        #! =========== PRUEBA DE ASK_COMIC_VINE ============
+        #! =========== PRUEBA DE ASK_COMICVINE ============
         #! =================================================
 
-        $vine_series = $series_name.trim()
+        <#
+        $vine_series = $series_name
         $vine_año = (extraer_año $lista_comics[$j].directory.name).trim()
         $vine_dir = $lista_comics[$j].directory.name.trim()
         $vine_issue = 1
         $vine_publisher = ""
-        busca_serie_comicvine $vine_series $vine_issue $vine_año $vine_publisher $vine_dir
+        get-serie_cv $vine_series $vine_issue $vine_año $vine_publisher $vine_dir
+        #>
+
+        scrap_comic $series_name $comic_fname
 
 
 
@@ -518,9 +512,9 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
         Remove-item $comic_final_dir\*.* -Recurse -Force -Confirm:$False -ErrorAction:SilentlyContinue -Verbose:$verbose
         Remove-item $log_dir\comprime.log -Recurse -Force -Confirm:$False -ErrorAction:SilentlyContinue -Verbose:$verbose
         Remove-item $log_dir\descomprime.log -Recurse -Force -Confirm:$False -ErrorAction:SilentlyContinue -Verbose:$verbose
-        Remove-item $log_dir\comictagger.log -Recurse -Force -Confirm:$False -ErrorAction:SilentlyContinue -Verbose:$verbose
+        # Remove-item $log_dir\comictagger.log -Recurse -Force -Confirm:$False -ErrorAction:SilentlyContinue -Verbose:$verbose
 
-        write-output ""
+        
         # write-output "#######################################################################################################################################"
         write-output ""
       

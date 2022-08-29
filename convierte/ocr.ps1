@@ -14,8 +14,8 @@ http://www.fmwconcepts.com/imagemagick/textcleaner/index.php
 
 function escaner_ocr {
 
-    $imagen_salida = 'c:\windows\temp\imagen_salida.jpg'
-    $texto_salida_ocr = 'C:\scripts\convierte\ocr\texto.txt'
+    $imagen_salida = "$ocr_temp_dir\imagen_salida.jpg"
+    $texto_salida_ocr = "$ocr_temp_dir\texto.txt"
     
     :outer foreach ( $imagen_id in @(0,1,2,3,4,-3,-2,-1)) {
 
@@ -30,7 +30,7 @@ function escaner_ocr {
         # Esto escanea la imagen y da un fichero tsv.
         # Despues de escanear la imagen, se puede usar el fichero tsv para extraer los datos.
         write-host "   >> Generando datos en formato TSV del OCR"
-        $tsv_salida = (& "C:\Program Files\Tesseract-OCR\tesseract.exe" $imagen_salida stdout --dpi 1200 --psm 6 --oem 1 -c preserve_interword_spaces=1,textord_min_xheight=6 tsv quiet)
+        $tsv_salida = (& $tesseract $imagen_salida stdout --dpi 1200 --psm 6 --oem 1 -c preserve_interword_spaces=1,textord_min_xheight=6 tsv quiet)
 
         write-output $null > $texto_salida_ocr
         write-host "   >> Procesando datos del OCR"
@@ -83,7 +83,8 @@ function escaner_ocr {
 }
 
 function buscar_año_ocr {   
-    $texto_salida_ocr = 'C:\scripts\convierte\ocr\texto.txt'
+    $texto_salida_ocr = "$ocr_temp_dir\texto.txt"
+
     $encontrados = [regex]::matches( (get-content $texto_salida_ocr) , '[(1|2][9|0][67890123]\d' )
 
     $v_año = @()
@@ -102,7 +103,7 @@ function buscar_año_ocr {
 
 function buscar_isbn_ocr {   
 
-    $texto_salida_ocr = 'C:\scripts\convierte\ocr\texto.txt'
+    $texto_salida_ocr = "$ocr_temp_dir\texto.txt"
     
     # Delante tiene la palabra isbn seguida de 2 puntos (o no)  y separados por punto (o no)
     $encontrados = [regex]::match( (get-content $texto_salida_ocr) , '(I\.?S\,?B\.?N\.?\:?)(.*)' )
@@ -123,8 +124,6 @@ function buscar_año_isbn_ocr {
         $isbn
     )
     $uri="https://isbnsearch.org/search?s="
-    # $isbn="9782302074705"
-    # $comic_name=''
     $comic_year=''
 
     $Request = Invoke-WebRequest -Uri $uri+$isbn

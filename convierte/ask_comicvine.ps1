@@ -1,29 +1,10 @@
 $api_key = "1d15350fce8f46f6d5ce5efadbc7a57e62c834c1"
 $url_base = "https://comicvine.gamespot.com/api/volumes/?"
+$client_id = 'client=cvscraper'
 $formato = "format=json"
+$Global:limites= "20"
 
-function lista_comics_comicvine {
-    Param (
-        [Parameter(Mandatory = $true)]
-        [String] $site_detail_url
-    )
-# Conociendo la url de la serie, busco los comics de la serie
-    $volumen_id = ((split-path $site_detail_url -leaf).split('-'))[1].trim()
-    write-host "BUSCANDO COMICS"
-    $url_base2 = "https://comicvine.gamespot.com/api/issues/?"
-    $filter   = "filter=volume:"+$volumen_id
-    $v_url2 = $url_base2 + "api_key=" + $api_key + "&" + $filter +"&" + $formato
-    $request2 = Invoke-WebRequest -Uri $v_url2 -Method Get 
-    $respuesta2 = $request2 | ConvertFrom-Json -AsHashtable
-
-    for ( $i = 0 ; $i -lt $respuesta2.number_of_page_results ; $i++ ){
-        write-host $series_name"#"($respuesta2.results[$i].issue_number).trim()" - "$respuesta2.results[$i].name" - "$respuesta2.results[$i].id
-    }
-}
-
-clear-host
-
-function busca_serie_comicvine {
+function get-serie_cv {
 
     Param (
         [Parameter()]
@@ -39,24 +20,21 @@ function busca_serie_comicvine {
         [String]$in_publisher,
 
         [Parameter()]
-        [String]$in_comic_path
+        [String]$in_comic_path,
+
+        [Parameter()]
+        [String]$in_num_issues
          )
 
 
-#   $series_name = "A Righteous Thirst for Vengeance"
-#   $publisher = "Image"
-#   $year_name = "2021"
+#   
 
     # Numero de maximo de resultados a mostrar
-    $limites  = "limit=10"
-    $filter   = "filter=" + "name:" + $series_name.trim() 
-    # + ";publisher:" + $publisher
-    # + ";start_year:" + $year_name
-    $num_files = (get-childitem -literalpath $in_comic_path -file -include ('*.cbr','*.cbz')).count
 
-    $v_url = $url_base + "api_key=" + $api_key + "&" + $formato + "&" + $orden + "&" + $filter + "&" + $limites
-    $Escaped  = [Uri]::EscapeUriString($v_url)
-    $request = Invoke-WebRequest -Uri $Escaped -Method Get 
+    $url_base = "https://comicvine.gamespot.com/api/search/?"
+    $v_url = $url_base + "api_key=" + $api_key + "&" + $client_id + "&" + $formato + "&" + $limites + "&resource=volume" + "&query=" + $series_name.trim()
+    $url_escaped  = [Uri]::EscapeUriString($v_url)
+    $request = Invoke-WebRequest -Uri $url_escaped -Method Get 
     $respuesta = $request | ConvertFrom-Json -AsHashtable
 
     if ( $respuesta.error -eq "OK" ) {
@@ -69,51 +47,67 @@ function busca_serie_comicvine {
                 $num_comics         = $respuesta.results[$i].count_of_issues
                 $publisher          = $respuesta.results[$i].publisher.name
                 $volume_year        = $respuesta.results[$i].start_year
-                $issue              = $respuesta.results[$i].issue_number
                 $site_detail_url    = $respuesta.results[$i].site_detail_url
-                $issue              = $respuesta.results[$i].issue_number
+                $issue              = $in_issue
                 $id                 = $respuesta.results[$i].id
                 $comic              = $respuesta.results[$i].name
                 
                 # Busco una serie en comicvine que coincida con los siguientes parametros:
                 $busqueda1 = $volumen -like $in_series_name
-                $busqueda2 = $in_publisher.contains($publisher)
+                $busqueda2 = $publisher.contains($in_publisher)
                 $busqueda3 = ($volume_year -in ([int]$in_year-1)..([int]$in_year+1))
-                $busqueda4 = $num_comics -ge $num_files
+                $busqueda4 = $num_comics -ge $in_num_issues
 
-                # if ( $busqueda1 -and $busqueda2 -and $busqueda3 -and  $busqueda4 ) {
-                if ( $busqueda1 -and $busqueda3 ) {
+                if ( $busqueda1 -and $busqueda2 -and $busqueda3 -and  $busqueda4 ) {
                     write-host "CUMPLE TODOS LOS PARAMETROS" -BackgroundColor Green -ForegroundColor White
                     # Si el nombre del volumen coincide con el nombre de la serie, entonces es la serie que busco
                     # Si no, entonces es otra serie que tengo que buscar
                     write-host "Identificador:"$i
                     write-host "COMIC: "$comic
-                    write-host "ISSUE: 001" 
+                    write-host "ISSUE: $issue" 
                     write-host "AÑO: "$volume_year
                     write-host "NUMERO DE COMICS: "$num_comics
                     write-host "EDITORIAL: "$publisher
                     write-host "ID: "$respuesta.results[$i].id
                     write-host "URL: "$respuesta.results[$i].api_detail_url
                     write-host "ID: "$id
-                        $url = $respuesta.results[$i].image.original_url
-                        $out_image = $scrapping_cache_dir + "\" + $comic + " #" + $issue + "1 de $num_comics " + "($id , " + (split-path $site_detail_url -leaf) + ")" + "($publisher)" + "($volume_year)"+".jpg"
-                        Invoke-WebRequest -uri $url -Method Get -OutFile $out_image
-                        # Comprimo la imagen 
-                        & $mogrify -resize 32x32^! -colorspace Gray -verbose -path $scrapping_temp_dir $out_image
-                        # Imagen comprimida
-                        $out_image_compressed = $scrapping_temp_dir + "\" + (get-childitem $out_image).name
-                        # Comprimo la primera imagen de la serie
-                        $portada = (get-childitem $comic_final)[0].fullname
-                        & $mogrify -resize 32x32^! -colorspace Gray -verbose -path $scrapping_temp_dir $portada
-                        $portada_comprimida = $scrapping_temp_dir + "\" + (get-childitem $portada).name
-                        # comparo la portada con la imagen comprimida
-                        $vine_compara = Get-CompareImage $portada_comprimida $out_image_compressed
+
+                    # Preparo las imagenes de las portadas del comic y de comicvine para compararlas
+
+                    $url = $respuesta.results[$i].image.original_url
+                    $out_image = $scrapping_cache_dir + "\" + $comic + " #" + $issue + " de $num_comics " + "($id , " + (split-path $site_detail_url -leaf) + ")" + "($publisher)" + "($volume_year)"+".jpg"
+                    Invoke-WebRequest -uri $url -Method Get -OutFile $out_image
+                    # Comprimo la imagen 
+                    & $mogrify -resize 32x32^! -colorspace Gray -verbose -path $scrapping_temp_dir $out_image 2>&1 | Out-Null
+                    # Imagen comprimida
+                    $out_image_compressed = $scrapping_temp_dir + "\" + (get-childitem $out_image).name
+                    # Comprimo la primera imagen de la serie
+                    $portada = (get-childitem $comic_final_dir)[0].fullname
+                    & $mogrify -resize 32x32^! -colorspace Gray -verbose -path $scrapping_temp_dir $portada 2>&1 | out-null
+                    $portada_comprimida = $scrapping_temp_dir + "\" + (get-childitem $portada).name
+                    # comparo la portada con la imagen comprimida
+                    $vine_compara = Get-CompareImage $portada_comprimida $out_image_compressed
                     
-                        # if ($vine_compara )
-                    
-                        write-host "SITE DETAIL URL: "$site_detail_url
-                    lista_comics_comicvine -site_detail_url $site_detail_url
-                    break
+                    if ($vine_compara -eq 0){
+                        # write-host "SITE DETAIL URL: "$site_detail_url
+                        write-host "Las portadas son iguales ->>>> SERIE IDENTIFICADA: $id" -ForegroundColor green
+                        #! Aqui puede venir lo de sustituir la portada por la original. 
+
+                        # Cargo los datos que he obtenido de comicvine en la variable xml
+                        $comicinfo_xml.ComicInfo.comicvine_volume_id = $id
+                        $comicinfo_xml.ComicInfo.Series     = $volumen
+                        $comicinfo_xml.ComicInfo.Volume     = $volume_year
+                        $comicinfo_xml.ComicInfo.Publisher  = $publisher
+                        $comicinfo_xml.ComicInfo.Count      = $num_comics
+                        $comicinfo_xml.ComicInfo.Notes      = "Creado por Comic-Convert"
+                        $comicinfo_xml.ComicInfo.Number     = $issue
+
+                        
+                        break
+                    } else {
+                        write-host "Las imagenes son diferentes, se trata de otro comic o de otra portada alternativa"
+                    }
+                  
                 } else {
                     write-host "NO CUMPLE CON LOS PARAMETROS" -BackgroundColor Red -ForegroundColor White
                     if ($false -eq $busqueda1) {
@@ -145,31 +139,135 @@ function busca_serie_comicvine {
         # Separacion entre volumenes
         write-host "========================================================================================="
     }   
+   return $id 
+}
+
+
+
+function get-seriesdetail_cv {
+        
+    $series_id = $comicinfo_xml.ComicInfo.comicvine_volume_id
     
+    # Obtiene los valores requeridos de la serie
+    $url_base2 = "https://comicvine.gamespot.com/api/volume/4050-$series_id/?"
+    $v_url2 = $url_base2 + "api_key=" + $api_key + "&" + $client_id + "&" + $formato + "&" + $limites 
+    $url_escaped2 = [Uri]::EscapeUriString($v_url2)
+    $request2 = Invoke-WebRequest -Uri $url_escaped2 -Method Get 
+    $respuesta2 = $request2 | ConvertFrom-Json -AsHashtable
+
+    $comicinfo_xml.ComicInfo.Locations = $respuesta2.results.locations.name
+    $issue = $comicinfo_xml.ComicInfo.Number
+    
+    # Extraigo los datos de comicvine
+    $comic_name = $respuesta2.results.issues[[int]($issue-1)].name
+    $comic_id = $respuesta2.results.issues[[int]($issue-1)].id
+    $comic_web = $respuesta2.results.issues[[int]($issue-1)].site_detail_url
+    $issue = $respuesta2.results.issues[[int]($issue-1)].issue_number
+
+    # Meto los datos en el array XML
+    $comicinfo_xml.ComicInfo.Title = $comic_name                         
+    $comicinfo_xml.ComicInfo.comicvine_issue_id = $comic_id
+    $comicinfo_xml.ComicInfo.Web = $comic_web
+}
+
+function get-issuedetail_cv{
+    
+    $comic_id = $comicinfo_xml.ComicInfo.comicvine_issue_id
+    $url_base4 = "https://comicvine.gamespot.com/api/issue/4000-$comic_id/?"
+    $v_url4 = $url_base4 + "api_key=" + $api_key + "&" + $client_id + "&" + $formato 
+    $request4 = Invoke-WebRequest -Uri $v_url4 -Method Get 
+    $respuesta4 = $request4 | ConvertFrom-Json -AsHashtable
+
+    write-host $respuesta4
+
+    # Obtengo los datos de comicvine
+    $year = ($respuesta4.results.store_date -split '-')[0]
+    $month = ($respuesta4.results.store_date -split '-')[1]
+    $day = ($respuesta4.results.store_date -split '-')[2]
+
+    # Carga y limpieza del campo summary
+    $summary = $respuesta4.results.description
+    $summary = $summary -replace "<[bB][rR] ?/?>|<[Pp] ?>","`n"
+    $summary = $summary -replace " {2,}"," "
+    $summary = $summary -replace "&nbsp;?", " "
+    $summary = $summary -replace "<.*?>" , ""
+    $summary = $summary -replace '&amp;', '&'
+    $summary = $summary -replace '&quot;', '"'
+    $summary = $summary -replace '&lt;', '<'
+    $summary = $summary -replace '&gt;', '>'
+    $summary = $summary -replace "(?is)list of covers.*$",""
+    $summary = $summary.trim()
+
+    # Los meto en el array XML
+    $comicinfo_xml.ComicInfo.Summary = $summary
+    $comicinfo_xml.ComicInfo.Year = $year
+    $comicinfo_xml.ComicInfo.month = $month
+    $comicinfo_xml.ComicInfo.day = $day
+
+    # Para obtener los creaores del comic
+    for ( $d = 0 ; $d -lt ($respuesta4.results.person_credits.count) ; $d++ ) {
+        switch ($respuesta4.results.person_credits[$d].role) {
+            'cover'       { $comicinfo_xml.ComicInfo.CoverArtist    = $respuesta4.results.person_credits[$d].name }
+            'writer'      { $comicinfo_xml.ComicInfo.Writer         = $respuesta4.results.person_credits[$d].name }
+            'artist'      { $comicinfo_xml.ComicInfo.inker          = $respuesta4.results.person_credits[$d].name }
+            'colorist'    { $comicinfo_xml.ComicInfo.colorist       = $respuesta4.results.person_credits[$d].name }
+            'letterer'    { $comicinfo_xml.ComicInfo.letterer       = $respuesta4.results.person_credits[$d].name }
+            'writer'      { $comicinfo_xml.ComicInfo.Writer         = $respuesta4.results.person_credits[$d].name }
+            'penciller'   { $comicinfo_xml.ComicInfo.penciller      = $respuesta4.results.person_credits[$d].name }
+            'editor'      { $comicinfo_xml.ComicInfo.editor         = $respuesta4.results.person_credits[$d].name }
+        }
+    }
+
+    # Personajes del comic
+    $comicinfo_xml.ComicInfo.Characters = $respuesta4.results.character_credits.name -join', '
+    $comicinfo_xml.ComicInfo.Storyarc = $respuesta4.results.story_arc_credits
 }
 
 
 <#
+function get-issuelist_cv {
+    
+    # Conociendo la url de la serie, busco los comics de la serie
+    $volumen_id = ((split-path $site_detail_url -leaf).split('-'))[1].trim()
+    write-host "BUSCANDO COMICS"
+    $url_base2 = "https://comicvine.gamespot.com/api/issues/?"
+    $filter   = "filter=volume:"+$volumen_id
+    $v_url2 = $url_base2 + "api_key=" + $api_key + "&" + $client_id + "&" + $filter +"&" + $formato
+    $request2 = Invoke-WebRequest -Uri $v_url2 -Method Get 
+    $respuesta2 = $request2 | ConvertFrom-Json -AsHashtable
 
-clear-host 
-write-host "=================="
-write-host " INICIO DEL SCRIPT "
-write-host "=================="  
-get-childitem "D:\PUBLIC\JDOWNLOADER" -directory | ForEach-Object {
-
-    $comic_path = $_
-    $series_name = ((split-path $comic_path -leaf).split('('))[0].trim()
-    $volume_year = ((split-path $comic_path -leaf).split('('))[1].replace(')','').trim()
-    $publisher = ((split-path $comic_path -leaf).split('('))[2].replace(')','').trim()
-
-    write-host "Buscando: "$series_name" | 1 | "$publisher" | "$volume_year 
-
-    busca_serie_comicvine $series_name "1" $publisher $volume_year $_.name
+    for ( $i = 0 ; $i -lt $respuesta2.number_of_page_results ; $i++ ){
+        write-host $series_name"#"($respuesta2.results[$i].issue_number).trim()" - "$respuesta2.results[$i].name" - "$respuesta2.results[$i].id
+        $url_base3 = "https://comicvine.gamespot.com/api/issues/?"
+        $filter   = "filter=volume:"+$volumen_id
+        $v_url3 = $url_base3 + "api_key=" + $api_key + "&" + $formato + "&" + $filter 
+        $request3 = Invoke-WebRequest -Uri $v_url3 -Method Get 
+        $respuesta3 = $request3 | ConvertFrom-Json -AsHashtable
+    
+        # write-host $respuesta3.results
+        $comic_id=$respuesta3.results[$i].id
+        get-issuedetail_cv $comic_id
+    }
 }
+#>
+
+<#
+function get-issue_cv {
+    $volumen_id = $comicinfo_xml.ComicInfo.comicvine_volume_id
+    write-host "BUSCANDO COMICS"
+    $url_base2 = "https://comicvine.gamespot.com/api/issues/?"
+    $filter   = "filter=volume:"+$volumen_id
+    $v_url2 = $url_base2 + "api_key=" + $api_key + "&" + $client_id  + "&" + $filter +"&" + $formato
+    $request2 = Invoke-WebRequest -Uri $v_url2 -Method Get 
+    $respuesta2 = $request2 | ConvertFrom-Json -AsHashtable
+
+}
+#>
 
 
-Datos de un Volumen
-
+<#
+DATOS DE UN VOLUMEN
+===================
 Name                           Value
 ----                           -----
 start_year                     2019
@@ -187,8 +285,9 @@ api_detail_url                 https://comicvine.gamespot.com/api/volume/4050-11
 date_last_updated              2021-10-08 20:25:44
 id                             118500
 
-Datos de un comic
 
+DATOS DE UN COMIC
+=================
 Name                           Value
 ----                           -----
 store_date                     2021-10-06
@@ -207,29 +306,40 @@ site_detail_url                https://comicvine.gamespot.com/a-righteous-thirst
 description                    <p><em>A NEW ONGOING CRIME SERIES from the writer of <strong>DEADLY CLASS</strong>!</em></p><p><em>When an unassumi…name
 cover_date                     2021-10-08
 
-#>
 
-
-
-<#
-Para encontrar una lista de volúmenes basada en algunos criterios de texto:
-
-https://comicvine.gamespot.com/api/volumes/?api_key=YOUR-KEY&format=json&sort=name:asc&filter=name:Walking%20Dead
-
-Para buscar un conjunto de issues en función de algunos criterios de texto:
-
-https://comicvine.gamespot.com/api/search/?api_key=YOUR-KEY&format=json&sort=name:asc&resources=issue&query=%22Master%20of%20kung%20fu%22
-
-Para encontrar un solo issue basado en una ID:
-
-https://comicvine.gamespot.com/api/issue/4000-14582/?api_key=YOUR-KEY&format=json 
-
-
-Preguntar por los publisher con un determinado nombre:
-$v_url="https://comicvine.gamespot.com/api/search/?api_key=1d15350fce8f46f6d5ce5efadbc7a57e62c834c1&format=json&sort=name:asc&query=publisher:Image"
-
-Preguntar por los issues de un volumen 
-https://comicvine.gamespot.com/api/issues/?api_key=1d15350fce8f46f6d5ce5efadbc7a57e62c834c1&filter=volume:118500&format=json&limit=20
-
+DETALLES DE UN COMIC
+====================
+Name                           Value
+----                           -----
+first_appearance_concepts
+api_detail_url                 https://comicvine.gamespot.com/api/issue/4000-767894/
+volume                         {name, id, api_detail_url, site_detail_url}
+story_arc_credits              {}
+date_added                     2020-06-13 02:52:21
+object_credits                 {}
+first_appearance_teams
+issue_number                   1
+name
+first_appearance_locations
+id                             767894
+location_credits               {}
+store_date                     2020-06-10
+first_appearance_characters
+cover_date                     2020-06-13
+first_appearance_storyarcs
+character_died_in              {}
+aliases
+team_disbanded_in              {}
+has_staff_review               False
+site_detail_url                https://comicvine.gamespot.com/adventureman-1/4000-767894/
+first_appearance_objects
+person_credits                 {Clayton Cowles, Lauren Sankovitch, Leonardo Olea, Matt Fraction…}
+concept_credits                {}
+date_last_updated              2020-06-13 04:16:36
+description                    <p><em>SERIES PREMIERE!</em></p><p><em>A CATACLYSMIC ADVENTURE DECADES IN THE MAKING!</em></p><p><em>In this WILDLY AF…team_credits                   {}
+character_credits              {Adventureman, Akaal, Baron Bizarre, Baroness Bizarre…}
+associated_images              {}
+image                          {medium_url, image_tags, screen_large_url, icon_url…}
+deck
 
 #>
