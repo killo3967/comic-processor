@@ -50,7 +50,7 @@ function get-serie_cv {
                 $site_detail_url    = $respuesta.results[$i].site_detail_url
                 $issue              = $in_issue
                 $id                 = $respuesta.results[$i].id
-                $comic              = $respuesta.results[$i].name
+                $Series              = $respuesta.results[$i].name
                 
                 # Busco una serie en comicvine que coincida con los siguientes parametros:
                 $busqueda1 = $volumen -like $in_series_name
@@ -63,7 +63,7 @@ function get-serie_cv {
                     # Si el nombre del volumen coincide con el nombre de la serie, entonces es la serie que busco
                     # Si no, entonces es otra serie que tengo que buscar
                     write-host "Identificador:"$i
-                    write-host "COMIC: "$comic
+                    write-host "COMIC: "$series
                     write-host "ISSUE: $issue" 
                     write-host "AÑO: "$volume_year
                     write-host "NUMERO DE COMICS: "$num_comics
@@ -75,7 +75,7 @@ function get-serie_cv {
                     # Preparo las imagenes de las portadas del comic y de comicvine para compararlas
 
                     $url = $respuesta.results[$i].image.original_url
-                    $out_image = $scrapping_cache_dir + "\" + $comic + " #" + $issue + " de $num_comics " + "($id , " + (split-path $site_detail_url -leaf) + ")" + "($publisher)" + "($volume_year)"+".jpg"
+                    $out_image = $scrapping_cache_dir + "\" + $series + " #" + $issue + " de $num_comics " + "($id , " + (split-path $site_detail_url -leaf) + ")" + "($publisher)" + "($volume_year)"+".jpg"
                     Invoke-WebRequest -uri $url -Method Get -OutFile $out_image
                     # Comprimo la imagen 
                     & $mogrify -resize 32x32^! -colorspace Gray -verbose -path $scrapping_temp_dir $out_image 2>&1 | Out-Null
@@ -92,7 +92,6 @@ function get-serie_cv {
                         # write-host "SITE DETAIL URL: "$site_detail_url
                         write-host "Las portadas son iguales ->>>> SERIE IDENTIFICADA: $id" -ForegroundColor green
                         #! Aqui puede venir lo de sustituir la portada por la original. 
-
                         # Cargo los datos que he obtenido de comicvine en la variable xml
                         $comicinfo_xml.ComicInfo.comicvine_volume_id = $id
                         $comicinfo_xml.ComicInfo.Series     = $volumen
@@ -101,8 +100,7 @@ function get-serie_cv {
                         $comicinfo_xml.ComicInfo.Count      = $num_comics
                         $comicinfo_xml.ComicInfo.Notes      = "Creado por Comic-Convert"
                         $comicinfo_xml.ComicInfo.Number     = $issue
-
-                        
+                        $comicinfo_xml.ComicInfo.Series     = $series
                         break
                     } else {
                         write-host "Las imagenes son diferentes, se trata de otro comic o de otra portada alternativa"
@@ -155,7 +153,7 @@ function get-seriesdetail_cv {
     $request2 = Invoke-WebRequest -Uri $url_escaped2 -Method Get 
     $respuesta2 = $request2 | ConvertFrom-Json -AsHashtable
 
-    $comicinfo_xml.ComicInfo.Locations = $respuesta2.results.locations.name
+    $Locations = $respuesta2.results.locations.name
     $issue = $comicinfo_xml.ComicInfo.Number
     
     # Extraigo los datos de comicvine
@@ -164,10 +162,11 @@ function get-seriesdetail_cv {
     $comic_web = $respuesta2.results.issues[[int]($issue-1)].site_detail_url
     $issue = $respuesta2.results.issues[[int]($issue-1)].issue_number
 
-    # Meto los datos en el array XML
-    $comicinfo_xml.ComicInfo.Title = $comic_name                         
+    # Meto los datos de la serie en el array XML
+    $comicinfo_xml.ComicInfo.Title              = $comic_name                         
     $comicinfo_xml.ComicInfo.comicvine_issue_id = $comic_id
-    $comicinfo_xml.ComicInfo.Web = $comic_web
+    $comicinfo_xml.ComicInfo.Web                = $comic_web
+    $comicinfo_xml.ComicInfo.Locations          = $Locations
 }
 
 function get-issuedetail_cv{
@@ -178,8 +177,6 @@ function get-issuedetail_cv{
     $request4 = Invoke-WebRequest -Uri $v_url4 -Method Get 
     $respuesta4 = $request4 | ConvertFrom-Json -AsHashtable
 
-    write-host $respuesta4
-
     # Obtengo los datos de comicvine
     $year = ($respuesta4.results.store_date -split '-')[0]
     $month = ($respuesta4.results.store_date -split '-')[1]
@@ -187,7 +184,7 @@ function get-issuedetail_cv{
 
     # Carga y limpieza del campo summary
     $summary = $respuesta4.results.description
-    $summary = $summary -replace "<[bB][rR] ?/?>|<[Pp] ?>","`n"
+    $summary = $summary -replace "<[bB][rR] ?/?>|<[Pp] ?>","`r`n"
     $summary = $summary -replace " {2,}"," "
     $summary = $summary -replace "&nbsp;?", " "
     $summary = $summary -replace "<.*?>" , ""
@@ -198,11 +195,12 @@ function get-issuedetail_cv{
     $summary = $summary -replace "(?is)list of covers.*$",""
     $summary = $summary.trim()
 
-    # Los meto en el array XML
-    $comicinfo_xml.ComicInfo.Summary = $summary
-    $comicinfo_xml.ComicInfo.Year = $year
-    $comicinfo_xml.ComicInfo.month = $month
-    $comicinfo_xml.ComicInfo.day = $day
+    # Datos del comic los meto en el array XML
+    $comicinfo_xml.ComicInfo.Summary    = $summary
+    $comicinfo_xml.ComicInfo.Year       = $year
+    $comicinfo_xml.ComicInfo.month      = $month
+    $comicinfo_xml.ComicInfo.day        = $day
+    $comicinfo_xml.ComicInfo.PageCount  = (get-childitem -literalpath $comic_final_dir -file -include *.png,*.jpg,*.webp).count
 
     # Para obtener los creaores del comic
     for ( $d = 0 ; $d -lt ($respuesta4.results.person_credits.count) ; $d++ ) {
@@ -212,15 +210,15 @@ function get-issuedetail_cv{
             'artist'      { $comicinfo_xml.ComicInfo.inker          = $respuesta4.results.person_credits[$d].name }
             'colorist'    { $comicinfo_xml.ComicInfo.colorist       = $respuesta4.results.person_credits[$d].name }
             'letterer'    { $comicinfo_xml.ComicInfo.letterer       = $respuesta4.results.person_credits[$d].name }
-            'writer'      { $comicinfo_xml.ComicInfo.Writer         = $respuesta4.results.person_credits[$d].name }
             'penciller'   { $comicinfo_xml.ComicInfo.penciller      = $respuesta4.results.person_credits[$d].name }
             'editor'      { $comicinfo_xml.ComicInfo.editor         = $respuesta4.results.person_credits[$d].name }
         }
     }
 
     # Personajes del comic
-    $comicinfo_xml.ComicInfo.Characters = $respuesta4.results.character_credits.name -join', '
-    $comicinfo_xml.ComicInfo.Storyarc = $respuesta4.results.story_arc_credits
+    $comicinfo_xml.ComicInfo.Characters     = $respuesta4.results.character_credits.name -join', '
+    $comicinfo_xml.ComicInfo.Storyarc       = $respuesta4.results.story_arc_credits
+    $comicinfo_xml.ComicInfo.Teams          = $respuesta4.results.team_disbanded_in
 }
 
 

@@ -113,10 +113,10 @@ function scrap_comic {
                     $comicinfo_xml.ComicInfo.Summary = traduce_deepl $comicinfo_xml.ComicInfo.Summary "EN" "ES"
 
                     # creo la seccion de Paginal del XML
-                    create_xml_pages_section
+                    create_comicinfo
 
                     # Crear el XML llamado comicinfo dentro del comic
-                    [xml]$comicinfo_xml.save("C:\scripts\convierte\comic\final\comicinfo.xml")
+                    # [xml]$comicinfo_xml.save("C:\scripts\convierte\comic\final\comicinfo.xml")
                     break outer
                 }
             }

@@ -85,6 +85,9 @@ $Global:mogrify    = "$img_dir\mogrify.exe"
 $Global:renamer    = "C:\Program Files (x86)\ReNamer\ReNamer.exe"
 $Global:tesseract  = "C:\Program Files\Tesseract-OCR\tesseract.exe"
 
+# Rutas de ficheros
+$Global:comicinfo_filepath = "$comic_final_dir\comicinfo.xml"
+
 
 # Variuables globales de los datos de la serie y del comic
 $Global:series_name = ''
