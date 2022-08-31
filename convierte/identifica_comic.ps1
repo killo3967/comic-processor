@@ -126,7 +126,7 @@ function extraer_issue {
         )
 
     # Extraigo el nombre del comic
-    $comic_name = $ruta_ficheros.name
+    $comic_name = (get-childitem -literalpath $ruta_ficheros).name
 
     # Cuento cuantos grupos de numeros hay en el comic que tengan menos de 3 digitos
     $grupos_numeros = [regex]::match( $comic_name , '\d{1,3}')

@@ -1,8 +1,5 @@
-$api_key = "1d15350fce8f46f6d5ce5efadbc7a57e62c834c1"
-$url_base = "https://comicvine.gamespot.com/api/volumes/?"
-$client_id = 'client=cvscraper'
-$formato = "format=json"
-$Global:limites= "20"
+# $api_key = "1d15350fce8f46f6d5ce5efadbc7a57e62c834c1"
+# $url_base = "https://comicvine.gamespot.com/api/volumes/?"
 
 function get-serie_cv {
 
@@ -58,6 +55,9 @@ function get-serie_cv {
                 $busqueda3 = ($volume_year -in ([int]$in_year-1)..([int]$in_year+1))
                 $busqueda4 = $num_comics -ge $in_num_issues
 
+                $busqueda2 = $true          # hasta que haga OCR
+                $busqueda3 = $true          # hasta que haga OCR
+
                 if ( $busqueda1 -and $busqueda2 -and $busqueda3 -and  $busqueda4 ) {
                     write-host "CUMPLE TODOS LOS PARAMETROS" -BackgroundColor Green -ForegroundColor White
                     # Si el nombre del volumen coincide con el nombre de la serie, entonces es la serie que busco
@@ -72,38 +72,53 @@ function get-serie_cv {
                     write-host "URL: "$respuesta.results[$i].api_detail_url
                     write-host "ID: "$id
 
+                    # Cargo los datos que he obtenido de comicvine en la variable xml
+                    $comicinfo_xml.ComicInfo.comicvine_volume_id = $id
+                    $comicinfo_xml.ComicInfo.Series     = $volumen
+                    $comicinfo_xml.ComicInfo.Volume     = $volume_year
+                    $comicinfo_xml.ComicInfo.Publisher  = $publisher
+                    $comicinfo_xml.ComicInfo.Count      = $num_comics
+                    $comicinfo_xml.ComicInfo.Notes      = "Creado por Comic-Convert"
+                    $comicinfo_xml.ComicInfo.Number     = $issue
+                    $comicinfo_xml.ComicInfo.Series     = $series
+
                     # Preparo las imagenes de las portadas del comic y de comicvine para compararlas
 
-                    $url = $respuesta.results[$i].image.original_url
+                    # Descargo la imagen de la serie ( que es la del primer comic )     
+                    if ( $issue -eq 1 ) {
+                        # Si el issue es 1
+                        $url = $respuesta.results[$i].image.original_url
+                    } else {
+                        # Si es otro issue hay que buscar la imagen de ese comic
+                        $url = get-issue_image_cv
+                    }
                     $out_image = $scrapping_cache_dir + "\" + $series + " #" + $issue + " de $num_comics " + "($id , " + (split-path $site_detail_url -leaf) + ")" + "($publisher)" + "($volume_year)"+".jpg"
                     Invoke-WebRequest -uri $url -Method Get -OutFile $out_image
+
+
                     # Comprimo la imagen 
                     & $mogrify -resize 32x32^! -colorspace Gray -verbose -path $scrapping_temp_dir $out_image 2>&1 | Out-Null
+
                     # Imagen comprimida
                     $out_image_compressed = $scrapping_temp_dir + "\" + (get-childitem $out_image).name
-                    # Comprimo la primera imagen de la serie
+
+                    # Comprimo la primera imagen de la serie 
                     $portada = (get-childitem $comic_final_dir)[0].fullname
                     & $mogrify -resize 32x32^! -colorspace Gray -verbose -path $scrapping_temp_dir $portada 2>&1 | out-null
                     $portada_comprimida = $scrapping_temp_dir + "\" + (get-childitem $portada).name
-                    # comparo la portada con la imagen comprimida
+
+                    # Comparo la portada con la imagen comprimida
                     $vine_compara = Get-CompareImage $portada_comprimida $out_image_compressed
                     
                     if ($vine_compara -eq 0){
                         # write-host "SITE DETAIL URL: "$site_detail_url
                         write-host "Las portadas son iguales ->>>> SERIE IDENTIFICADA: $id" -ForegroundColor green
                         #! Aqui puede venir lo de sustituir la portada por la original. 
-                        # Cargo los datos que he obtenido de comicvine en la variable xml
-                        $comicinfo_xml.ComicInfo.comicvine_volume_id = $id
-                        $comicinfo_xml.ComicInfo.Series     = $volumen
-                        $comicinfo_xml.ComicInfo.Volume     = $volume_year
-                        $comicinfo_xml.ComicInfo.Publisher  = $publisher
-                        $comicinfo_xml.ComicInfo.Count      = $num_comics
-                        $comicinfo_xml.ComicInfo.Notes      = "Creado por Comic-Convert"
-                        $comicinfo_xml.ComicInfo.Number     = $issue
-                        $comicinfo_xml.ComicInfo.Series     = $series
+                        
                         break
                     } else {
                         write-host "Las imagenes son diferentes, se trata de otro comic o de otra portada alternativa"
+                        
                     }
                   
                 } else {
@@ -124,9 +139,9 @@ function get-serie_cv {
                         write-host "    >> CUMPLE CON EL AÑO: "$volume_year" se parece a "$in_year
                     } 
                     if ($false -eq $busqueda4) {
-                        write-host "    >> NO CUMPLE CON EL NUMERO DE COMICS: "$num_comics" no se parece a "$num_files
+                        write-host "    >> NO CUMPLE CON EL NUMERO DE COMICS: "$num_comics" es mayor o igual a "$num_comics
                     } else {
-                        write-host "    >> CUMPLE CON EL NUMERO DE COMICS: "$num_comics" se parece a "$num_files
+                        write-host "    >> CUMPLE CON EL NUMERO DE COMICS: "$num_comics" es mayor o igual a "$num_comics
                     }
                 }
                 
@@ -167,6 +182,18 @@ function get-seriesdetail_cv {
     $comicinfo_xml.ComicInfo.comicvine_issue_id = $comic_id
     $comicinfo_xml.ComicInfo.Web                = $comic_web
     $comicinfo_xml.ComicInfo.Locations          = $Locations
+}
+
+function get-issue_image_cv {
+    $issue = $comicinfo_xml.ComicInfo.Number
+    $volumen_id = $comicinfo_xml.ComicInfo.comicvine_volume_id
+    $url_base2 = "https://comicvine.gamespot.com/api/issues/?"
+    $filter   = "filter=volume:" + $volumen_id
+    $v_url2 = $url_base2 + "api_key=" + $api_key + "&" + $client_id  + "&" + $filter +"&" + $formato
+    $request2 = Invoke-WebRequest -Uri $v_url2 -Method Get 
+    $respuesta2 = $request2 | ConvertFrom-Json -AsHashtable
+    $imagen = $respuesta2.results[[int]($issue-1)].image.original_url
+return $imagen
 }
 
 function get-issuedetail_cv{
@@ -250,16 +277,7 @@ function get-issuelist_cv {
 #>
 
 <#
-function get-issue_cv {
-    $volumen_id = $comicinfo_xml.ComicInfo.comicvine_volume_id
-    write-host "BUSCANDO COMICS"
-    $url_base2 = "https://comicvine.gamespot.com/api/issues/?"
-    $filter   = "filter=volume:"+$volumen_id
-    $v_url2 = $url_base2 + "api_key=" + $api_key + "&" + $client_id  + "&" + $filter +"&" + $formato
-    $request2 = Invoke-WebRequest -Uri $v_url2 -Method Get 
-    $respuesta2 = $request2 | ConvertFrom-Json -AsHashtable
 
-}
 #>
 
 

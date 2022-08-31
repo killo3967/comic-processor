@@ -84,7 +84,7 @@ function limpieza_nombre_comics {
     $comic_name = $comic_name -replace ( "\[Traducido por .*\]" , "")         
     $comic_name = $comic_name -replace ( "\[Trad por .*\]" , "")              
 
-    # Elimino textos de recopiladores
+    # Elimino textos de recopiladores (meter en un fichero)
     $comic_name = $comic_name -replace ( "\[CRG.*\]" , "")                    
     $comic_name = $comic_name -replace ( "\[TM.*\]" , "")                     
     $comic_name = $comic_name -replace ( "\[Belisario.*\]" , "")              
@@ -155,17 +155,16 @@ Function limpia_nombres {
         # Obtengo el nombre del fichero
         
         $comic_name = $_.name
-        $old_comic_name = $_.fullname
+        $full_comic_name = $_.fullname
         
         # Creo un array con la lista de ficheros que me gustaria borrar que esta en el fichero exclude.cfg
         $excluded_name = get-content $config_dir\exclude_name.cfg -verbose:$verbose
 
-        # borro la cadena de texto del nombre del comic 
+        # Borro la cadena de texto excluida del nombre del comic 
         foreach ( $v_texto in $excluded_name ) {
-
             # Elimino los textos del fichero de configuracion y antes compruebo que la linea tiene contenido
             # y escapo el contenido por si tiene caracteres especiales
-            if ( $v_texto -match '[a-zA-Z]' ) {
+            if ( $v_texto -match '[a-zA-Z0-9]' ) {
                 $comic_name = $comic_name -replace [regex]::escape($v_texto) , '' 
             }
         }
@@ -174,7 +173,7 @@ Function limpia_nombres {
         $comic_name = $comic_name -replace "CBR" , "cbr"
         $comic_name = $comic_name -replace "CBZ" , "cbz"
          
-        # Llamo a la funcion correspondiente
+        # Llamo a la funcion de limpieza (profunda) del nombre del comic
         #! Esto habria que hacerlo mas flexible y permitir varias configuraciones segun el perfil escogido.
         #! De momento solo tengo encuenta si los ficheros son tipo 'comics' o 'tipo manga'
         #! Pero podria meterse en el fichero de configuracion y depender del sitio, de una palabra, etc 
@@ -185,13 +184,20 @@ Function limpia_nombres {
             $new_comic_name = limpieza_nombre_manga $comic_name
         }
         
-        $new_comic_name = $ruta_ficheros + "\" + $new_comic_name
-        rename-item -literalpath $old_comic_name -newname $new_comic_name -Force
-        
-    } 
+        $series = extraer_serie $ruta_ficheros
 
-
-}   # Fin de funcion
+        # Veo si el comic contiene el nombre de la serie, si no le cambio el nombre.
+        if ($comic_name -match $series) {
+            # Creo el nuevo nombre del comic
+            $new_comic_name = $ruta_ficheros + "\" + $new_comic_name
+        } else {
+            $issue = extraer_issue $full_comic_name
+            $new_comic_name = $ruta_ficheros + "\" + $series + " #" + $issue + $_.Extension 
+        }
+        # Renombro el comic
+        rename-item -literalpath $full_comic_name -newname $new_comic_name -Force
+    }
+}# Fin de funcion
 
 # Este modulo intenta dejar el nombre de los comics lo mas ordenado y limpio posible antes de identificarlo.
 function reparar_signos_puntuacion {
@@ -255,6 +261,7 @@ function Get-DamLev {
         [ValidateRange(0, [int]::MaxValue)]
         [int]
         $maxDistance = [int]::MaxValue,
+        
         # Param3 help description
         [Parameter(Mandatory = $false, 
             ValueFromPipeline = $true,

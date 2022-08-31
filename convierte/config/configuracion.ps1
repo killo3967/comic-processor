@@ -1,19 +1,9 @@
-# ComicVine API KEY
-$Global:comicvine_api_key = "1d15350fce8f46f6d5ce5efadbc7a57e62c834c1"
-
-# DeepL API KEY
+##################################
+##### CONFIGURACION GENERAL ######
+##################################
+$Global:comicvine_api_key = "1d15350fce8f46f6d5ce5efadbc7a57e62c834c1"  #? API-KEY DE COMICVINE
 $Global:deepl_api_key = "c614d9d4-54dc-f4dd-22b9-6d7daef47864:fx"
-
-# Configuracion General
 $Global:verbose = $false
-
-# Configuracion de procesado de las imagenes
-$Global:formato_imagen = "jpg"
-$Global:compresion = "80"
-$Global:correccion_gamma = "2.2"
-
-# Configuracion del comic
-$Global:formato_comic = "cbz"
 
 # A continuacion vienen las expresiones REGEX para buscar ciertas cadenas dentro del nombre del directorio o del nombre del comic, que faciliten su scrapping
 # Con esta expresion de regex se puede extraer la cadena que contenga el año en $3
@@ -22,53 +12,69 @@ $Global:formato_comic = "cbz"
 $Global:cadena_año = '((\(|\[)([a-zA-ZÀ-ÿ\u00f1\u00d1\w\d\s\-\,])*?\s?([(1|2][9|0][67890123]\d)\s?([a-zA-ZÀ-ÿ\u00f1\u00d1\w\d\s\-\,])*?(\)|\]))'
 $Global:cadena_issue = '( #| t| t.| T| T.| Tomo| Tomo.|-|-#| )(\d{1,3})'
 
+#################
+##### COMIC #####
+#################
 
-# Incluir directorio raiz en la lista de directorios a procesar
-#! Futuro
-$Global:incluir_directorio_raiz = $false
+$Global:formato_comic = "cbz"                                               #? Formato de fichero de comic. De momento solo esta soportado cbz
+$Global:incluir_directorio_raiz = $false                                    #! FUTURO
+$Global:un_solo_directorio  = $false                                        #? ¿Meto todos los comics en un solo directorio y borro los subdirectorios?
+$Global:renombrar_comics = $true                                            #? ¿ Renombro el fichero segun los datos obtenidps del scrapping ?
+$Global:tipo_renombrado = "comics"                                          #? ¿ Como es el tipo de nombre del fichero de comic ?
 
-# Mover todos los comics a directorio base y borra todo el arbol de subdirectorios
-$Global:un_solo_directorio  = $false
+####################
+##### LIMPIEZA #####
+####################
+$Global:buscar_creditos = $true                                             #? ¿Busco imagenes de creditos?
+[int]$Global:numero_imagenes_creditos = 7                                   #? Numero de imagenes a procesar para ver sin son creditos
 
-# Renombrado de comics segun datos obtenidos del Scrapping
-$Global:renombrar_comics = $true
 
-# Indica que tipo de renombrado sera, de momento solo hay dos. 'Manga' y 'Comics'
-$Global:tipo_renombrado = "comics"
+###################################
+##### TRATAMIENTO DE IMAGENES #####
+###################################
+$Global:formato_imagen = "jpg"                                              #? Formato del fichero de imagen dentro del comic
+$Global:compresion = "80"                                                   #? Nivel de compresion para JPEG 
+$Global:correccion_gamma = "2.2"                                            #? Correccion gamma para JPEG 
+$Global:reprocesar_imagen = $true                                           #? ¿Reproceso las imagenes del comic?
+$Global:tipo_conversion = "alta"                                            #? Grado de conversion de las imagenes. Opciones alta/baja
 
-# Indica si se buscan imagenes de creditos
-$Global:buscar_creditos = $true
 
-# Numero de imagenes al final del comic en las que busco los creditos
-[int]$Global:numero_imagenes_creditos = 7       
+#####################
+##### SCRAPPING #####
+#####################
+$Global:scrapper_comic = $true                                              #? ¿Hago un scrapping del comic?             
+$Global:scrapper_overwrite = $true                                          #? ¿Tengo en cuenta el archivo comicinfo.xml existente ?
+$Global:scrapper_other_languages = $true                                    #? ¿Buscar el comic en otros idiomas?
+$Global:scrapper_languajes = 'ES,EN,FR'                                     #? Lenguaje a los que traduce el comic para buscar en la web
 
-# Indica si reproceso las imagenes del comic
-$Global:reprocesar_imagen = $true
 
-# Indica tipo de procesado de imagenes
-$Global:tipo_conversion = "alta"
+#####################
+##### COMICVINE #####
+#####################
+$Global:client_id = 'client=cvscraper'                                      #? Cadena de cliente en la comunicacion con ComiCVine 
+$Global:formato = "format=json"                                             #? Formato de respuesta de ComicVine
+$Global:limites= "20"                                                       #? Numero maximo de resultados de ComicVine
+$url_base = "https://comicvine.gamespot.com/api/"                           #? URL de la api de ComicVine
 
-# Indica si se hace y como se hace el scrapping
-$Global:scrapper_comic = $true
-$Global:scrapper_overwrite = $true
-$Global:scrapper_other_languages = $true
-$Global:scrapper_languajes = 'ES,EN,FR'
-$Global:limites= "20"                            # Numero maximo de resultados de ComicVine
 
-# Variables del proceso de OCR
 
-# Define el nivel de confianza de lo escaneado
-$Global:confianza_ocr = 80                      # Define el nivel de confianza de lo escaneado (cuanto mas se baja mas "ruido" se obtiene)
+################
+##### OCR ######
+################
+$Global:confianza_ocr = 80                                                  #? Define el nivel de confianza de lo escaneado (cuanto mas se baja mas "ruido" se obtiene)
 
-# Indica si muevo un comic y a donde lo muevo
-$Global:mover_comic = $false
+
+#######################
+##### POSTPROCESO #####
+#######################
+$Global:mover_comic = $false                                                #? ¿Muevo el comic despues de procesarlo?
 $Global:directorio_destino_sin_scrapping = ""
 $Global:directorio_destino_con_scrapping = ""
 
 
-############
-# PERFILES #
-############
+#####################
+##### PERFILES ######
+#####################
 Function perfil_nuevo_comic {
     $Global:tipo_conversion                 = "baja"
     $Global:un_solo_directorio              = $true
@@ -101,13 +107,13 @@ Function perfil_manga_nuevo {
 }
 
 Function perfil_solo_scrapping {
-    $Global:un_solo_directorio          = $false
-    $Global:scrapper_comic              = $false
+    $Global:un_solo_directorio          = $true
+    $Global:scrapper_comic              = $true
     $Global:reprocesar_imagen           = $false
     $Global:buscar_creditos             = $false
     $Global:scrapper_overwrite          = $true
-    $Global:scrapper_other_languages    = $false
-    $Global:tipo_renombrado = "comics"
+    $Global:scrapper_other_languages    = $true
+    $Global:tipo_renombrado             = "comics"
 }
 
 ###############################################
