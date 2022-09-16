@@ -152,7 +152,6 @@ function get-serie_cv {
         # Separacion entre volumenes
         write-host "========================================================================================="
     }   
-   return $id 
 }
 
 

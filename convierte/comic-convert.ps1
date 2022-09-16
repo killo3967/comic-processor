@@ -74,6 +74,7 @@ $Global:fichero_temporal     = "C:\windows\temp\temp.jpg"
 . $prog_dir\identifica_comic.ps1
 . $prog_dir\ocr.ps1
 . $prog_dir\ask_comicvine.ps1
+. $prog_dir\ask_isbn.ps1
 . $prog_dir\metadata.ps1
 
 
@@ -87,12 +88,6 @@ $Global:tesseract  = "C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 # Rutas de ficheros
 $Global:comicinfo_filepath = "$comic_final_dir\comicinfo.xml"
-
-
-# Variuables globales de los datos de la serie y del comic
-$Global:series_name = ''
-$Global:series_year = ''
-$Global:comic_year  = ''
 
 
 ###################################################################
@@ -188,7 +183,9 @@ if ( $true -eq $incluir_directorio_raiz) {
 for ($i=0; $i -lt $dir_list.count; $i++) {
 
     # Directorio donde esta la serie a procesar
-    $series_dir = $dir_list[$i].fullname
+    $series_dir = $dir_list[$i].fullname                
+    #! SUSTITUIR
+    # $datos_proceso.DatosProceso.dpfullpath = $dir_list[$i].fullname 
 
     # Renombro el directorio quitando los "&nbsp" que encuentre
     $new_series_dir = $series_dir.replace('&nbsp','')
@@ -198,6 +195,8 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
 
     # Extraigo el nombre de la serie del nombre del directorio
     $series_name = extraer_serie $series_dir 
+    #! SUSTITUIR y tambien la entrada a la funcion extraerserie en identifica_comic 
+    $comic.r.DP.dpserie = extraer_serie  
     
    
     # Defino el fichero de log. Hago un log para cada serie, que contiene la conversion de varios comics.
@@ -319,8 +318,6 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
             remove-item $_.fullname -Recurse -Force -verbose:$verbose -Confirm:$False -ErrorAction:SilentlyContinue -exclude cvinfo
         }
 
-        
-        
         #! AQUI HABRIA QUE RENOMBRAR LOS NOMBRES DE LAS IMAGENES AL PATRON <serie>_<volumen>_<comic>_nnn.jpg
         #####################################################################
         # CONVIERTO LOS FICHEROS DE IMAGENES A UN FORMATO ADECUADO
@@ -424,26 +421,16 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
             }
         }
 
-        #! =================================================
-        #! =========== PRUEBA DE ASK_COMICVINE ============
-        #! =================================================
-
-        <#
-        $vine_series = $series_name
-        $vine_año = (extraer_año $lista_comics[$j].directory.name).trim()
-        $vine_dir = $lista_comics[$j].directory.name.trim()
-        $vine_issue = 1
-        $vine_publisher = ""
-        get-serie_cv $vine_series $vine_issue $vine_año $vine_publisher $vine_dir
-        #>
+        # ==================================
+        # =========== SCRAPPING ============
+        # ==================================
 
         scrap_comic $series_name $comic_fname
 
 
-
-        ##################################
+        #######################
         # CREO EL NUEVO COMIC
-        ##################################
+        #######################
 
         # Uso el mismo nombre y le cambio la extension a CBZ
         write-host "CREO EL NUEVO NOMBRE"

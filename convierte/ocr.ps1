@@ -16,14 +16,16 @@ function escaner_ocr {
 
     $imagen_salida = "$ocr_temp_dir\imagen_salida.jpg"
     $texto_salida_ocr = "$ocr_temp_dir\texto.txt"
-    
+
+    # Escaneo las 5 primeras y 3 ultimas imagenes del comic para buscar los datos necesarios
+    # Esto lo hago ya que a veces no encuentro 
     :outer foreach ( $imagen_id in @(0,1,2,3,4,-3,-2,-1)) {
 
-        # Escaneo las 5 primeras y 3 ultimas imagenes del comic
         $imagen = (get-childitem -literalpath $comic_final)[$imagen_id].fullname
         write-host "   >> Seleccionada imagen para OCR: $imagen"
 
         # Preparo la imagen para una mejor lectura
+        #! Esto hay que convertirlo en una funcion de powershell
         & C:\scripts\convierte\textcleaner.sh  $imagen $imagen_salida
         write-host "   >> Mejorando imagen para OCR: $imagen"
         
@@ -32,6 +34,7 @@ function escaner_ocr {
         write-host "   >> Generando datos en formato TSV del OCR"
         $tsv_salida = (& $tesseract $imagen_salida stdout --dpi 1200 --psm 6 --oem 1 -c preserve_interword_spaces=1,textord_min_xheight=6 tsv quiet)
 
+        # Convierto el fichero TSV en un formato inteligible en formato texto.
         write-output $null > $texto_salida_ocr
         write-host "   >> Procesando datos del OCR"
         $ocr_csv = ( $tsv_salida | Convertfrom-Csv -Delimiter "`t" )
@@ -48,7 +51,7 @@ function escaner_ocr {
             }
         }
 
-        # Primero busco el ISBN. Si lo encuentro llamare a la web de isbnsearch.org para obtener el dato del año
+        # Primero busco el ISBN. Si lo encuentro llamare a la web de isbnsearch.org para obtener el dato del año.
         write-host "   >> Buscado ISBN"
         $v_isbn = buscar_isbn_ocr
         if ( $null -ne $v_isnb ) {
@@ -82,25 +85,6 @@ function escaner_ocr {
     return $v_año
 }
 
-function buscar_año_ocr {   
-    $texto_salida_ocr = "$ocr_temp_dir\texto.txt"
-
-    $encontrados = [regex]::matches( (get-content $texto_salida_ocr) , '[(1|2][9|0][67890123]\d' )
-
-    $v_año = @()
-    if ($encontrados.success -eq $true){
-        for ( $i = 0 ; $i -lt $encontrados.count ; $i++ ) {
-            $v_año += $encontrados[$i].value
-        }
-    } else {
-        $v_año = ''
-    }
-    # Elimino posibles duplicados
-    $v_año = ( $v_año | sort-object -unique )
-
-    return $v_año
-}
-
 function buscar_isbn_ocr {   
 
     $texto_salida_ocr = "$ocr_temp_dir\texto.txt"
@@ -116,25 +100,25 @@ function buscar_isbn_ocr {
     return $isbn
 }
 
+function buscar_año_ocr {   
+    $texto_salida_ocr = "$ocr_temp_dir\texto.txt"
 
-function buscar_año_isbn_ocr {
+    $encontrados = [regex]::matches( (get-content $texto_salida_ocr) , '[(1|2][9|0][67890123]\d{2}' )
 
-    Param (
-        [Parameter(Mandatory=$true)]
-        $isbn
-    )
-    $uri="https://isbnsearch.org/search?s="
-    $comic_year=''
+    $v_año = @()
+    if ($encontrados.success -eq $true){
+        for ( $i = 0 ; $i -lt $encontrados.count ; $i++ ) {
+            $v_año += $encontrados[$i].value
+        }
+    } else {
+        $v_año = ''
+    }
+    # Elimino posibles duplicados
+    $v_año = ( $v_año | sort-object -unique )
 
-    $Request = Invoke-WebRequest -Uri $uri+$isbn
-    $Parser = New-Object AngleSharp.Html.Parser.HtmlParser
-    $Parsed = $Parser.ParseDocument($Request.Content)
-    $ForecastList = $Parsed.All | Where-Object {  $_.Classname  -eq "bookinfo" }
-    # $comic_name = $ForecastList[1].TextContent
-    # $comic_publisher = $ForecastList[11].TextContent
-    $comic_year = $ForecastList[13].TextContent
-    # Extraigo el año del comic
-    [int]$comic_year = ($comic_year -replace '(.*)(\d{4})' , '$2').Trim()
-
-    Return $comic_year
+    return $v_año
 }
+
+
+
+

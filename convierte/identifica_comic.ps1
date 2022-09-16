@@ -71,6 +71,10 @@ SERIES_NAME (SERIESYEAR) #ISSUENUM (of COUNT) (PUBYEAR) - Nombre del archivo.ext
 
 #>
 
+function crear_datos_proceso{
+    
+}
+
 function extraer_serie {
     Param (
     [Parameter(Mandatory=$true)]
@@ -93,7 +97,7 @@ function extraer_serie_nombre_comic {
 }
 
 function extraer_año {
-    # Se extrae del directorio donde esta contenido el comic o desde el propio comic
+    # Se extrae del directorio donde esta contenido el comic o desde el propio comic y si no se encuentra, se hace un OCR.
     Param (
         [Parameter(Mandatory=$true)]
         $ruta_ficheros
