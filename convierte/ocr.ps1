@@ -21,15 +21,19 @@ function escaner_ocr {
     # Esto lo hago ya que a veces no encuentro 
     :outer foreach ( $imagen_id in @(0,1,2,3,4,-3,-2,-1)) {
 
-        $imagen = (get-childitem -literalpath $comic_final)[$imagen_id].fullname
+        $imagen = (get-childitem -literalpath $comic_final_dir -include *.jpg,*.bmp,*.png,*.webp -file )[$imagen_id].fullname
         write-host "   >> Seleccionada imagen para OCR: $imagen"
 
         # Preparo la imagen para una mejor lectura
         #! Esto hay que convertirlo en una funcion de powershell
+        Remove-Item -LiteralPath $imagen_salida -Force -ErrorAction SilentlyContinue -Verbose:$verbose | out-null
         & C:\scripts\convierte\textcleaner.sh  $imagen $imagen_salida
         write-host "   >> Mejorando imagen para OCR: $imagen"
+        # Como es un procedimiento asincrono espero hasta que se cree la imagen
+        while (!( Test-Path $imagen_salida )) { Start-Sleep 1 }
         
-        # Esto escanea la imagen y da un fichero tsv.
+
+        # Ahora procedo a escanear la imagen y generar un fichero tsv.
         # Despues de escanear la imagen, se puede usar el fichero tsv para extraer los datos.
         write-host "   >> Generando datos en formato TSV del OCR"
         $tsv_salida = (& $tesseract $imagen_salida stdout --dpi 1200 --psm 6 --oem 1 -c preserve_interword_spaces=1,textord_min_xheight=6 tsv quiet)
@@ -54,17 +58,27 @@ function escaner_ocr {
         # Primero busco el ISBN. Si lo encuentro llamare a la web de isbnsearch.org para obtener el dato del año.
         write-host "   >> Buscado ISBN"
         $v_isbn = buscar_isbn_ocr
-        if ( $null -ne $v_isnb ) {
+        if ( $v_isbn.length -ne 0 ) {
             $v_isbn = $v_isbn -replace '\.' , ''
             $v_isbn = $v_isbn -replace ':' , ''
             $v_isbn = $v_isbn -replace '-' , ''
             $v_isbn = $v_isbn -replace ' ' , ''  
-            write-host "   >> Encontrado ISBN: "$v_isbn -foregrounf-color "yellow"       
-            # Ahora llamo a la web de isbnsearch.org para obtener el dato del año
-            $v_año = buscar_año_isbn_ocr $v_isbn
+            write-host "   >> Encontrado ISBN: $v_isbn" -ForegroundColor yellow
             
-            if ( $null -ne $v_año ) {
-                write-host "   >> Encontrado año en ISBN: "$v_año -foregrounf-color "yellow"       
+            #$ ASIGNACION DE VARIABLE GLOBAL  
+            $Global:dp_ocr_isbn = $v_isbn     
+            
+            # Ahora llamo a la web de isbnsearch.org para obtener el dato del año
+            # $v_año = buscar_año_isbn_ocr $v_isbn
+            # $v_año = 
+            $Global:dp_ocr_year = @()
+            $Global:dp_ocr_year.Clear()
+            buscar_año_isbn_ocr
+            
+            # if ( $null -ne $v_año ) {
+            if ( $null -ne $Global:dp_ocr_year ) {
+              
+                write-host "   >> Encontrado año en ISBN: $v_año" -ForegroundColor yellow       
             }
             break outer      
         } else {
@@ -72,7 +86,7 @@ function escaner_ocr {
             $v_año = buscar_año_ocr
             write-host "   >> Buscado año usando OCR"
             if ( $v_año -gt 1960 -and $v_año -lt 2020 ) {
-                write-host "   >> Encontrado año por OCR: $v_año"
+                write-host "   >> Encontrado año por OCR: $v_año" -ForegroundColor yellow
                 # exit main loop
                 break outer
             } else {

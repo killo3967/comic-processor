@@ -89,6 +89,7 @@ $Global:tesseract  = "C:\Program Files\Tesseract-OCR\tesseract.exe"
 # Rutas de ficheros
 $Global:comicinfo_filepath = "$comic_final_dir\comicinfo.xml"
 
+$Global:comic_final
 
 ###################################################################
 ###############    PREPARACION DEL ENTORNO    #####################
@@ -184,20 +185,16 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
 
     # Directorio donde esta la serie a procesar
     $series_dir = $dir_list[$i].fullname                
-    #! SUSTITUIR
-    # $datos_proceso.DatosProceso.dpfullpath = $dir_list[$i].fullname 
+    
 
     # Renombro el directorio quitando los "&nbsp" que encuentre
     $new_series_dir = $series_dir.replace('&nbsp','')
     rename-item -path $series_dir -newname $new_series_dir -Force -Confirm:$False -verbose:$verbose -ErrorAction:SilentlyContinue 
     $series_dir = $new_series_dir  
 
-
     # Extraigo el nombre de la serie del nombre del directorio
     $series_name = extraer_serie $series_dir 
-    #! SUSTITUIR y tambien la entrada a la funcion extraerserie en identifica_comic 
-    $comic.r.DP.dpserie = extraer_serie  
-    
+        
    
     # Defino el fichero de log. Hago un log para cada serie, que contiene la conversion de varios comics.
     $log_file = $log_dir + "\" + $series_name + "_" + $(get-date -f yyyy_MM_dd_hh_mm_ss) + ".log"
