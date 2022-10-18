@@ -5,7 +5,7 @@ function genera_miniatura {
         [Parameter(Mandatory=$true)]
         [String] $ruta_destino
     )
-    f ( $verbose -eq $true ) {
+    if ( $verbose -eq $true ) {
         & $mogrify -resize 32x32^! -colorspace Gray -verbose -path $ruta_destino $imagen_origen 2>&1
     } else {
         & $mogrify -resize 32x32^! -colorspace Gray -path $ruta_destino $imagen_origen 2>&1
@@ -16,7 +16,7 @@ function genera_miniatura {
 function reprocesar_imagen {
     Param(
         [Parameter(Mandatory=$true)]
-        [String] $lista_ficheros,
+        $lista_ficheros,
         [Parameter(Mandatory=$true)]
         [String] $comic_final
     )

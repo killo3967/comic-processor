@@ -220,7 +220,9 @@ density=""          # input density for rasterizing vector files
 resize=""           # final resize 
 
 # set directory for temporary files
-dir="."    # suggestions are dir="." or dir="/tmp"
+dir=".\ocr"    # suggestions are dir="." or dir="/tmp"
+
+CONVERT_PATH="C:\Program Files\ImageMagick-7.1.0-Q16-HDRI" 
 
 # set up functions to report Usage and Usage with Description
 PROGNAME=`type $0 | awk '{print $3}'`  # search for executable on path
@@ -485,6 +487,8 @@ else
 	outfile="$2"
 fi
 
+
+
 # test that infile provided
 [ "$infile" = "" ] && errMsg "NO INPUT FILE SPECIFIED"
 
@@ -497,16 +501,19 @@ trap "rm -f $tmpA1 $tmpA2; exit 0;" 0
 trap "rm -f $tmpA1 $tmpA2; exit 1" 1 2 3 15
 #trap "rm -f $tmpA1 $tmpA2; exit 1" ERR
 
+
+
 # get im version
-im_version=`convert -list configure | \
+im_version=`"$CONVERT_PATH\convert.exe" -list configure | \
 sed '/^LIB_VERSION_NUMBER */!d;  s//,/;  s/,/,0/g;  s/,0*\([0-9][0-9]\)/\1/g' | head -n 1`
+
 
 # test for hdri enabled
 # NOTE: must put grep before trap using ERR in case it does not find a match
 if [ "$im_version" -ge "07000000" ]; then
-	hdri_on=`convert -version | grep "HDRI"`	
+	hdri_on=`"$CONVERT_PATH\convert.exe" -version | grep "HDRI"`	
 else
-	hdri_on=`convert -list configure | grep "enable-hdri"`
+	hdri_on=`"$CONVERT_PATH\convert.exe" -list configure | grep "enable-hdri"`
 fi
 
 # colorspace RGB and sRGB swapped between 6.7.5.5 and 6.7.6.7 
@@ -546,16 +553,22 @@ echo "invert=$inversion1"
 
 
 # read the input image into the TMP cached image.
-convert -quiet $applydensity "$infile" +repage $rotation $inversion1 "$tmpA1" ||
+"$CONVERT_PATH\convert.exe" -quiet $applydensity "$infile" +repage $rotation $inversion1 "$tmpA1" ||
 	errMsg "--- FILE $infile NOT READABLE OR HAS ZERO SIZE ---"
+echo "Read the input image into the TMP cached image."
+
 
 # get image size
-ww=`convert $tmpA1 -ping -format "%w" info:`
-hh=`convert $tmpA1 -ping -format "%h" info:`
+ww=`"$CONVERT_PATH\convert.exe" $tmpA1 -ping -format "%w" info:`
+hh=`"$CONVERT_PATH\convert.exe" $tmpA1 -ping -format "%h" info:`
+echo "Get image size $ww x $hh"
+
+
 
 # get image h/w aspect ratio and determine if portrait=1 (h/w>1) or landscape=0 (h/w<1)
-aspect=`convert xc: -format "%[fx:($hh/$ww)>=1?1:0]" info:`
-echo "ww=$ww; hh=$hh; aspect=$aspect"
+aspect=`"$CONVERT_PATH\convert.exe" xc: -format "%[fx:($hh/$ww)>=1?1:0]" info:`
+echo "Get image h/w aspect ratio and determine if portrait=1 (h/w>1) or landscape=0 (h/w<1) ---> ww=$ww; hh=$hh; aspect=$aspect"
+
 
 # set up rotation
 if [ "$layout" = "portrait" -a $aspect -eq 0 -a "$rotate" = "cw" ]; then
@@ -570,29 +583,29 @@ else
 	rotation=""
 fi
 echo "layout=$layout"
-
 	
 # set up cropping
 if [ "$cropoff" != "" -a $numcrops -eq 1 ]; then
-	wwc=`convert xc: -format "%[fx:$ww-2*$crop1]" info:`
-	hhc=`convert xc: -format "%[fx:$hh-2*$crop1]" info:`
+	wwc=`"$CONVERT_PATH\convert.exe" xc: -format "%[fx:$ww-2*$crop1]" info:`
+	hhc=`"$CONVERT_PATH\convert.exe" xc: -format "%[fx:$hh-2*$crop1]" info:`
 	cropping="-crop ${wwc}x${hhc}+$crop1+$crop1 +repage"
 elif [ "$cropoff" != "" -a $numcrops -eq 2 ]; then
-	wwc=`convert xc: -format "%[fx:$ww-2*$crop1]" info:`
-	hhc=`convert xc: -format "%[fx:$hh-2*$crop2]" info:`
+	wwc=`"$CONVERT_PATH\convert.exe" xc: -format "%[fx:$ww-2*$crop1]" info:`
+	hhc=`"$CONVERT_PATH\convert.exe" xc: -format "%[fx:$hh-2*$crop2]" info:`
 	cropping="-crop ${wwc}x${hhc}+$crop1+$crop2 +repage"
 elif [ "$cropoff" != "" -a $numcrops -eq 4 ]; then
-	wwc=`convert xc: -format "%[fx:$ww-($crop1+$crop3)]" info:`
-	hhc=`convert xc: -format "%[fx:$hh-($crop2+$crop4)]" info:`
+	wwc=`"$CONVERT_PATH\convert.exe" xc: -format "%[fx:$ww-($crop1+$crop3)]" info:`
+	hhc=`"$CONVERT_PATH\convert.exe" xc: -format "%[fx:$hh-($crop2+$crop4)]" info:`
 	cropping="-crop ${wwc}x${hhc}+$crop1+$crop2 +repage"
 else
 	cropping=""
 fi
 echo "cropoff=$cropoff; numcrops=$numcrops; cropping=$cropping"
 
+
 # test if grayscale
-grayscale=`convert $tmpA1 -format "%[colorspace]" info:`
-typegray=`convert $tmpA1 -format '%r' info: | grep 'Gray'`
+grayscale=`"$CONVERT_PATH\convert.exe" $tmpA1 -format "%[colorspace]" info:`
+typegray=`"$CONVERT_PATH\convert.exe" $tmpA1 -format '%r' info: | grep 'Gray'`
 if [ "$gray" = "yes" -o "$grayscale" = "Gray" -o "$typegray" != "" ]; then 
 	makegray="$setcspace -colorspace gray -type grayscale"
 else
@@ -615,7 +628,7 @@ if [ "$threshold" = "" ]; then
 	blurring=""
 else
 	# note: any 0<bluramt<=1, will be the same as using bluramt=1, since radius must be used as an integer
-#	bluramt=`convert xc: -format "%[fx:$threshold/100]" info:`
+#	bluramt=`"$CONVERT_PATH\convert.exe" xc: -format "%[fx:$threshold/100]" info:`
 #	blurring="-blur ${bluramt}x65535 -level ${threshold}x100%"
 	blurring="-blur 1x65535 -level ${threshold}x100%"
 fi
@@ -624,9 +637,9 @@ echo "blurring=$blurring"
 # get background color
 bgcolor=`echo "$bgcolor" | tr "[:upper:]" "[:lower:]"`
 if [ "$bgcolor" = "image" ]; then
-	bgcolor=`convert $tmpA1 -format "%[pixel:u.p{0,0}]" info:`
+	bgcolor=`"$CONVERT_PATH\convert.exe" $tmpA1 -format "%[pixel:u.p{0,0}]" info:`
 	fuzzval=$((100-fuzzval))
-	bgcolor=`convert $tmpA1 -fuzz $fuzzval% +transparent "$bgcolor" -scale 1x1! -alpha off -format "%[pixel:u.p{0,0}]" info:`
+	bgcolor=`"$CONVERT_PATH\convert.exe" $tmpA1 -fuzz $fuzzval% +transparent "$bgcolor" -scale 1x1! -alpha off -format "%[pixel:u.p{0,0}]" info:`
 fi
 echo "$bgcolor"
 
@@ -715,8 +728,9 @@ echo "resizing=$resizing"
 
 # read -p "Press [Enter] key to continue"
 
+
 # process image
-convert -respect-parenthesis \( $tmpA1 $cropping $makegray $enhancing \) \
+"$CONVERT_PATH\convert.exe" -respect-parenthesis \( $tmpA1 $cropping $makegray $enhancing \) \
 	\( -clone 0  $setcspace -colorspace gray -negate -lat ${filtersize}x${filtersize}+${offset}% -contrast-stretch 0 $blurring \) \
 	-alpha off -compose copy_opacity -composite -fill "$bgcolor" -opaque none -alpha off \
 	$unrotating $sharpening $modulation $adaptiveblurring $resizing $trimming $padding $inversion2 $compressing \

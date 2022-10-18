@@ -4,6 +4,7 @@
 
 function scrap_comic {
 # Esta funcion es la principal, la que se encarga de llamar a las funciones que hacen el scrapping y a la que se le pasa los parametros
+    <#
     Param (
         [Parameter(Mandatory)]
         [String]$series_name,
@@ -11,6 +12,10 @@ function scrap_comic {
         [Parameter(Mandatory)]
         [String]$file_name
     )
+    #>
+    
+    $series_name = $Global:dp_series_name_path
+    $file_name = $Global:dp_comic_fullname
 
     $nombre_fichero = (get-childitem $file_name)
 
@@ -27,8 +32,8 @@ function scrap_comic {
     $v_año.clear
     $v_año = extraer_año (get-childitem $file_name)
 
-    # Obtengo el publisher de la serie o del comic
-    $publisher = get-publisher $file_name
+    # Obtengo el publisher de la serie o del comic    
+    $publisher = obtener_publisher $file_name
     $num_issues = (get-childitem(get-childitem $full_name).directoryname).count
         
     write-host "========================================================"

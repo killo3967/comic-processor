@@ -1,6 +1,3 @@
-# $api_key = "1d15350fce8f46f6d5ce5efadbc7a57e62c834c1"
-# $url_base = "https://comicvine.gamespot.com/api/volumes/?"
-
 function get-serie_cv {
 
     Param (
@@ -24,12 +21,10 @@ function get-serie_cv {
          )
 
 
-#   
-
     # Numero de maximo de resultados a mostrar
 
     $url_base = "https://comicvine.gamespot.com/api/search/?"
-    $v_url = $url_base + "api_key=" + $api_key + "&" + $client_id + "&" + $formato + "&" + $limites + "&resource=volume" + "&query=" + $series_name.trim()
+    $v_url = $url_base + "api_key=" + $Global:comicvine_api_key + "&" + $client_id + "&" + $formato + "&" + $limites + "&resource=volume" + "&query=" + $series_name.trim()
     $url_escaped  = [Uri]::EscapeUriString($v_url)
     $request = Invoke-WebRequest -Uri $url_escaped -Method Get 
     $respuesta = $request | ConvertFrom-Json -AsHashtable
@@ -47,11 +42,12 @@ function get-serie_cv {
                 $site_detail_url    = $respuesta.results[$i].site_detail_url
                 $issue              = $in_issue
                 $id                 = $respuesta.results[$i].id
-                $Series              = $respuesta.results[$i].name
+                $series             = $respuesta.results[$i].name
                 
                 # Busco una serie en comicvine que coincida con los siguientes parametros:
                 $busqueda1 = $volumen -like $in_series_name
-                $busqueda2 = $publisher.contains($in_publisher)
+                # $busqueda2 = $publisher.contains($in_publisher)
+                $busqueda2 = $publisher -match $in_publisher
                 $busqueda3 = ($volume_year -in ([int]$in_year-1)..([int]$in_year+1))
                 $busqueda4 = $num_comics -ge $in_num_issues
 
@@ -94,7 +90,6 @@ function get-serie_cv {
                     }
                     $out_image = $scrapping_cache_dir + "\" + $series + " #" + $issue + " de $num_comics " + "($id , " + (split-path $site_detail_url -leaf) + ")" + "($publisher)" + "($volume_year)"+".jpg"
                     Invoke-WebRequest -uri $url -Method Get -OutFile $out_image
-
 
                     # Comprimo la imagen 
                     & $mogrify -resize 32x32^! -colorspace Gray -verbose -path $scrapping_temp_dir $out_image 2>&1 | Out-Null

@@ -34,7 +34,7 @@ If ( -Not ([System.Management.Automation.PSTypeName]'AngleSharp.Parser.Html.Html
 
 
 # Defino el directorio donde estan los comics.
-$Global:comic_dir = "Q:\PRUEBAS\" 
+$Global:comic_dir = "S:\PRUEBAS\" 
 
 if ( (get-childitem $comic_dir -File -Recurse).count -eq 0 ) {
     write-host "NO HAY COMICS A PROCESAR."
@@ -71,6 +71,7 @@ $Global:fichero_temporal     = "C:\windows\temp\temp.jpg"
 . $prog_dir\traducir.ps1
 . $prog_dir\scrapping.ps1
 . $prog_dir\procesar_nombre.ps1
+. $prog_dir\Damerau–Levenshtein
 . $prog_dir\identifica_comic.ps1
 . $prog_dir\ocr.ps1
 . $prog_dir\ask_comicvine.ps1
@@ -184,18 +185,20 @@ if ( $true -eq $incluir_directorio_raiz) {
 for ($i=0; $i -lt $dir_list.count; $i++) {
 
     # Directorio donde esta la serie a procesar
-    $series_dir = $dir_list[$i].fullname                
+    $Global:dp_series_name_path = $dir_list[$i].fullname                
     
-
     # Renombro el directorio quitando los "&nbsp" que encuentre
-    $new_series_dir = $series_dir.replace('&nbsp','')
-    rename-item -path $series_dir -newname $new_series_dir -Force -Confirm:$False -verbose:$verbose -ErrorAction:SilentlyContinue 
-    $series_dir = $new_series_dir  
+    $new_series_dir = $Global:dp_series_name_path.replace('&nbsp','')
+    rename-item -path $Global:dp_series_name_path -newname $new_series_dir -Force -Confirm:$False -verbose:$verbose -ErrorAction:SilentlyContinue 
+    $Global:dp_series_name_path = $new_series_dir  
 
-    # Extraigo el nombre de la serie del nombre del directorio
-    $series_name = extraer_serie $series_dir 
-        
-   
+    # Extraigo el nombre de la serie, el publisher y el año del nombre del directorio del comic
+    # $series_name = extraer_serie  
+    $Global:dp_series_name = ((split-path $Global:dp_series_name_path -leaf ) -replace '(\[|\()[^\]\)]*(\]|\))' , '' ).trim()
+    $Global:dp_series_path_publisher    = [regex]::match( $Global:dp_series_name_path , $Global:cadena_publisher_year ).Groups[4].value
+    $Global:dp_series_path_year         = [regex]::match( $Global:dp_series_name_path , $Global:cadena_publisher_year ).Groups[9].value
+
+    
     # Defino el fichero de log. Hago un log para cada serie, que contiene la conversion de varios comics.
     $log_file = $log_dir + "\" + $series_name + "_" + $(get-date -f yyyy_MM_dd_hh_mm_ss) + ".log"
     write-host ""
@@ -220,7 +223,7 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
 
     # Hago un bucle con toda la lista de comics
     # Solo escojo los ficheros con extensiones 'cbr' y 'cbz'
-    $lista_comics = get-childitem -literalpath $series_dir -Include *.cbr,*.cbz -file -recurse
+    $lista_comics = get-childitem -literalpath $Global:dp_series_name_path -Include *.cbr,*.cbz -file -recurse
 
     # Si la lista esta vacia me salgo
     if ( $lista_comics.count -eq 0 ) {
@@ -239,8 +242,8 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
         write-host
         write-host "MUEVO TODOS LOS COMIS AL DIRECTORIO RAIZ DE LA SERIE Y BORRO DIRECTORIOS VACIOS RECURSIVAMENTE"
         write-host
-        Get-childitem -literalpath $series_dir -Include *.cbr, *.cbz -file -recurse | foreach-object { Move-Item -literalpath $_.fullname -destination $series_dir } 
-        Get-childitem -path $series_dir -Directory -Recurse | foreach-object { if ( $_.fullname -ne $series_dir ) { Remove-Item $_.fullname -force -recurse -verbose:$verbose  } }
+        Get-childitem -literalpath $Global:dp_series_name_path -Include *.cbr, *.cbz -file -recurse | foreach-object { Move-Item -literalpath $_.fullname -destination $Global:dp_series_name_path } 
+        Get-childitem -path $Global:dp_series_name_path -Directory -Recurse | foreach-object { if ( $_.fullname -ne $Global:dp_series_name_path ) { Remove-Item $_.fullname -force -recurse -verbose:$verbose  } }
     }
 
     # RENOMBRO LOS COMICS Y PONGO TODO LO BIEN QUE SE PUEDE EL NOMBRE DE LOS COMICS
@@ -248,11 +251,11 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
         write-host
         write-host "LIMPIO EL NOMBRE DEL COMIC"
         write-host
-        limpia_nombres ($series_dir)
+        limpia_nombres #($Global:dp_series_name_path)
     }
 
     # Despues de la limpieza vuelvo a listar los comics ya que los nombres han cambiado.
-    $lista_comics = get-childitem -literalpath $series_dir -Include *.cbr,*.cbz -file -recurse
+    $lista_comics = get-childitem -literalpath $Global:dp_series_name_path -Include *.cbr,*.cbz -file -recurse
 
     #! AQUI EN MEDIO HABRIA QUE COMPROBAR, QUE LOS NOMBRES DE LOS COMICS COINCIDEN CON EL NOMBRE DEL DIRECTORIO
     #! Y si no es asi intentar detectar el nombre de la serie y sustuir el nombre del comic.
@@ -260,10 +263,10 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
     # ENTRO EN UN BUBLE PARA PROCESAR CADA UNO DE LOS COMIS
     for ( $j = 0 ; $j -lt $lista_comics.count ; $j++ ) {
     
-        $comic_fname = $lista_comics[$j].fullname
+        $Global:dp_comic_fullname = $lista_comics[$j].fullname
 
         write-host "#####################################################################################################"
-        write-Host "#### PROCESANDO NUEVO COMIC: $comic_fname"
+        write-Host "#### PROCESANDO NUEVO COMIC: $Global:dp_comic_fullname"
         write-host "#####################################################################################################"  
         
         ################################
@@ -279,7 +282,7 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
         
         # Llamo a 7Z para descomprimir el comic
         write-host "    >> Descomprimo el comic"
-        start-process -wait -verbose:$verbose -nonewwindow "C:\program files\7-zip\7z.exe" -ArgumentList "e `"$comic_fname`" -o$comic_unzip_dir -y -bb3" -RedirectStandardOutput "$log_dir\descomprime.log" 
+        start-process -wait -verbose:$verbose -nonewwindow "C:\program files\7-zip\7z.exe" -ArgumentList "e `"$Global:dp_comic_fullname`" -o$comic_unzip_dir -y -bb3" -RedirectStandardOutput "$log_dir\descomprime.log" 
         if ( $verbose -eq $true ) {
         Get-Content -LiteralPath "$log_dir\descomprime.log" -verbose:$verbose 
         }
@@ -356,10 +359,10 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
             # Antes de borrar los ficheros los paso por renamer para que limpie los nombres ya que se me ha
             # dado el caso de que todos ficheros tenian nombres con que coincidian con los filtros a borrar.
             #! Esto habria que cambiarlo por una funcion pero ya!
-            if ($tipo_renombrado = 'comic'){
+            if ($Global:tipo_renombrado = 'comic'){
                 & "C:\Program Files (x86)\ReNamer\ReNamer.exe" /silent /rename "COMICS" $comic_unzip_dir
             }
-            if ($tipo_renombrado = 'manga'){
+            if ($Global:tipo_renombrado = 'manga'){
                 & "C:\Program Files (x86)\ReNamer\ReNamer.exe" /silent /rename "MANGA" $comic_unzip_dir
             }
             # Tengo que poner esto para esperar a Renamer
@@ -382,7 +385,7 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
             # Solo genero las '$numero_imagenes_creditos' ultimas para acelerar el proceso
             for ( $k = ($num_imagenes - $numero_imagenes_creditos) ; $k -lt $num_imagenes ; $k++) {  
                 $imagen = (get-childitem $comic_final_dir -exclude comicinfo.xml,cvinfo)[$k].fullname
-                genera_miniatura $imagen
+                genera_miniatura $imagen $comic32x32_dir
             }
 
             # Inicializo el array de imagenes a eliminar
@@ -422,7 +425,9 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
         # =========== SCRAPPING ============
         # ==================================
 
-        scrap_comic $series_name $comic_fname
+        if ( $true -eq $Global:scrapper_comic ) {
+            scrap_comic                         
+        }
 
 
         #######################
@@ -453,27 +458,14 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
         
         # Compruebo los tamaños de los ficheros excepto si el fichero inicial es un cbz ya que al recomprimir la diferencia puede dar 0
         write-host "COMPRUEBO EL NUEVO COMIC"
-        if ( ( [math]::abs( ( get-childitem -Literalpath $new_comic).length - (get-childitem -Literalpath $backup_comic ).length ) -gt 1 ) -or ( ( get-childitem -literalpath $comic_fname).extension -eq ".cbz" ) ) {
+        if ( ( [math]::abs( ( get-childitem -Literalpath $new_comic).length - (get-childitem -Literalpath $backup_comic ).length ) -gt 1 ) -or ( ( get-childitem -literalpath $Global:dp_comic_fullname).extension -eq ".cbz" ) ) {
             # Los comics tienen un tamaño parecido. Se puede borrar el antiguo
             write-host "    >> EL COMIC ES CORRECTO" -ForegroundColor Green
 
             # Borro el backup    
             write-host "    >> Borro el backup"
             remove-item -LiteralPath "$backup_comic" -Recurse -Force -Verbose:$verbose  -Confirm:$False -ErrorAction:SilentlyContinue
-
-            ##################################
-            # HAGO UN SCRAPPING DEL COMIC
-            ##################################
- 
-            # Hago un scrapping del comic usando el software de comictagger
-            <# 
-            if ( $scrapper_comic -eq $true ) {
-
-                write-host "HAGO UN SCRAPPING DEL COMIC CON COMICTAGGER"
-                $scrap_respuesta = scrap_comic $series_name (get-childitem $new_comic)
-                
-            }#>
-        
+      
         } else {
             ##################################
             # RESTAURO EL COMIC ORIGINAL
@@ -483,7 +475,7 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
             write-host "    >> Elimino el nuevo comic"
             remove-item -LiteralPath "$new_comic" -Recurse -Force -Verbose:$verbose -Confirm:$False -ErrorAction:SilentlyContinue
             write-host "    >> Restauro el backup" 
-            rename-item -LiteralPath "$backup_comic" "$comic_fname"
+            rename-item -LiteralPath "$backup_comic" "$Global:dp_comic_fullname"
             write-host "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@" -ForegroundColor Red
             write-host "@@@@@@@@ ERROR PROCESANDO COMIC, RESTAURANDO COPIA DE SEGURIDAD @@@@@@@@@" -ForegroundColor Red
             write-host "@@@@@@@@ POR FAVOR REVISE EL FICHERO DE LOG ANTES DE CONTINUAR  @@@@@@@@@" -ForegroundColor Red
@@ -516,15 +508,15 @@ for ($i=0; $i -lt $dir_list.count; $i++) {
         # PASO FINAL - MUEVO EL COMIC A LA CARPETA DE DESTINO DEPENDIENDO DE SI TODOS LOS PROCESOS ANTERIORES SON CORRECTOS
         write-host "PASO FINAL - MUEVO EL COMIC A LA CARPETA DE DESTINO"
         # Miro si todos los comics se han escrapeados 
-        if ( [int]$comic_encontrado -eq [int](get-childitem -literalpath $series_dir -file).count) {
+        if ( [int]$comic_encontrado -eq [int](get-childitem -literalpath $Global:dp_series_name_path -file).count) {
             # Todos los ficheros han sido procesados y scrapeados. Se puede mover el directorio
             write-host "  >> TODOS LOS COMICS HAN SIDO PROCESADOS Y SCRAPEADOS"
-            move-item -LiteralPath $series_dir -Destination $directorio_destino_con_scrapping -Force -Confirm:$False -ErrorAction:SilentlyContinue -verbose:$verbose 
+            move-item -LiteralPath $Global:dp_series_name_path -Destination $directorio_destino_con_scrapping -Force -Confirm:$False -ErrorAction:SilentlyContinue -verbose:$verbose 
             
         } else {
             # No todos los comics han sido procesados. Se puede mover el directorio
             write-host "  >> NO TODOS LOS COMICS HAN SIDO CORRECTAMENTE PROCESADOS"
-            move-item -LiteralPath $series_dir -Destination $directorio_destino_sin_scrapping -Force -Confirm:$False -ErrorAction:SilentlyContinue -verbose:$verbose 
+            move-item -LiteralPath $Global:dp_series_name_path -Destination $directorio_destino_sin_scrapping -Force -Confirm:$False -ErrorAction:SilentlyContinue -verbose:$verbose 
         }
         write-host "  >> Muevo la serie de comics a $series_dir_final"
     }

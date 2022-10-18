@@ -27,7 +27,7 @@ function escaner_ocr {
         # Preparo la imagen para una mejor lectura
         #! Esto hay que convertirlo en una funcion de powershell
         Remove-Item -LiteralPath $imagen_salida -Force -ErrorAction SilentlyContinue -Verbose:$verbose | out-null
-        & C:\scripts\convierte\textcleaner.sh  $imagen $imagen_salida
+        & C:\scripts\convierte\textcleaner.sh  $imagen $imagen_salida 
         write-host "   >> Mejorando imagen para OCR: $imagen"
         # Como es un procedimiento asincrono espero hasta que se cree la imagen
         while (!( Test-Path $imagen_salida )) { Start-Sleep 1 }
@@ -55,30 +55,24 @@ function escaner_ocr {
             }
         }
 
-        # Primero busco el ISBN. Si lo encuentro llamare a la web de isbnsearch.org para obtener el dato del año.
+        # Primero busco el ISBN. Si lo encuentro llamare a la web  para obtener el dato del año.
         write-host "   >> Buscado ISBN"
-        $v_isbn = buscar_isbn_ocr
-        if ( $v_isbn.length -ne 0 ) {
-            $v_isbn = $v_isbn -replace '\.' , ''
-            $v_isbn = $v_isbn -replace ':' , ''
-            $v_isbn = $v_isbn -replace '-' , ''
-            $v_isbn = $v_isbn -replace ' ' , ''  
-            write-host "   >> Encontrado ISBN: $v_isbn" -ForegroundColor yellow
+        buscar_isbn_ocr
+        # Solo dejo los numeros y limpio espacios delante y detras
+        # $v_isbn = ($v_isbn -replace '([^\d+])' , '').trim()
+        # Miro si es mayor que nueve ya que hay ISBN de 10 
+        if ( $Global:dp_ocr_isbn -ne '' ) {
+            write-host "   >> Encontrado ISBN: $Global:dp_ocr_isbn" -ForegroundColor yellow
+               
             
-            #$ ASIGNACION DE VARIABLE GLOBAL  
-            $Global:dp_ocr_isbn = $v_isbn     
-            
-            # Ahora llamo a la web de isbnsearch.org para obtener el dato del año
-            # $v_año = buscar_año_isbn_ocr $v_isbn
-            # $v_año = 
-            $Global:dp_ocr_year = @()
-            $Global:dp_ocr_year.Clear()
+            # Ahora llamo a la web con el valor del ISBN para obtener el dato del año
+            $Global:dp_ocr_year = ''
             buscar_año_isbn_ocr
             
             # if ( $null -ne $v_año ) {
             if ( $null -ne $Global:dp_ocr_year ) {
               
-                write-host "   >> Encontrado año en ISBN: $v_año" -ForegroundColor yellow       
+                write-host "   >> Encontrado año en ISBN: $Global:dp_ocr_year" -ForegroundColor yellow       
             }
             break outer      
         } else {
@@ -104,10 +98,11 @@ function buscar_isbn_ocr {
     $texto_salida_ocr = "$ocr_temp_dir\texto.txt"
     
     # Delante tiene la palabra isbn seguida de 2 puntos (o no)  y separados por punto (o no)
-    $encontrados = [regex]::match( (get-content $texto_salida_ocr) , '(I\.?S\,?B\.?N\.?\:?)(.*)' )
+    $encontrados = [regex]::match( (get-content $texto_salida_ocr) , $Global:cadena_isbn )
 
     if ($encontrados.success -eq $true){
-        $isbn = $encontrados.Groups[2].value
+        $isbn = $encontrados.Groups[2].value.replace('.','-')
+        $Global:dp_ocr_isbn = $isbn
     } else {
         $isbn = '' 
     }

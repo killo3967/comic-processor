@@ -75,23 +75,22 @@ function crear_datos_proceso{
     
 }
 
+<#
 function extraer_serie {
-    Param (
-    [Parameter(Mandatory=$true)]
-    $ruta_fichero
+    # Param (
+    # [Parameter(Mandatory=$true)]
+    # $ruta_fichero
     )
     $series_directory = split-path $ruta_fichero -leaf
-    $series_directory = ($series_directory -replace '(\[|\()[^\]\)]*(\]|\))' , '').trim()
+    $Global:dp_series_name = ($series_directory -replace '(\[|\()[^\]\)]*(\]|\))' , '').trim()
     
-    return $series_directory
+    # return $series_directory
 }
+#>
 
 function extraer_serie_nombre_comic {
-    Param (
-    [Parameter(Mandatory=$true)]
-    $ruta_fichero
-    )
-    $nombre_fichero = split-path -leaf $ruta_fichero
+    
+    $nombre_fichero = split-path -leaf $Global:dp_series_name_path
     $series_name = ($nombre_fichero.split('#'))[0].trim()
     return $series_name 
 }
@@ -133,7 +132,7 @@ function extraer_issue {
     $comic_name = (get-childitem -literalpath $ruta_ficheros).name
 
     # Cuento cuantos grupos de numeros hay en el comic que tengan menos de 3 digitos
-    $grupos_numeros = [regex]::match( $comic_name , '\d{1,3}')
+    $grupos_numeros = [regex]::match( $comic_name , '\d{1,3}' )
     
     # Si hay uno solo, entiendo que es el issue.
     if ( $grupos_numeros.count -eq 1 ) {
@@ -165,14 +164,32 @@ function extraer_issue {
 return $issue
 }
 
-function get-publisher {
-    Param (
-        [Parameter(Mandatory=$true)]
-        $in_ruta_fichero
-    )
-    $out_publisher = ($in_ruta_fichero.split('('))[1].split(')')[0]
-    #! Si esto no contiene nada habra que implementar el OCR
-return $out_publisher
+function obtener_publisher {
+    
+    # Miro el año de la ruta del fichero
+    if ( ($Global:dp_series_path_publisher -gt 1800) -and ($Global:dp_ocr_publisher -gt 1800) -and ($Global:dp_series_path_publisher -eq $Global:dp_ocr_publisher) ){
+        # Los años del OCR/ISBN y del path coinciden. Establezco el año del volumen de la serie
+        write-host "    >> Los años del directorio y el reportado por el ISBN coinciden: $Global:dp_ocr_publisher"
+        $Global:dp_series_year = $Global:dp_series_path_publisher
+    } else {
+        if ( ($Global:dp_ocr_publisher -gt 1800) -and ($Global:dp_series_path_publisher -eq '' ) ) {
+            # Año obtenido a traves del OCR del ISBN y sin año de la serie
+            $Global:dp_series_year = $Global:dp_ocr_publisher
+        } else {
+            if ( ($Global:dp_ocr_publisher -eq '' ) -and ($Global:dp_series_path_publisher -gt 1800 ) ) {
+                # Año obtenido a traves del directorio del comic
+                $Global:dp_series_year = $Global:dp_series_path_publisher 
+            } else {
+                if ( ($Global:dp_ocr_publisher -eq '' ) -and ($Global:dp_series_path_publisher -eq '' ) ){
+                    # No tenemos datos del año
+                    write-host "    >> No se ha podido conseguir datos del año por ningun sistema"
+                } else {
+                    # Hay algun error con los datos del año
+                    write-host "    >> Error con los datos del año. Verifique el programa" -ForegroundColor Red
+                }
+            }
+        }
+    }
 }
 
 
